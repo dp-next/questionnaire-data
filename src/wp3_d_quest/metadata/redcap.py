@@ -11,9 +11,13 @@ def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProper
     """Create package properties from the REDCap metadata."""
     return sp.SproutProperties.from_default(
         name="wp3-d-quest",
-        title="WP3-D Quest",
-        description="Data package for WP3 of the DP-Next project.",
-        homepage="https://dp-next.github.io/",
+        title="Questionnaire data package for Work Package 3 of the DP-Next project",
+        description=(
+            "This repository contains the source raw data and Python code to build the "
+            "data package for the DP-Next work package 3 population questionnaire. "
+            "Only metadata and documentation are publicly accessible."
+        ),
+        homepage="https://dp-next.github.io/wp3-d-quest",
         contributors=[
             sp.ContributorProperties(
                 title="Kristiane Beicher",
@@ -22,6 +26,14 @@ def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProper
                 family_name="Beicher",
                 organization="Steno Diabetes Centre Aarhus",
                 roles=["DataManager", "DataCurator", "ContactPerson"],
+            ),
+            sp.ContributorProperties(
+                title="Signe Kirk Brødbæk",
+                email="signekb@clin.au.dk",
+                given_name="Signe Kirk",
+                family_name="Brødbæk",
+                organization="Steno Diabetes Centre Aarhus",
+                roles=["DataManager", "DataCurator"],
             ),
             sp.ContributorProperties(
                 title="Luke W Johnston",
