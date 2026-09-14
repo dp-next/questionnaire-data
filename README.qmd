@@ -10,11 +10,15 @@ metadata-files:
 
 {{< include /docs/includes/_badges.qmd >}}
 
-<!-- TODO: Add description of package -->
+This repository contains the source raw data and Python code to build the data
+package for the DP-Next work package 3 population questionnaire. Personal data
+is kept in [Git LFS](https://decisions.seedcase-project.org/why-git-lfs/) stores
+within [GenomeDK](https://genome.au.dk) and no personal data is uploaded to
+GitHub. Only metadata and documentation is publicly accessible.
 
 Check out our [website]({{< meta links.site >}}) for more information, such as
-the [metadata]({{< meta links.site >}}/docs/) on the data package and its
-contents.
+the [metadata]({{< meta links.site >}}/docs/metadata/) on the data package and
+its contents.
 
 ::: callout-tip
 This data package was generated from the [Template Data
