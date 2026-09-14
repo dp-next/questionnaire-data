@@ -1,9 +1,9 @@
 {
   "name": "wp3-d-quest",
   "id": "0b14e351-79ee-4790-a3d5-ba087e38b24f",
-  "title": "WP3-D Quest",
-  "description": "Data package for WP3 of the DP-Next project.",
-  "homepage": "https://dp-next.github.io/",
+  "title": "Questionnaire data package for Work Package 3 of the DP-Next project",
+  "description": "This repository contains the source raw data and Python code to build the data package for the DP-Next work package 3 population questionnaire. Only metadata and documentation are publicly accessible.",
+  "homepage": "https://dp-next.github.io/wp3-d-quest",
   "version": "0.1.0",
   "created": "2026-09-08T16:35:37+02:00",
   "contributors": [
@@ -17,6 +17,17 @@
         "DataManager",
         "DataCurator",
         "ContactPerson"
+      ]
+    },
+    {
+      "title": "Signe Kirk Brødbæk",
+      "email": "signekb@clin.au.dk",
+      "givenName": "Signe Kirk",
+      "familyName": "Brødbæk",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator"
       ]
     },
     {
