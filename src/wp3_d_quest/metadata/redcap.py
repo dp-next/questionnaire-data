@@ -67,14 +67,26 @@ def _create_resource_properties(
     redcap_fields: list[dict[str, str]],
 ) -> list[sp.ResourceProperties]:
     # Discard the participant_id field, which is added to each resource separately.
-    redcap_fields = so.keep(
-        redcap_fields, lambda field: field["field_name"] != "participant_id"
+    sorted_by_form = sorted(
+        _keep_relevant_fields(redcap_fields), key=lambda field: field["form_name"]
     )
-    sorted_by_form = sorted(redcap_fields, key=lambda field: field["form_name"])
     grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])
     return so.fmap(
         grouped_by_form,
         lambda group: _form_to_resource(group[0], list(group[1])),
+    )
+
+
+def _keep_relevant_fields(fields: list[dict[str, str]]) -> list[dict[str, str]]:
+    return so.keep(
+        fields,
+        lambda field: (
+            # Descriptive fields contain display information only
+            field["field_type"] != "descriptive"
+            # `participant_id` is added to each resource separately
+            and field["field_name"] != "participant_id"
+            and field["form_name"] in {"registration", "dp_next"}
+        ),
     )
 
 
@@ -89,13 +101,12 @@ def _form_to_resource(
         constraints=sp.ConstraintsProperties(required=True),
     )
 
-    # Discard fields displayed for information only and checkbox fields,
-    # which are processed separately.
-    form_redcap_fields = so.keep(
-        fields, lambda field: field["field_type"] not in ["descriptive", "checkbox"]
+    # Checkbox fields are processed separately
+    non_checkbox_fields = so.keep(
+        fields, lambda field: field["field_type"] != "checkbox"
     )
     form_fields = so.fmap(
-        form_redcap_fields,
+        non_checkbox_fields,
         lambda field: sp.FieldProperties(
             name=field["field_name"],
             title=field["field_name"],
@@ -114,10 +125,8 @@ def _form_to_resource(
         ),
     )
 
-    checkbox_redcap_fields = so.keep(
-        fields, lambda field: field["field_type"] == "checkbox"
-    )
-    checkbox_fields = so.flat_fmap(checkbox_redcap_fields, _expand_checkbox_field)
+    checkbox_fields = so.keep(fields, lambda field: field["field_type"] == "checkbox")
+    checkbox_fields = so.flat_fmap(checkbox_fields, _expand_checkbox_field)
 
     return sp.ResourceProperties(
         name=form_name,
