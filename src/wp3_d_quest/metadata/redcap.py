@@ -66,7 +66,6 @@ def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProper
 def _create_resource_properties(
     redcap_fields: list[dict[str, str]],
 ) -> list[sp.ResourceProperties]:
-    # Discard the participant_id field, which is added to each resource separately.
     sorted_by_form = sorted(
         _keep_relevant_fields(redcap_fields), key=lambda field: field["form_name"]
     )
