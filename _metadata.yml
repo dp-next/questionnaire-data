@@ -6,5 +6,4 @@ tagline: "Questionnaire data package for Work Package 3 of the DP-Next project"
 
 links:
   github: "https://github.com/seedcase-project/wp3-d-quest"
-  # TODO: Add the URL
-  site: ""
+  site: "https://dp-next.github.io/wp3-d-quest"
