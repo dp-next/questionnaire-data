@@ -20,10 +20,17 @@ has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 <!-- [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) -->
 
-<!-- TODO: Add description of package -->
+This repository contains the source raw data and Python code to build
+the data package for the DP-Next work package 3 population
+questionnaire. Personal data is kept in [Git
+LFS](https://decisions.seedcase-project.org/why-git-lfs/) stores within
+[GenomeDK](https://genome.au.dk) and no personal data is uploaded to
+GitHub. Only metadata and documentation is publicly accessible.
 
-Check out our [website]() for more information, such as the
-[metadata](./docs/) on the data package and its contents.
+Check out our [website](https://dp-next.github.io/wp3-d-quest) for more
+information, such as the
+[metadata](https://dp-next.github.io/wp3-d-quest/docs/metadata/) on the
+data package and its contents.
 
 > [!TIP]
 >

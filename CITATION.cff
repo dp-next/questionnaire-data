@@ -1,26 +1,32 @@
-title: "Data package for the questionnaire data of Work Package 3 of the DP-Next project"
-# TODO: Add abstract of data package.
-abstract: ""
+title: "Questionnaire data package for Work Package 3 of the DP-Next project"
+abstract: |
+  Contains the source code and raw data (not publicly accessible) to build the
+  DP-Next questionnaire data package.
 authors:
   - family-names: Beicher
     given-names: Kristiane
-    orcid: "0000-0001-7556-9566"
+    affiliation: "Steno Diabetes Center Aarhus"
+    orcid: "https://orcid.org/0000-0001-7556-9566"
+  - family-names: Brødbæk
+    given-names: Signe Kirk
+    affiliation: "Steno Diabetes Center Aarhus"
+    orcid: "https://orcid.org/0009-0000-2208-7088"
   - family-names: Johnston
     given-names: Luke William
     orcid: "https://orcid.org/0000-0003-4169-2616"
     affiliation: "Steno Diabetes Center Aarhus"
-  # TODO: Add author details.
-  # - family-names: ""
-  #   given-names: ""
-  #   orcid: ""
-  #   affiliation: ""
+  - family-names: Vago
+    given-names: Marton
+    affiliation: "Steno Diabetes Center Aarhus"
+    orcid: "https://orcid.org/0009-0007-4628-655X"
 cff-version: 1.2.0
 # doi:
+# data-published:
 keywords:
   - "data package"
   - "questionnaire data"
+  - "population survey"
 license: "CC0-1.0"
 message: "If you use this data package, please cite it using these metadata."
 repository-code: "https://github.com/seedcase-project/wp3-d-quest"
-# TODO: Add a URL for any website for the data package.
-# url: ""
+url: "https://dp-next.github.io/wp3-d-quest"

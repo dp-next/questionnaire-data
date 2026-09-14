@@ -1,6 +1,5 @@
 import os
 from dataclasses import dataclass
-from enum import Enum
 from typing import Any, Literal
 
 import requests
@@ -14,26 +13,23 @@ class APIConfig:
     url: str
 
 
-class Center(Enum):
-    """The centers in the study."""
-
-    Open = APIConfig(
-        env_key="REDCAP_OPEN_API_KEY", url="https://open.rsyd.dk/redcap/api/"
-    )
+API_CONFIG = APIConfig(
+    env_key="REDCAP_OPEN_API_KEY", url="https://open.rsyd.dk/redcap/api/"
+)
 
 
 def get(
     request_data: dict[str, str],
-    center: Center = Center.Open,
+    api_config: APIConfig = API_CONFIG,
 ) -> requests.Response:
     """Send a request to the REDCap API."""
-    token = os.environ.get(center.value.env_key)
+    token = os.environ.get(api_config.env_key)
     if not token:
-        raise RuntimeError(f"{center.value.env_key} environment variable is not set.")
+        raise RuntimeError(f"{api_config.env_key} environment variable is not set.")
 
     request_data["token"] = token
 
-    response = requests.post(center.value.url, data=request_data, timeout=60)
+    response = requests.post(api_config.url, data=request_data, timeout=60)
     response.raise_for_status()
 
     return response
@@ -41,7 +37,6 @@ def get(
 
 def get_json(
     content: Literal["metadata", "repeatingFormsEvents", "formEventMapping"],
-    center: Center = Center.Open,
 ) -> Any:
     """Send a request to the REDCap API and return the JSON response."""
     request_data = {
@@ -49,5 +44,5 @@ def get_json(
         "format": "json",
         "returnFormat": "json",
     }
-    response = get(request_data, center)
+    response = get(request_data)
     return response.json()
