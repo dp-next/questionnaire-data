@@ -5,11 +5,13 @@ description = "Data package for the questionnaire from Work Package 3 of the DP-
 authors = [
   { name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
   { name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  { name = "Marton Vago", email = "martonvago@gmail.com" },
   # TODO: Add the other authors (Kristina, Daniel, Jonas, Mikkel, etc)
 ]
 maintainers = [
   { name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
   { name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  { name = "Marton Vago", email = "martonvago@gmail.com" },
 ]
 readme = "README.md"
 license = "MIT AND CC0-1.0"
@@ -29,11 +31,10 @@ dependencies = [
 dev = ["jupyter>=1.1.1", "types-requests>=2.33.0.20260906"]
 
 [project.urls]
-# TODO: Add URLs relevant to the project.
-# homepage = ""
-repository = "https://github.com/seedcase-project/wp3-d-quest"
-issues = "https://github.com/seedcase-project/wp3-d-quest/issues"
-changelog = "https://github.com/seedcase-project/wp3-d-quest/blob/main/CHANGELOG.md"
+homepage = "https://dp-next.github.io/wp3-d-quest"
+repository = "https://github.com/dp-next/wp3-d-quest"
+issues = "https://github.com/dp-next/wp3-d-quest/issues"
+changelog = "https://github.com/dp-next/wp3-d-quest/blob/main/CHANGELOG.md"
 
 [tool.ruff]
 extend = ".config/ruff.toml"
