@@ -2,12 +2,11 @@ project:
   # TODO: Change to correct project type if using extensions
   type: website
 
-
 website:
   title: "TODO: Set the title of the website"
   # TODO: Set the URL of the website
   site-url: ""
-  repo-url: "https://github.com/seedcase-project/wp3-d-quest"
+  repo-url: "https://github.com/dp-next/wp3-d-quest"
   # TODO: Set favicon if relevant.
   # favicon: ""
   navbar:
@@ -22,7 +21,7 @@ website:
         href: docs/index.qmd
     tools:
       - icon: github
-        href: "https://github.com/seedcase-project/wp3-d-quest"
+        href: "https://github.com/dp-next/wp3-d-quest"
         aria-label: "GitHub icon: Source repository"
   sidebar:
     contents:
