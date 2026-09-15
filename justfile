@@ -11,16 +11,22 @@ format-all: format-md format-python
 check-all: check-spelling check-urls check-python check-unused check-security
 
 # Run all build-related recipes
-build-all: build-datapackage build-contributors build-website build-readme
+build-all: build-contributors build-website build-readme
 
 # List all TODO items in the repository
 list-todos:
   grep -R -n \
-    --exclude="*.code-snippets" \
+    --exclude-dir=*_cache \
+    --exclude-dir=.git \
     --exclude-dir=.quarto \
+    --exclude-dir=.venv \
     --exclude-dir=_site \
+    --exclude-dir=_temp \
+    --exclude-dir=template \
+    --exclude=copier.yaml \
+    --exclude=json.code-snippets \
     --exclude=justfile \
-    "TODO" *
+    "TODO" .
 
 # Install the pre-commit hooks
 install-precommit:
@@ -128,7 +134,7 @@ build-contributors:
 
 # Re-build the README file from the Quarto version
 build-readme:
-  uvx --from quarto quarto render README.qmd --to gfm
+  uv run quarto render README.qmd --to gfm
 
 # Build the documentation for the data package
 build-metadata-docs:
@@ -136,11 +142,11 @@ build-metadata-docs:
 
 # Build the documentation website using Quarto
 build-website: build-metadata-docs
-  uvx quarto render
+  uv run quarto render --execute
 
 # Preview the documentation website with automatic reload on changes
 preview-website: build-metadata-docs
-  uvx quarto preview
+  uv run quarto quarto preview --execute
 
 # Check for and apply updates from the template
 update-from-template:
