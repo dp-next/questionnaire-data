@@ -43,11 +43,7 @@ abide by its terms.
 
 ## Licensing
 
-This project is licensed under the [MIT License](LICENSE.md).
-
-## Licensing
-
-Code in this project is licensed under the [MIT License](LICENSE-MIT.md). Data
+The code in this project is licensed under the [MIT License](LICENSE.md). Data
 in this project is licensed under the [CC0 License](LICENSE.md).
 
 ## Changelog

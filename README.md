@@ -6,14 +6,14 @@
 
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true.svg)](https://github.com/copier-org/copier)
 [![GitHub
-License](https://img.shields.io/github/license/seedcase-project/wp3-d-quest.svg)](https://github.com/seedcase-project/wp3-d-quest/blob/main/LICENSE.md)
+License](https://img.shields.io/github/license/dp-next/wp3-d-quest.svg)](https://github.com/dp-next/wp3-d-quest/blob/main/LICENSE.md)
 [![GitHub
-Release](https://img.shields.io/github/v/release/seedcase-project/wp3-d-quest.svg)](https://github.com/seedcase-project/wp3-d-quest/releases/latest)
-[![Checks](https://github.com/seedcase-project/wp3-d-quest/actions/workflows/checks.yml/badge.svg)](https://github.com/seedcase-project/wp3-d-quest/actions/workflows/checks.yml)
+Release](https://img.shields.io/github/v/release/dp-next/wp3-d-quest.svg)](https://github.com/dp-next/wp3-d-quest/releases/latest)
+[![Checks](https://github.com/dp-next/wp3-d-quest/actions/workflows/checks.yml/badge.svg)](https://github.com/dp-next/wp3-d-quest/actions/workflows/checks.yml)
 [![Build
-website](https://github.com/seedcase-project/wp3-d-quest/actions/workflows/build-website.yml/badge.svg)](https://github.com/seedcase-project/wp3-d-quest/actions/workflows/build-website.yml)
+website](https://github.com/dp-next/wp3-d-quest/actions/workflows/build-website.yml/badge.svg)](https://github.com/dp-next/wp3-d-quest/actions/workflows/build-website.yml)
 [![pre-commit.ci
-status](https://results.pre-commit.ci/badge/github/seedcase-project/wp3-d-quest/main.svg)](https://results.pre-commit.ci/latest/github/seedcase-project/wp3-d-quest/main)
+status](https://results.pre-commit.ci/badge/github/dp-next/wp3-d-quest/main.svg)](https://results.pre-commit.ci/latest/github/dp-next/wp3-d-quest/main)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
@@ -50,13 +50,9 @@ to abide by its terms.
 
 ## Licensing
 
-This project is licensed under the [MIT License](LICENSE.md).
-
-## Licensing
-
-Code in this project is licensed under the [MIT
-License](LICENSE-MIT.md). Data in this project is licensed under the
-[CC0 License](LICENSE.md).
+The code in this project is licensed under the [MIT
+License](LICENSE.md). Data in this project is licensed under the [CC0
+License](LICENSE.md).
 
 ## Changelog
 
@@ -66,8 +62,14 @@ For a list of changes, see our [changelog](CHANGELOG.md) page.
 
 If you use this package in your work, please cite it as follows:
 
-‘CITATION.cff’ does not pass validation. Conversion aborted.
+Beicher K., Brødbæk S.K., Johnston L.W., Vago M. Questionnaire data
+package for Work Package 3 of the DP-Next project URL:
+https://dp-next.github.io/wp3-d-quest
 
 Or as a BibTeX entry:
 
-    'CITATION.cff' does not pass validation. Conversion aborted.
+    @misc{YourReferenceHere,
+    author = {Beicher, Kristiane and Brødbæk, Signe Kirk and Johnston, Luke William and Vago, Marton},
+    title = {Questionnaire data package for Work Package 3 of the DP-Next project},
+    url = {https://dp-next.github.io/wp3-d-quest}
+    }
