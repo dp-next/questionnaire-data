@@ -77,9 +77,50 @@ check-unused:
   # Create an allowlist with `vulture --make-allowlist`
   uvx vulture --min-confidence 100 src/ **/vulture-allowlist.py
 
-# Re-build the data package
-build-datapackage:
-  uv run main.py
+# Run the 'raw' tasks to build the raw data and/or metadata, e.g. by downloading from the source locations into `raw/`
+build-raw:
+  uv run pytask build -m raw
+
+# Run the 'staging' tasks to build the files in `staging/`
+build-staging:
+  uv run pytask build -m staging
+
+# Run the 'metadata' tasks to build the metadata files, e.g. `datapackage.json`
+build-metadata:
+  uv run pytask build -m metadata
+
+# Build the final resources from the staging files
+build-resources:
+  # Requires filling out config file for Sprout.
+  uxv seedcase-sprout build-resources
+
+# Build all files for the data package, such as metadata, README, and resources
+build-package version="0.0.0": build-staging build-metadata build-resources build-readme
+  #!/usr/bin/env bash
+  # Safer script, see https://just.systems/man/en/safer-bash-shebang-recipes.html
+  set -euxo pipefail
+  # Move into `releases/latest/` to make it easier to make a tar file.
+  # CHANGELOG will be generated first when running `release`, see `.config/cog.toml`.
+  cp --target-directory releases/latest/ \
+    datapackage.json \
+    LICENSE.md \
+    README.md \
+    CHANGELOG.md \
+    resources/**/*.parquet
+  repo=$(basename $(pwd))
+  (
+    cd releases/latest/ && \
+      tar --create --file=$repo.tar * && \
+      zip $repo.zip \
+        datapackage.json \
+        LICENSE.md \
+        README.md \
+        CHANGELOG.md
+  )
+  cp releases/latest/$repo.tar \
+    releases/$repo_{{version}}.tar
+  cp releases/latest/$repo.zip \
+    releases/$repo_{{version}}.zip
 
 # Generate a Quarto include file with the contributors
 build-contributors:
