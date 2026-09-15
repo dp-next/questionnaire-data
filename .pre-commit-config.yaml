@@ -20,7 +20,7 @@ repos:
         args: [--config, .config/typos.toml, --force-exclude]
 
   - repo: https://github.com/jolars/panache-pre-commit
-    rev: v3.9.0
+    rev: v3.10.0
     hooks:
       - id: panache-format
 
@@ -35,7 +35,7 @@ repos:
         args: [--assume-in-merge]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.6
+    rev: v0.16.7
     hooks:
       # Run the linter.
       - id: ruff-check
