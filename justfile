@@ -54,7 +54,8 @@ check-spelling:
 # Check Python code for any errors that need manual attention
 check-python:
   uvx ruff check .
-  uv run mypy --pretty .
+  # Check types
+  uvx pyrefly check
 
 # Run basic security checks on the package
 check-security:
