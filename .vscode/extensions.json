@@ -13,6 +13,7 @@
     "ms-toolsai.jupyter",
     "vivaxy.vscode-conventional-commits",
     "charliermarsh.ruff",
+    "meta.pyrefly",
     "pshaddel.conventional-branch",
     "tekumara.typos-vscode",
     "EditorConfig.EditorConfig",

@@ -21,6 +21,9 @@ dependencies = [
     "seedcase-sprout>=0.51.0",
 ]
 
+[dependency-groups]
+dev = ["jupyter>=1.1.1"]
+
 [project.urls]
 # TODO: Add URLs relevant to the project.
 # homepage = ""
@@ -31,11 +34,11 @@ changelog = "https://github.com/seedcase-project/wp3-d-quest/blob/main/CHANGELOG
 [tool.ruff]
 extend = ".config/ruff.toml"
 
-[tool.mypy]
-python_version = "3.12"
-strict = true
-
-[dependency-groups]
-dev = [
-    "mypy>=2.3.0",
-]
+[tool.pyrefly]
+project-includes = ["src/"]
+min-severity = "warn"
+python-version = "3.12.0"
+preset = "strict"
+python-interpreter-path = ".venv/bin/python"
+# Use inline `# type: ignore` comments, which can be useful.
+permissive-ignores = true
