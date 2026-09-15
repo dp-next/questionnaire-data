@@ -27,10 +27,11 @@ install-precommit:
   uvx pre-commit install
   uvx pre-commit autoupdate
   uvx pre-commit run --all-files
+
 # Update the Quarto seedcase-theme extension
 update-quarto-theme:
   # Add theme if it doesn't exist, update if it does
-  quarto update seedcase-project/seedcase-theme --no-prompt
+  quarto update dp-next/dp-next-theme --no-prompt
 
 # Install Python package dependencies
 install-deps:
