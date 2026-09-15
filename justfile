@@ -82,7 +82,7 @@ build-datapackage:
 
 # Generate a Quarto include file with the contributors
 build-contributors:
-  sh ./tools/get-contributors.sh seedcase-project/wp3-d-quest > docs/includes/_contributors.qmd
+  sh ./tools/get-contributors.sh dp-next/wp3-d-quest > docs/includes/_contributors.qmd
 
 # Re-build the README file from the Quarto version
 build-readme:
