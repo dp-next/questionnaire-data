@@ -144,6 +144,16 @@ build-metadata-docs:
 build-website: build-metadata-docs
   uv run quarto render --execute
 
+# Build data package and create a new release
+[confirm("Are you sure you want to run the release process? (yes/no)")]
+release: run-all
+  #!/usr/bin/env bash
+  # Safer script, see https://just.systems/man/en/safer-bash-shebang-recipes.html
+  set -euxo pipefail
+  # TODO: Remove once ready to release.
+  echo "Release process not ready, cancelling."
+  exit 0
+
 # Preview the documentation website with automatic reload on changes
 preview-website: build-metadata-docs
   uv run quarto quarto preview --execute
