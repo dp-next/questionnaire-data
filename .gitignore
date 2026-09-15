@@ -28,10 +28,6 @@ __pycache__/
 
 # Raw data files and folders
 *.parquet
-*.csv
-/data-raw/
-/raw/
-/data/
 
 # MacOS
 .DS_Store
@@ -48,8 +44,10 @@ _site
 _book
 public
 site
-docs/resources
-docs/index.qmd
+
+# Auto-generated from Flower
+docs/metadata/resources
+docs/metadata/index.qmd
 
 # Misc files
 *.log
