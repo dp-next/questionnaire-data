@@ -2,7 +2,7 @@
     just --list --unsorted
 
 # Run all build-related recipes in the justfile
-run-all: install-deps update-quarto-theme format-python format-md check-all build-all
+run-all: install-deps update-quarto-theme format-all check-all build-all
 
 # Run all format-related recipes
 format-all: format-md format-python
