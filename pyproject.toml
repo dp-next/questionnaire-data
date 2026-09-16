@@ -16,13 +16,19 @@ license = "MIT AND CC0-1.0"
 license-files = ["LICENSE-MIT.md", "LICENSE.md"]
 requires-python = ">=3.12"
 dependencies = [
+    "dotenv>=0.9.9",
     "polars>=1.42.1",
+    "pytask>=0.6.0",
+    "requests>=2.34.2",
     "seedcase-flower>=0.30.1",
     "seedcase-sprout>=0.51.0",
 ]
 
 [dependency-groups]
-dev = ["jupyter>=1.1.1"]
+dev = [
+    "jupyter>=1.1.1",
+    "types-requests>=2.33.0.20260906",
+]
 
 [project.urls]
 # TODO: Add URLs relevant to the project.
@@ -42,3 +48,12 @@ preset = "strict"
 python-interpreter-path = ".venv/bin/python"
 # Use inline `# type: ignore` comments, which can be useful.
 permissive-ignores = true
+
+[tool.pytask.ini_options]
+paths = ["src/wp3_d_quest"]
+task_files = ["task_*.py", "build.py"]
+markers = ["metadata"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
