@@ -1,5 +1,5 @@
 """Functions for processing metadata."""
 
-from . import redcap
+from . import package, redcap
 
-__all__ = ["redcap"]
+__all__ = ["package", "redcap"]

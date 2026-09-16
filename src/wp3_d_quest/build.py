@@ -1,8 +1,12 @@
+import hashlib
+import json
+from dataclasses import replace
 from importlib.resources import files
 from pathlib import Path
 from typing import Annotated
 
-from pytask import Product, mark
+import seedcase_sprout as sp
+from pytask import Product, PythonNode, mark
 
 from wp3_d_quest import common, metadata
 
@@ -16,6 +20,12 @@ RAW_METADATA_PATH = RAW / "metadata" / "metadata.json"
 STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.json"
 
 DATAPACKAGE_PATH = SRC.parent / "datapackage.json"
+
+
+def _hash_properties(props: sp.SproutProperties) -> str:
+    return hashlib.sha256(
+        json.dumps(props.compact_dict, sort_keys=True).encode()
+    ).hexdigest()
 
 
 @mark.metadata
@@ -42,8 +52,12 @@ def task_stage_metadata(
 def task_create_datapackage_json(
     datapackage_path: Annotated[Path, Product] = DATAPACKAGE_PATH,
     staging_metadata_path: Path = STAGING_METADATA_PATH,
+    package_properties: Annotated[
+        sp.SproutProperties, PythonNode(hash=_hash_properties)
+    ] = metadata.package.package_properties,
 ) -> None:
     """Create the datapackage.json file from the REDCap metadata."""
     staging_metadata = common.json.read(staging_metadata_path)
-    package_properties = metadata.redcap.create_package_properties(staging_metadata)
+    resources = metadata.redcap.create_resource_properties(staging_metadata)
+    package_properties = replace(package_properties, resources=resources)
     common.json.write(datapackage_path, package_properties.compact_dict)
