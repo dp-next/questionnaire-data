@@ -62,17 +62,127 @@
   ],
   "resources": [
     {
-      "name": "dp_next",
-      "path": "resources/dp_next/data.parquet",
-      "title": "dp_next",
-      "description": "dp_next",
+      "name": "registration",
+      "path": "resources/registration/data.parquet",
+      "title": "registration",
+      "description": "registration",
       "schema": {
         "fields": [
           {
             "name": "participant_id",
-            "title": "The unique ID of the participant",
+            "title": "participant_id",
             "type": "string",
-            "description": "The unique ID of the participant.",
+            "description": "Every participant will get a participant ID",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "digital_postcpr",
+            "title": "digital_postcpr",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "municipal_code",
+            "title": "municipal_code",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 100,
+              "maximum": 999
+            }
+          },
+          {
+            "name": "email_eboks",
+            "title": "email_eboks",
+            "type": "string",
+            "format": "email",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "send_date",
+            "title": "send_date",
+            "type": "date",
+            "format": "%m/%d/%Y",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "name",
+            "title": "name",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "status_field",
+            "title": "status_field",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Eboks OK",
+                "Eboks fysisk post",
+                "Ingen Eboks tilknyttet",
+                "Anden fejl"
+              ]
+            },
+            "categories": [
+              "Eboks OK",
+              "Eboks fysisk post",
+              "Ingen Eboks tilknyttet",
+              "Anden fejl"
+            ]
+          },
+          {
+            "name": "status_text_field",
+            "title": "status_text_field",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "no_consent___1",
+            "title": "STOP",
+            "type": "boolean",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          }
+        ],
+        "primaryKey": [
+          "participant_id"
+        ]
+      }
+    },
+    {
+      "name": "survey",
+      "path": "resources/survey/data.parquet",
+      "title": "survey",
+      "description": "survey",
+      "schema": {
+        "fields": [
+          {
+            "name": "participant_id",
+            "title": "participant_id",
+            "type": "string",
+            "description": "Every participant will get a participant ID",
             "constraints": {
               "required": true
             }
@@ -383,7 +493,9 @@
             "type": "integer",
             "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god eller dårlig du synes, </span>dit fysiske helbred er i dag<span style=\"font-weight: normal;\">. Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værste tænkelige helbredstilstand) |  | 100 (bedst tænkelige helbredstilstand)",
             "constraints": {
-              "required": false
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
             }
           },
           {
@@ -392,7 +504,9 @@
             "type": "integer",
             "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god eller dårlig du synes, </span>dit mentale helbred er i dag<span style=\"font-weight: normal;\">. Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værste tænkelige helbredstilstand) |  | 100 (bedst tænkelige helbredstilstand)",
             "constraints": {
-              "required": false
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
             }
           },
           {
@@ -401,7 +515,9 @@
             "type": "integer",
             "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god </span>din livskvalitet er i dag.<span style=\"font-weight: normal;\"> Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værst tænkelige livskvalitet) |  | 100 (bedst tænkelige livskvalitet)",
             "constraints": {
-              "required": false
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
             }
           },
           {
@@ -4693,116 +4809,6 @@
           {
             "name": "health_tracker_devices___3",
             "title": "Andre instrumenter eller måleenheder",
-            "type": "boolean",
-            "description": "",
-            "constraints": {
-              "required": false
-            }
-          }
-        ],
-        "primaryKey": [
-          "participant_id"
-        ]
-      }
-    },
-    {
-      "name": "registration",
-      "path": "resources/registration/data.parquet",
-      "title": "registration",
-      "description": "registration",
-      "schema": {
-        "fields": [
-          {
-            "name": "participant_id",
-            "title": "The unique ID of the participant",
-            "type": "string",
-            "description": "The unique ID of the participant.",
-            "constraints": {
-              "required": true
-            }
-          },
-          {
-            "name": "digital_postcpr",
-            "title": "digital_postcpr",
-            "type": "string",
-            "description": "",
-            "constraints": {
-              "required": false
-            }
-          },
-          {
-            "name": "municipal_code",
-            "title": "municipal_code",
-            "type": "integer",
-            "description": "",
-            "constraints": {
-              "required": false,
-              "minimum": 100,
-              "maximum": 999
-            }
-          },
-          {
-            "name": "email_eboks",
-            "title": "email_eboks",
-            "type": "string",
-            "format": "email",
-            "description": "",
-            "constraints": {
-              "required": false
-            }
-          },
-          {
-            "name": "send_date",
-            "title": "send_date",
-            "type": "date",
-            "format": "%m/%d/%Y",
-            "description": "",
-            "constraints": {
-              "required": false
-            }
-          },
-          {
-            "name": "name",
-            "title": "name",
-            "type": "string",
-            "description": "",
-            "constraints": {
-              "required": false
-            }
-          },
-          {
-            "name": "status_field",
-            "title": "status_field",
-            "type": "string",
-            "description": "",
-            "constraints": {
-              "required": false,
-              "enum": [
-                "Eboks OK",
-                "Eboks fysisk post",
-                "Ingen Eboks tilknyttet",
-                "Anden fejl"
-              ]
-            },
-            "categories": [
-              "Eboks OK",
-              "Eboks fysisk post",
-              "Ingen Eboks tilknyttet",
-              "Anden fejl"
-            ]
-          },
-          {
-            "name": "status_text_field",
-            "title": "status_text_field",
-            "type": "string",
-            "description": "",
-            "constraints": {
-              "required": false
-            }
-          },
-          {
-            "name": "no_consent___1",
-            "title": "STOP",
             "type": "boolean",
             "description": "",
             "constraints": {
