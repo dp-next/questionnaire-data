@@ -1,5 +1,0 @@
-- source: project
-  netlify:
-    # TODO: Add correct ID and URL
-    - id: ""
-      url: "https://seedcase-project-wp3-d-quest.netlify.app"

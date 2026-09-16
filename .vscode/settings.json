@@ -1,9 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.snippetSuggestions": "inline",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always"
-  },
   "autoDocstring.customTemplatePath": ".vscode/google-notypes.mustache",
   "conventional-branch.type": [
     "build",
@@ -23,11 +20,14 @@
     "editor.defaultFormatter": "jolars.panache"
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "always",
+    }
   },
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
   "python.languageServer": "Pylance",
-  "mypy.runUsingActiveInterpreter": true,
+  "typos.config": ".config/typos.toml",
   "files.insertFinalNewline": true,
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.promptScopes": false

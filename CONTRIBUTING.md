@@ -3,7 +3,7 @@
 ## :bug: Issues and bugs
 
 The easiest way to contribute is to report issues or bugs that you might find
-while using `wp3-d-quest`. You can do this by creating a new issue on our GitHub
+while using wp3-d-quest. You can do this by creating a new issue on our GitHub
 repository.
 
 ## :pencil2: Adding or modifying content
@@ -35,9 +35,25 @@ to see what commands are available. To see a list of commands available, run:
 just
 ```
 
-As you contribute, make sure your changes will pass our tests by opening a
+You can run a recipe by typing:
+
+```bash
+just <recipe-name>
+```
+
+As you contribute, make sure your changes will pass our checks by opening a
 terminal so that the working directory is the root of this project
-(`wp3-d-quest/`) and running:
+(`wp3-d-quest/`) and running our recipes. Some recipes to run regularly are:
+
+```bash
+just check-all
+just build-package
+```
+
+Which runs some checks (like formatting and code checks) and builds the data
+package (like regenerating the `datapackage.json` file).
+
+And once you're ready to create a pull request, you run:
 
 ```bash
 just run-all
@@ -56,6 +72,40 @@ one commit.
 ## :file_folder: Explanation of files and folders
 
 This is a brief description of some of the files in this repository.
+
+### Data package content
+
+- `src/`: The folder you should put all your Python files in, as this data
+  package is structured like a Python package. The organization of the folder is
+  up to you, but we recommend following a structure commonly found in data
+  engineering projects, e.g. in
+  [dbt](https://docs.getdbt.com/best-practices/how-we-structure/1-guide-overview?version=2)
+  projects. We recommend that Python files only contain functions and classes
+  for data processing, while the actual data processing is done in `main.py` to
+  keep all the processing steps in one place.
+  - Use the naming convention
+    `src/wp3_d_quest/<data-source>/<data-resource>_(data|metadata).py` for your
+    Python files. `data-source` is the source that your data comes from (see
+    `raw/` below) and `data-resource` is the name of the (eventual) data
+    resource.
+  - Utility or common functions should be kept in a `src/wp3_d_quest/common/`
+    folder.
+- `raw/`: The folder for all your raw data files. These data files should come
+  directly from their source locations (e.g. a database, an API, or a downloaded
+  file) without having been modified in any way. Name the files using the
+  convention: `raw/<data-source>/<timestamp>.csv` (or whatever format your data
+  is in).
+- `staging/`: The folder where processed data files are stored after they've
+  been tidied from `raw/` but before they've been converted into a resource in
+  `resources/`. The files in this folder can be used to actually create the
+  resource properties, as they will all be in a tidy format with their data
+  types and values more or less in their final form. Name the files using the
+  convention: `staging/<data-source>/<data-resource>/<timestamp>.parquet`
+  (Sprout requires Parquet).
+- `resources/`: The folder with your data resources. Each resource has its own
+  Parquet file (or files) containing all resource data contained within.
+
+### Configuration and other content
 
 - `.copier-answers.yml`: Contains the answers you gave when copying the project
   from the template. **You should not modify this file directly.**
@@ -81,6 +131,8 @@ This is a brief description of some of the files in this repository.
     Markdown files in the project.
   - `cog.toml`: [Cocogitto](https://docs.cocogitto.io) configuration file for
     managing versions.
+  - `lychee.toml`: [Lychee](https://lychee.cli.rs) configuration file for
+    checking URLs.
   - `cliff.toml`: [git-cliff](https://git-cliff.org) configuration file for
     creating the changelog.
   - `ruff.toml`: [Ruff](https://github.com/charliermarsh/ruff) configuration
@@ -95,3 +147,10 @@ This is a brief description of some of the files in this repository.
 - `justfile`: [`just`](https://just.systems/man/en/) configuration file for
   scripting project tasks.
 - `CHANGELOG.md`: Changelog file for tracking changes in the project.
+
+## Developing your data package
+
+The first steps for creating and developing your data package are kept in the
+`src/wp3-d-quest/build.py`. For more detailed instructions on developing data
+packages, check out the [Building Data
+Packages](https://data-pkg-guide.seedcase-project.org) guide.

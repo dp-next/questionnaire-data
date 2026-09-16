@@ -1,2 +1,2 @@
 # ruff: noqa
-# mypy: ignore-errors
+# type: ignore

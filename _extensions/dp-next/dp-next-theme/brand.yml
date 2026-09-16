@@ -1,0 +1,67 @@
+meta:
+  name:
+    full: DP-Next
+    short: dp-next
+  # TODO: Fill in description
+  # description: |
+  #  TEXT
+
+  link:
+    home: https://dp-next.github.io
+    github: https://github.com/dp-next
+
+# TODO: Decide on colour palette, see Seedcase Project theme for inspiration
+# color:
+#   palette:
+#     colour-name: HTML colour code
+#   primary: colour-name
+#   tertiary: colour-name
+#   light: light-grey # maybe?
+
+# TODO: Decide on fonts from https://fonts.bunny.net
+typography:
+  fonts:
+    - family: noto sans
+      source: "bunny"
+      # other weights are used for e.g., bold and table headers
+      weight: [300, 500, 600]
+    - family: poppins
+      source: "bunny"
+      weight: 400
+    - family: roboto mono
+      source: "bunny"
+  base:
+    family: noto sans
+    weight: 300
+  headings:
+    family: poppins
+    weight: 400
+  monospace: roboto mono
+
+defaults:
+  bootstrap:
+    defaults:
+      mermaid-edge-color: "#8B8B8B"
+    rules: |
+      .cell-output pre code {
+        white-space: pre-wrap;
+      }
+
+      .navbar {
+        border-bottom: var(--quarto-scss-export-gray-300) 1px solid;
+      }
+      svg {
+          display: block;
+          max-width: 100%;
+          margin: 0 auto;
+          height: auto !important;
+          width: auto !important;
+      }
+
+      li {
+          margin: 5px 0;
+      }
+
+      figcaption {
+          text-align: center;
+      }
