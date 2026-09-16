@@ -1,19 +1,16 @@
 project:
-  # TODO: Change to correct project type if using extensions
-  type: website
-
+  type: dp-next-theme
 
 website:
-  title: "TODO: Set the title of the website"
-  # TODO: Set the URL of the website
-  site-url: ""
-  repo-url: "https://github.com/seedcase-project/wp3-d-quest"
+  title: "DP-Next Questionnaire Data Package"
+  site-url: "https://dp-next.github.io/wp3-d-quest"
+  repo-url: "https://github.com/dp-next/wp3-d-quest"
   # TODO: Set favicon if relevant.
   # favicon: ""
   navbar:
     # TODO: Add logo and logo-alt
-    logo: ""
-    logo-alt: ""
+    # logo: ""
+    # logo-alt: ""
     pinned: true
     left:
       - text: "Overview"
@@ -22,20 +19,11 @@ website:
         href: docs/index.qmd
     tools:
       - icon: github
-        href: "https://github.com/seedcase-project/wp3-d-quest"
+        href: "https://github.com/dp-next/wp3-d-quest"
         aria-label: "GitHub icon: Source repository"
   sidebar:
     contents:
       - index.qmd
       - docs/index.qmd
 
-format:
-  # TODO: Use Quarto extension if available
-  html:
-    theme:
-      # TODO: Choose a different theme if desired
-      - litera
-      - custom-styles.scss
-    # TODO: Uncomment if using the goatcounter website visitor counter
-    # include-before-body:
-      # - "includes/site-counter.html"
+format: dp-next-theme-html

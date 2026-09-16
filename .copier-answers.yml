@@ -1,9 +1,9 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.24.1
+_commit: 0.27.1
 _src_path: gh:seedcase-project/template-data-package
 cc0_license: true
 copyright_year: '2026'
 for_seedcase: true
 github_repo: wp3-d-quest
-github_user: seedcase-project
-hosting_provider: netlify
+github_user: dp-next
+hosting_provider: gh-pages

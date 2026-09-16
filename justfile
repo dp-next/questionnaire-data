@@ -27,10 +27,11 @@ install-precommit:
   uvx pre-commit install
   uvx pre-commit autoupdate
   uvx pre-commit run --all-files
+
 # Update the Quarto seedcase-theme extension
 update-quarto-theme:
   # Add theme if it doesn't exist, update if it does
-  quarto update seedcase-project/seedcase-theme --no-prompt
+  quarto update dp-next/dp-next-theme --no-prompt
 
 # Install Python package dependencies
 install-deps:
@@ -54,7 +55,8 @@ check-spelling:
 # Check Python code for any errors that need manual attention
 check-python:
   uvx ruff check .
-  uv run mypy --pretty .
+  # Check types
+  uvx pyrefly check
 
 # Run basic security checks on the package
 check-security:
@@ -63,10 +65,7 @@ check-security:
 # Install lychee from https://lychee.cli.rs/guides/getting-started/
 # Check that URLs work
 check-urls:
-  lychee . \
-    --verbose \
-    --extensions md,qmd,py \
-    --exclude-path "_badges.qmd"
+  lychee . --config .config/lychee.toml
 
 # Check for unused code in the package and its tests
 check-unused:
@@ -84,7 +83,7 @@ build-datapackage:
 
 # Generate a Quarto include file with the contributors
 build-contributors:
-  sh ./tools/get-contributors.sh seedcase-project/wp3-d-quest > docs/includes/_contributors.qmd
+  sh ./tools/get-contributors.sh dp-next/wp3-d-quest > docs/includes/_contributors.qmd
 
 # Re-build the README file from the Quarto version
 build-readme:
