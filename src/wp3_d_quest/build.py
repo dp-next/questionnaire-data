@@ -50,11 +50,12 @@ def task_stage_metadata(
 
 @mark.metadata
 def task_create_datapackage_json(
+    package_properties: Annotated[
+        sp.SproutProperties,
+        PythonNode(value=metadata.package.package_properties, hash=_hash_properties),
+    ],
     datapackage_path: Annotated[Path, Product] = DATAPACKAGE_PATH,
     staging_metadata_path: Path = STAGING_METADATA_PATH,
-    package_properties: Annotated[
-        sp.SproutProperties, PythonNode(hash=_hash_properties)
-    ] = metadata.package.package_properties,
 ) -> None:
     """Create the datapackage.json file from the REDCap metadata."""
     staging_metadata = common.json.read(staging_metadata_path)
