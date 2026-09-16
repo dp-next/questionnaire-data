@@ -21,12 +21,21 @@ DATAPACKAGE_PATH = SRC.parent / "datapackage.json"
 @mark.metadata
 def task_download_metadata(
     raw_metadata_path: Annotated[Path, Product] = RAW_METADATA_PATH,
-    staging_metadata_path: Annotated[Path, Product] = STAGING_METADATA_PATH,
 ) -> None:
-    """Download the metadata to raw and staging."""
+    """Download the metadata to raw."""
     redcap_metadata = common.redcap.get_json("metadata")
     common.json.write(raw_metadata_path, redcap_metadata)
-    common.json.write(staging_metadata_path, redcap_metadata)
+
+
+@mark.metadata
+def task_stage_metadata(
+    staging_metadata_path: Annotated[Path, Product] = STAGING_METADATA_PATH,
+    raw_metadata_path: Path = RAW_METADATA_PATH,
+) -> None:
+    """Prepare the REDCap metadata for transformation into datapackage.json."""
+    raw_metadata = common.json.read(raw_metadata_path)
+    staged_metadata = metadata.redcap.stage_metadata(raw_metadata)
+    common.json.write(staging_metadata_path, staged_metadata)
 
 
 @mark.metadata

@@ -7,6 +7,45 @@ import seedcase_soil as so
 import seedcase_sprout as sp
 
 
+def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Prepare the REDCap metadata for transformation into datapackage.json."""
+    FORMS = ["registration", "dp_next"]
+
+    # Create a `participant_id` field for all forms
+    participant_id_field = so.keep(
+        redcap_fields, lambda field: field["field_name"] == "participant_id"
+    )[0]
+    participant_id_fields = so.fmap(
+        FORMS,
+        lambda form: {**participant_id_field, "form_name": form},
+    )
+
+    # Discard fields in forms that are not in the data package
+    # and `participant_id`, which will be added separately
+    redcap_fields = so.keep(
+        redcap_fields,
+        lambda field: (
+            field["form_name"] in FORMS and field["field_name"] != "participant_id"
+        ),
+    )
+
+    # Add `participant_id` for all forms
+    redcap_fields = participant_id_fields + redcap_fields
+
+    # Rename the `dp_next` form to `survey`
+    redcap_fields = so.fmap(
+        redcap_fields,
+        lambda field: {
+            **field,
+            "form_name": "survey"
+            if field["form_name"] == "dp_next"
+            else field["form_name"],
+        },
+    )
+
+    return redcap_fields
+
+
 def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProperties:
     """Create package properties from the REDCap metadata."""
     return sp.SproutProperties.from_default(
@@ -66,9 +105,11 @@ def create_package_properties(metadata: list[dict[str, Any]]) -> sp.SproutProper
 def _create_resource_properties(
     redcap_fields: list[dict[str, str]],
 ) -> list[sp.ResourceProperties]:
-    sorted_by_form = sorted(
-        _keep_relevant_fields(redcap_fields), key=lambda field: field["form_name"]
+    # Discard descriptive fields displayed for information only
+    content_fields = so.keep(
+        redcap_fields, lambda field: field["field_type"] != "descriptive"
     )
+    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])
     grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])
     return so.fmap(
         grouped_by_form,
@@ -76,30 +117,9 @@ def _create_resource_properties(
     )
 
 
-def _keep_relevant_fields(fields: list[dict[str, str]]) -> list[dict[str, str]]:
-    return so.keep(
-        fields,
-        lambda field: (
-            # Descriptive fields contain display information only
-            field["field_type"] != "descriptive"
-            # `participant_id` is added to each resource separately
-            and field["field_name"] != "participant_id"
-            and field["form_name"] in {"registration", "dp_next"}
-        ),
-    )
-
-
 def _form_to_resource(
     form_name: str, fields: list[dict[str, str]]
 ) -> sp.ResourceProperties:
-    participant_id_field = sp.FieldProperties(
-        name="participant_id",
-        title="The unique ID of the participant",
-        type="string",
-        description="The unique ID of the participant.",
-        constraints=sp.ConstraintsProperties(required=True),
-    )
-
     # Checkbox fields are processed separately
     non_checkbox_fields = so.keep(
         fields, lambda field: field["field_type"] != "checkbox"
@@ -134,7 +154,7 @@ def _form_to_resource(
         description=form_name,
         schema=sp.TableSchemaProperties(
             primary_key=["participant_id"],
-            fields=[participant_id_field] + form_fields + checkbox_fields,
+            fields=form_fields + checkbox_fields,
         ),
     )
 
