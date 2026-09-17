@@ -54,8 +54,8 @@ def create_resource_properties(
     content_fields = so.keep(
         redcap_fields, lambda field: field["field_type"] != "descriptive"
     )
-    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])
-    grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])
+    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])  # type: ignore
+    grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])  # type: ignore
     return so.fmap(
         grouped_by_form,
         lambda group: _form_to_resource(group[0], list(group[1])),
