@@ -6,9 +6,10 @@ pre_bump_hooks = [
   # Quiet the log output of git-cliff, it is noisy.
   "RUST_LOG='none' uvx git-cliff --tag {{version}}",
   "uvx --from panache-cli panache format CHANGELOG.md --quiet",
+  # The `datapackage.json` version comes from `pyproject.toml`.
   "uv version {{version}}",
-  # TODO: Add build data package command here.
-  "git commit CHANGELOG.md pyproject.toml uv.lock -m 'build: 🔖 update version to {{version}} [skip ci]'",
+  "just build-package {{version}}",
+  "git commit CHANGELOG.md pyproject.toml datapackage.json uv.lock -m 'build: 🔖 update version to {{version}} [skip ci]'",
 ]
 post_bump_hooks = ["git push", "git push --tags"]
 

@@ -3,33 +3,30 @@ name = "wp3-d-quest"
 version = "0.1.0"
 description = "Data package for the questionnaire from Work Package 3 of the DP-Next project."
 authors = [
-  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk"},
-  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com"},
+  { name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  { name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
   # TODO: Add the other authors (Kristina, Daniel, Jonas, Mikkel, etc)
 ]
 maintainers = [
-  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
-  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  { name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  { name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
 ]
 readme = "README.md"
 license = "MIT AND CC0-1.0"
 license-files = ["LICENSE-MIT.md", "LICENSE.md"]
 requires-python = ">=3.12"
 dependencies = [
-    "dotenv>=0.9.9",
-    "polars>=1.42.1",
-    "pytask>=0.6.0",
-    "requests>=2.34.2",
-    "seedcase-flower>=0.30.1",
-    "seedcase-soil>=0.16.0",
-    "seedcase-sprout>=0.51.0",
+  "dotenv>=0.9.9",
+  "polars>=1.42.1",
+  "pytask>=0.6.0",
+  "requests>=2.34.2",
+  "seedcase-flower>=0.30.1",
+  "seedcase-soil>=0.16.0",
+  "seedcase-sprout>=0.51.0",
 ]
 
 [dependency-groups]
-dev = [
-    "jupyter>=1.1.1",
-    "types-requests>=2.33.0.20260906",
-]
+dev = ["jupyter>=1.1.1", "types-requests>=2.33.0.20260906"]
 
 [project.urls]
 # TODO: Add URLs relevant to the project.
@@ -53,8 +50,9 @@ permissive-ignores = true
 [tool.pytask.ini_options]
 paths = ["src/wp3_d_quest"]
 task_files = ["task_*.py", "build.py"]
-markers = ["metadata"]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+# Setting up markers for phases of a build pipeline
+[tool.pytask.ini_options.markers]
+metadata = "Tasks to process and build the metadata for the data package."
+raw = "Tasks to download and save data (and maybe metadata) from different source locations into 'raw/'."
+staging = "Tasks to process data from 'raw/' to 'staging/'."
