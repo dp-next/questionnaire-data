@@ -9,14 +9,14 @@ import seedcase_sprout as sp
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-    FORMS = ["registration", "dp_next"]
+    forms = ["registration", "dp_next"]
 
     # Create a `participant_id` field for all forms
     participant_id_field = so.keep(
         redcap_fields, lambda field: field["field_name"] == "participant_id"
     )[0]
     participant_id_fields = so.fmap(
-        FORMS,
+        forms,
         lambda form: {**participant_id_field, "form_name": form},
     )
 
@@ -25,7 +25,7 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     redcap_fields = so.keep(
         redcap_fields,
         lambda field: (
-            field["form_name"] in FORMS and field["field_name"] != "participant_id"
+            field["form_name"] in forms and field["field_name"] != "participant_id"
         ),
     )
 

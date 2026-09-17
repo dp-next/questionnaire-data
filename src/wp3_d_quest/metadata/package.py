@@ -6,8 +6,11 @@ package_properties = sp.SproutProperties(
     description=(
         "This repository contains the source raw data and Python code to build the "
         "data package for the DP-Next work package 3 population questionnaire. "
-        "This package contains the data and metadata from a questionnaire sent out to residents in Denmark who had an HbA1c measurement taken in the last 24 months and who are between 40-50 years of age. The questionnaire study is part of the DP-Next project. "
-        "Only metadata and documentation are publicly accessible, personal data is kept within GenomeDK."
+        "This package contains the data and metadata from a questionnaire sent out to "
+        "residents in Denmark who had an HbA1c measurement taken in the last 24 months "
+        "and who are between 40-50 years of age. The questionnaire study is part of "
+        "the DP-Next project. Only metadata and documentation are publicly accessible, "
+        "personal data is kept within GenomeDK."
     ),
     homepage="https://dp-next.github.io/wp3-d-quest",
     contributors=[
