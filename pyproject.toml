@@ -48,6 +48,10 @@ python-interpreter-path = ".venv/bin/python"
 # Use inline `# type: ignore` comments, which can be useful.
 permissive-ignores = true
 
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
 [tool.pytask.ini_options]
 paths = ["src/wp3_d_quest"]
 task_files = ["task_*.py", "build.py"]
