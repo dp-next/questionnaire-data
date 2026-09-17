@@ -16,7 +16,7 @@ website:
       - text: "Overview"
         href: index.qmd
       - text: "Data Package"
-        href: docs/index.qmd
+        href: docs/metadata/index.qmd
     tools:
       - icon: github
         href: "https://github.com/dp-next/wp3-d-quest"
@@ -24,6 +24,6 @@ website:
   sidebar:
     contents:
       - index.qmd
-      - docs/index.qmd
+      - docs/metadata/index.qmd
 
 format: dp-next-theme-html
