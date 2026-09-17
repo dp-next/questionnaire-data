@@ -52,6 +52,8 @@ def task_stage_metadata(
 def task_create_datapackage_json(
     package_properties: Annotated[
         sp.SproutProperties,
+        # `SproutProperties` is a mutable dataclass, so it has no `__hash__`;
+        # `_hash_properties` gives Pytask a stable content hash to detect changes.
         PythonNode(value=metadata.package.package_properties, hash=_hash_properties),
     ],
     datapackage_path: Annotated[Path, Product] = DATAPACKAGE_PATH,
