@@ -84,14 +84,22 @@
     "href": "docs/metadata/index.html",
     "title": "wp3-d-quest: Questionnaire data package for Work Package 3 of the DP-Next project",
     "section": "",
-    "text": "Licenses:\n\nCC0 1.0 Universal\n\nVersion: 0.1.0\nThis repository contains the source raw data and Python code to build the data package for the DP-Next work package 3 population questionnaire. Only metadata and documentation are publicly accessible.\n\n\n\nKristiane Beicher (kris.beicher@clin.au.dk): DataManager, DataCurator, ContactPerson\nSigne Kirk Brødbæk (signekb@clin.au.dk): DataManager, DataCurator\nLuke W Johnston (lwjohnst@clin.au.dk): DataManager, DataCurator\nMarton Vago (mvago@clin.au.dk): DataManager, DataCurator"
+    "text": "Licenses:\n\nCC0 1.0 Universal\n\nVersion: 0.1.0\nThis repository contains the source raw data and Python code to build the data package for the DP-Next work package 3 population questionnaire. Only metadata and documentation are publicly accessible.\n\n\n\nKristiane Beicher (kris.beicher@clin.au.dk): DataManager, DataCurator, ContactPerson\nSigne Kirk Brødbæk (signekb@clin.au.dk): DataManager, DataCurator\nLuke W Johnston (lwjohnst@clin.au.dk): DataManager, DataCurator\nMarton Vago (mvago@clin.au.dk): DataManager, DataCurator",
+    "crumbs": [
+      "Overview",
+      "`wp3-d-quest`: Questionnaire data package for Work Package 3 of the DP-Next project"
+    ]
   },
   {
     "objectID": "docs/metadata/index.html#contributors",
     "href": "docs/metadata/index.html#contributors",
     "title": "wp3-d-quest: Questionnaire data package for Work Package 3 of the DP-Next project",
     "section": "",
-    "text": "Kristiane Beicher (kris.beicher@clin.au.dk): DataManager, DataCurator, ContactPerson\nSigne Kirk Brødbæk (signekb@clin.au.dk): DataManager, DataCurator\nLuke W Johnston (lwjohnst@clin.au.dk): DataManager, DataCurator\nMarton Vago (mvago@clin.au.dk): DataManager, DataCurator"
+    "text": "Kristiane Beicher (kris.beicher@clin.au.dk): DataManager, DataCurator, ContactPerson\nSigne Kirk Brødbæk (signekb@clin.au.dk): DataManager, DataCurator\nLuke W Johnston (lwjohnst@clin.au.dk): DataManager, DataCurator\nMarton Vago (mvago@clin.au.dk): DataManager, DataCurator",
+    "crumbs": [
+      "Overview",
+      "`wp3-d-quest`: Questionnaire data package for Work Package 3 of the DP-Next project"
+    ]
   },
   {
     "objectID": "docs/metadata/resources/survey.html",
