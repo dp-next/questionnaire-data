@@ -15,6 +15,8 @@ website:
     left:
       - text: "Overview"
         href: index.qmd
+      - text: "Protocol"
+        href: docs/protocol.qmd
       - text: "Data Package"
         href: docs/metadata/index.qmd
     tools:

@@ -1,0 +1,113 @@
+---
+title: "Protocol"
+---
+
+<!-- TODO: Add appropriate citations and bib file -->
+
+<!-- TODO: Include a bit more background information -->
+
+## Aims
+
+<!-- TODO: Add aims -->
+
+## Inclusion criteria
+
+- Between 40 to 50 years of age.
+- Have had an HbA1c measurement within the last 24 months.
+- Do not have diabetes based on an HbA1c of ≥48 mmol/mol.
+- Are not currently pregnant.
+- Have not had systemic glucocorticoid therapy within the last 24 months.
+
+<!-- TODO: What does `test-specific` mean? -->
+
+<!-- - test-specific contraindications. -->
+
+## Estimated population size
+
+As of March 2026 there are 6,029,607 people living in Denmark. From that
+population, there are 712,293 people who are between 40--50 years of age. Of
+that age group, we estimate that 288,168 people have had a HbA1c measurement
+within 24 months based on numbers from 2024. To exclude potential diabetes
+cases, we estimated that approximately 7,492 would have diabetes based on a
+Danish prevalence of 2.6% in 2017. From this population without diabetes, we
+estimate about 268,626 would have normal glycemia based on an HbA1c \<42
+mmol/mol and and about 12,000 who would be considered to be prediabetic based on
+an HbA1c 42--47 mmol/mol. The flow from the total Danish population to the
+eligible population is shown in @fig-consort-diagram.
+
+## Estimate response rate
+
+<!-- TODO: confirm these numbers -->
+
+We estimated a response rate of between 30-50% for both the normal glycemia and
+prediabetes groups. The estimated response rate is based on a meta-analysis from
+2022 showing an average response rate of 44.1% for online surveys. The study
+suggests that sending surveys to a clearly defined population such as ours
+positively affects response rates. A similar response rate of 43% was observed
+in the recent "Hvordan har du det?" survey from 2025, which is a large national
+questionnaire on health in Denmark. To keep estimates on the lower end, we
+anticipate at least a response rate of 40% for the participants with normal
+glycemia. We estimate that people with prediabetes will have a lower response
+rate of about 30%, as those with prediabetes tend to have lower socioeconomic
+status, who are also less likely to respond to surveys.
+
+Based on this estimated response rate, we will randomly sample 80,000
+individuals from the normal glycemia group in order to obtain at least 30,000
+participants who completed the survey. We will invite all approximately 12,000
+people with prediabetes to reach approximately 3,000 participants. All together,
+we estimate a total of 33,000 people who completed the survey.
+
+<!-- TODO: Include link to clinical protocol -->
+
+In the clinical cohort we aim to recruit 1,000 people with prediabetes. We aim
+to recruit this sample from those who have prediabetes, who completed the
+questionnaire, and who answered "yes, you may contact me".
+
+```{mermaid}
+%%| label: fig-consort-diagram
+%%| fig-cap: >-
+%%|    CONSORT diagram of the estimated sample population based on inclusion
+%%|    criteria and estimated response rates.
+
+flowchart TB
+  subgraph normal["Normal glycemia"]
+    ng["Normal glycemia<br>N ≈ 268,626"]
+    ng1["Random sample<br>N = 80,000"]
+    ng2["Responding (30%)<br>N ≈ 30,000"]
+    ng3["Non-responding (70%)<br>N ≈ 50,000"]
+  end
+
+  subgraph prediabetes["Prediabetes"]
+    pd["Prediabetes<br>N ≈ 12,000"]
+    pd1["All invited"]
+    pd2["Responding<br>N ≈ 3,000"]
+    pd3["Non-responding<br>N ≈ 9,000"]
+  end
+
+  subgraph exclusions["Exclusions"]
+    d["Diabetes and<br>other exclusions<br>N ≈ 7,492 <br>"]
+  end
+
+  A["Population in Denmark<br>N = 6,029,607"] -->
+    B["Aged 40-50 years<br>N = 712,293"] -->
+    C["HbA1c measured within 24 months<br>N = 288,168"]
+
+  ng -->
+    ng1 -->
+    ng2 & ng3
+
+  pd -->
+    pd1 -->
+    pd2 & pd3
+
+  C -- Exclusions --> exclusions
+  C -- "HbA1c \> 42 mmol/mol" --> ng
+  C -- "HbA1c 42-47 mmol/mol" --> pd
+```
+
+## REDCap questionnaire creation
+
+We used [REDCap](https://project-redcap.org) to create the survey and to store
+the completed responses. See the full [REDCap data
+dictionary](redcap-dictionary.csv) for the exact questions asked and the forms
+created.
