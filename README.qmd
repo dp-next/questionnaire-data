@@ -1,7 +1,5 @@
 ---
 format: gfm
-execute:
-  echo: false
 metadata-files:
   - _metadata.yml
 ---
@@ -50,18 +48,6 @@ in this project is licensed under the [CC0 License](LICENSE.md).
 
 For a list of changes, see our [changelog](CHANGELOG.md) page.
 
-## Citing
+## Citing us
 
-If you use this package in your work, please cite it as follows:
-
-```{python}
-#| output: asis
-
-!uvx --quiet cffconvert --format apalike
-```
-
-Or as a BibTeX entry:
-
-```{python}
-!uvx --quiet cffconvert --format bibtex
-```
+{{< include /docs/includes/_cite-us.md >}}

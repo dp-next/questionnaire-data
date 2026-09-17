@@ -1,0 +1,19 @@
+---
+format: gfm
+execute:
+  echo: false
+---
+
+If you use this package in your work, please cite it as follows:
+
+```{python}
+#| output: asis
+
+!uvx --quiet cffconvert -i ../../CITATION.cff --format apalike
+```
+
+Or as a BibTeX entry:
+
+```{python}
+!uvx --quiet cffconvert -i ../../CITATION.cff --format bibtex
+```
