@@ -1,51 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/CHANGELOG.html</loc>
-    <lastmod>2026-09-17T10:28:26.189Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/index.html</loc>
-    <lastmod>2026-09-17T10:37:05.536Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/docs/metadata/resources/survey.html</loc>
-    <lastmod>2026-09-17T10:33:03.685Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/docs/metadata/index.html</loc>
-    <lastmod>2026-09-17T10:33:03.684Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/docs/population-description/Flowchart/Flowchart.html</loc>
-    <lastmod>2026-09-17T10:33:00.212Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/CONTRIBUTING.html</loc>
-    <lastmod>2026-09-17T10:37:05.526Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/CODE_OF_CONDUCT.html</loc>
-    <lastmod>2026-09-17T10:37:05.526Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/docs/index.html</loc>
-    <lastmod>2026-09-17T10:32:37.007Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/docs/population-description/Flowchart/HbA1cDK.html</loc>
-    <lastmod>2026-09-17T10:26:50.557Z</lastmod>
+    <loc>https://dp-next.github.io/wp3-d-quest/LICENSE.html</loc>
+    <lastmod>2026-09-17T10:45:01.402Z</lastmod>
   </url>
   <url>
     <loc>https://dp-next.github.io/wp3-d-quest/docs/metadata/resources/registration.html</loc>
-    <lastmod>2026-09-17T10:33:03.684Z</lastmod>
+    <lastmod>2026-09-17T10:45:20.648Z</lastmod>
   </url>
   <url>
-    <loc>https://dp-next.github.io/wp3-d-quest/LICENSE.html</loc>
-    <lastmod>2026-09-17T10:37:05.526Z</lastmod>
+    <loc>https://dp-next.github.io/wp3-d-quest/CONTRIBUTING.html</loc>
+    <lastmod>2026-09-17T10:45:01.402Z</lastmod>
   </url>
   <url>
     <loc>https://dp-next.github.io/wp3-d-quest/LICENSE-MIT.html</loc>
-    <lastmod>2026-09-17T10:37:05.526Z</lastmod>
+    <lastmod>2026-09-17T10:45:01.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dp-next.github.io/wp3-d-quest/index.html</loc>
+    <lastmod>2026-09-17T10:45:01.413Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dp-next.github.io/wp3-d-quest/CHANGELOG.html</loc>
+    <lastmod>2026-09-17T10:45:01.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dp-next.github.io/wp3-d-quest/CODE_OF_CONDUCT.html</loc>
+    <lastmod>2026-09-17T10:45:01.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dp-next.github.io/wp3-d-quest/docs/metadata/index.html</loc>
+    <lastmod>2026-09-17T10:45:20.648Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dp-next.github.io/wp3-d-quest/docs/metadata/resources/survey.html</loc>
+    <lastmod>2026-09-17T10:45:20.649Z</lastmod>
   </url>
 </urlset>
