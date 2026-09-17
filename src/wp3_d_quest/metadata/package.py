@@ -4,8 +4,6 @@ package_properties = sp.SproutProperties(
     name="wp3-d-quest",
     title="Questionnaire data package for Work Package 3 of the DP-Next project",
     description=(
-        "This repository contains the source raw data and Python code to build the "
-        "data package for the DP-Next work package 3 population questionnaire. "
         "This package contains the data and metadata from a questionnaire sent out to "
         "residents in Denmark who had an HbA1c measurement taken in the last 24 months "
         "and who are between 40-50 years of age. The questionnaire study is part of "
