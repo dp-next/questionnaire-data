@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="survey">
+
+<title>survey – DP-Next Questionnaire Data Package</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6a537fba8eaf0f87500e2e8a30aa56d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b540b6f04bd439ed7a1e576ece92db15.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6a537fba8eaf0f87500e2e8a30aa56d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-0bb21cca1784ad8ec91a6c98dae12c15.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-0bb21cca1784ad8ec91a6c98dae12c15.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-0bb21cca1784ad8ec91a6c98dae12c15.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">DP-Next Questionnaire Data Package</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../../index.html" aria-current="page"> 
+<span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../docs/index.html"> 
+<span class="menu-text">Data Package</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/dp-next/wp3-d-quest" title="" class="quarto-navigation-tool px-1" aria-label="GitHub icon: Source repository"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">survey</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Flowchart</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">survey</h1>
+<p class="subtitle lead"><code>survey</code></p>
+</div>
+
+<div>
+  <div class="description">
+    survey
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!--
+NEVER EDIT MANUALLY. This documentation was auto-generated by `seedcase-flower`.
+If you want to edit the content, please make changes to the `datapackage.json` file.
+-->
+<ul>
+<li>Path: <code>resources/survey/data.parquet</code></li>
+<li>Primary key: (<code>participant_id</code>)</li>
+</ul>
+<table class="caption-top table">
+<caption>Fields in the <code>survey</code> resource.</caption>
+<colgroup>
+<col style="width: 3%">
+<col style="width: 9%">
+<col style="width: 1%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Title</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>participant_id</code></td>
+<td>participant_id</td>
+<td>string</td>
+<td>Every participant will get a participant ID</td>
+</tr>
+<tr class="even">
+<td><code>background_start</code></td>
+<td>background_start</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>gender</code></td>
+<td>gender</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Mand</code>, <code>Kvinde</code></td>
+</tr>
+<tr class="even">
+<td><code>height</code></td>
+<td>height</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>weight</code></td>
+<td>weight</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>weight_2_female</code></td>
+<td>weight_2_female</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>blood_preasure</code></td>
+<td>blood_preasure</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>cholesterol</code></td>
+<td>cholesterol</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>weight_20yo</code></td>
+<td>weight_20yo</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>highest_weight</code></td>
+<td>highest_weight</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>highest_weight_2</code></td>
+<td>highest_weight_2</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>time_highest_weight</code></td>
+<td>time_highest_weight</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>time_highest_weight_2</code></td>
+<td>time_highest_weight_2</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>menstruation</code></td>
+<td>menstruation</td>
+<td>string</td>
+<td>Information on whether the participant is still experiencing menstruation.<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>menopause</code></td>
+<td>menopause</td>
+<td>string</td>
+<td>Information on whether the participant has entered menopause.<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved det ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>civilstatus</code></td>
+<td>civilstatus</td>
+<td>string</td>
+<td>The participants civil status<br>Allowed values: <code>Gift/Samlevende</code>, <code>Partner (ikke sammenlevende)</code>, <code>Enlig</code>, <code>Fraskilt</code>, <code>Enke/enkemand</code>, <code>Ved ikke/vil ikke oplyse</code></td>
+</tr>
+<tr class="odd">
+<td><code>children_home</code></td>
+<td>children_home</td>
+<td>string</td>
+<td>Information on whether the participant has any children living at home.<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>smoking</code></td>
+<td>smoking</td>
+<td>string</td>
+<td>Information on the participant’s smoking status<br>Allowed values: <code>Ja, hver dag</code>, <code>Ja, mindst en gang om ugen</code>, <code>Ja, men sjældnere end hver uge</code>, <code>Nej, jeg er stoppet inden for de seneste 12 måneder</code>, <code>Nej, jeg er stoppet for 1-5 år siden</code>, <code>Nej, jeg er stoppet for mere end 5 år siden</code>, <code>Nej, jeg har aldrig røget</code></td>
+</tr>
+<tr class="odd">
+<td><code>nikotine</code></td>
+<td>nikotine</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, hver dag</code>, <code>Ja, mindst en gang om ugen</code>, <code>Ja, men sjældnere end hver uge</code>, <code>Nej, jeg er stoppet inden for de seneste 12 måneder</code>, <code>Nej, jeg er stoppet for 1-5 år siden</code>, <code>Nej, jeg er stoppet for mere end 5 år siden</code>, <code>Nej, jeg har aldrig brugt nikotinpræparater</code></td>
+</tr>
+<tr class="even">
+<td><code>background_end</code></td>
+<td>background_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>compl_time_background</code></td>
+<td>compl_time_background</td>
+<td>string</td>
+<td>Derived using the formula: datediff([background_start],[background_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>vas_physical</code></td>
+<td>vas_physical</td>
+<td>integer</td>
+<td>Question: </td>
+</tr>
+<tr class="odd">
+<td><code>vas_mentalhealth</code></td>
+<td>vas_mentalhealth</td>
+<td>integer</td>
+<td>Question: </td>
+</tr>
+<tr class="even">
+<td><code>qol_vas</code></td>
+<td>qol_vas</td>
+<td>integer</td>
+<td>Question: </td>
+</tr>
+<tr class="odd">
+<td><code>sf_health_overall</code></td>
+<td>sf_health_overall</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Fremragende</code>, <code>Vældig godt</code>, <code>Godt</code>, <code>Mindre godt</code>, <code>Dårligt</code></td>
+</tr>
+<tr class="even">
+<td><code>sf_activities</code></td>
+<td>sf_activities</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, meget begrænset</code>, <code>Ja, lidt begrænset</code>, <code>Nej, slet ikke begrænset</code></td>
+</tr>
+<tr class="odd">
+<td><code>sf_activities_1</code></td>
+<td>sf_activities_1</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, meget begrænset</code>, <code>Ja, lidt begrænset</code>, <code>Nej, slet ikke begrænset</code></td>
+</tr>
+<tr class="even">
+<td><code>sf_daily_activities</code></td>
+<td>sf_daily_activities</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>sf_daily_activities_limit</code></td>
+<td>sf_daily_activities_limit</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>sf_activities_mental</code></td>
+<td>sf_activities_mental</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>sf_activities_careful</code></td>
+<td>sf_activities_careful</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>sf_physical_pain</code></td>
+<td>sf_physical_pain</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Slet ikke</code>, <code>Lidt</code>, <code>Noget</code>, <code>En hel del</code>, <code>Virkelig meget</code></td>
+</tr>
+<tr class="odd">
+<td><code>sf_mental_relaxed</code></td>
+<td>sf_mental_relaxed</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Hele tiden</code>, <code>Det meste af tiden</code>, <code>En hel del af tiden</code>, <code>Noget af tiden</code>, <code>Lidt af tiden</code>, <code>På Intet tidspunkt</code></td>
+</tr>
+<tr class="even">
+<td><code>sf_mental_energy</code></td>
+<td>sf_mental_energy</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Hele tiden</code>, <code>Det meste af tiden</code>, <code>En hel del af tiden</code>, <code>Noget af tiden</code>, <code>Lidt af tiden</code>, <code>På Intet tidspunkt</code></td>
+</tr>
+<tr class="odd">
+<td><code>sf_mental_sad</code></td>
+<td>sf_mental_sad</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Hele tiden</code>, <code>Det meste af tiden</code>, <code>En hel del af tiden</code>, <code>Noget af tiden</code>, <code>Lidt af tiden</code>, <code>På Intet tidspunkt</code></td>
+</tr>
+<tr class="even">
+<td><code>sf_mental_social</code></td>
+<td>sf_mental_social</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Hele tiden</code>, <code>Det meste af tiden</code>, <code>Noget af tiden</code>, <code>Lidt af tiden</code>, <code>På Intet tidspunkt</code></td>
+</tr>
+<tr class="odd">
+<td><code>sf12v2_end</code></td>
+<td>sf12v2_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>sf12v2_complt_time</code></td>
+<td>sf12v2_complt_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([background_end],[sf12v2_end],“s”,true)</td>
+</tr>
+<tr class="odd">
+<td><code>obesity</code></td>
+<td>obesity</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Undervægtig</code>, <code>Normalvægtig</code>, <code>Overvægtig</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>body_number</code></td>
+<td>body_number</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+</tr>
+<tr class="odd">
+<td><code>ses_dk_slider</code></td>
+<td>ses_dk_slider</td>
+<td>integer</td>
+<td>the participant’s self-perceived SES Question: </td>
+</tr>
+<tr class="even">
+<td><code>ses_lokal_slider</code></td>
+<td>ses_lokal_slider</td>
+<td>integer</td>
+<td>the participant’s self-perceived SES comparet to the local community Question: </td>
+</tr>
+<tr class="odd">
+<td><code>self_rate_end</code></td>
+<td>self_rate_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>compl_time_self_rate</code></td>
+<td>compl_time_self_rate</td>
+<td>string</td>
+<td>Derived using the formula: datediff([sf12v2_end],[self_rate_end],“s”,true)</td>
+</tr>
+<tr class="odd">
+<td><code>alc_12mo</code></td>
+<td>alc_12mo</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>alc_days_per_week</code></td>
+<td>alc_days_per_week</td>
+<td>string</td>
+<td>The number of days per week the participant usually consumes alcohol.<br>Allowed values: <code>Mindre end en dag om ugen</code>, <code>1 dag om ugen</code>, <code>2 dage om ugen</code>, <code>3 dage om ugen</code>, <code>4 dage om ugen</code>, <code>5 dage om ugen</code>, <code>6 dage om ugen</code>, <code>7 dage om ugen</code></td>
+</tr>
+<tr class="odd">
+<td><code>alc_mon</code></td>
+<td>alc_mon</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>alc_tue</code></td>
+<td>alc_tue</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>alc_wed</code></td>
+<td>alc_wed</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>alc_thu</code></td>
+<td>alc_thu</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>alc_fri</code></td>
+<td>alc_fri</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>alc_sat</code></td>
+<td>alc_sat</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>alc_sun</code></td>
+<td>alc_sun</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>alc_freq_per_occa</code></td>
+<td>alc_freq_per_occa</td>
+<td>string</td>
+<td>Information on how often the participant consumes five or more drinks on a single occasion.<br>Allowed values: <code>Næsten dagligt eller dagligt</code>, <code>Ugentligt</code>, <code>Månedligt</code>, <code>Sjældent</code>, <code>Aldrig</code></td>
+</tr>
+<tr class="odd">
+<td><code>alc_want_lower</code></td>
+<td>alc_want_lower</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>ja</code>, <code>nej</code>, <code>ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>alc_bad_health</code></td>
+<td>alc_bad_health</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, meget</code>, <code>Ja, lidt</code>, <code>Nej</code>, <code>ved ikke</code></td>
+</tr>
+<tr class="odd">
+<td><code>alc_prev_daily_use</code></td>
+<td>alc_prev_daily_use</td>
+<td>string</td>
+<td>Information on whether the participant has previously had a daily alcohol consumption.<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>alc_per_week_earlier</code></td>
+<td>alc_per_week_earlier</td>
+<td>number</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>alc_period_start</code></td>
+<td>alc_period_start</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>alc_period_start_2</code></td>
+<td>alc_period_start_2</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>alc_end</code></td>
+<td>alc_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>alc_compl_time</code></td>
+<td>alc_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([self_rate_end],[alc_end],“s”,true)</td>
+</tr>
+<tr class="odd">
+<td><code>lonely_single</code></td>
+<td>lonely_single</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Nej, det passer ikke</code>, <code>Ja, det passer, men jeg lider ikke under det</code>, <code>Ja, det passer, og jeg lider lidt under det</code>, <code>Ja, det passer, og jeg lider moderat under det</code>, <code>Ja, det passer, og jeg lider meget under det</code></td>
+</tr>
+<tr class="even">
+<td><code>social_support</code></td>
+<td>social_support</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>contact_helpwithprob</code></td>
+<td>contact_helpwithprob</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Dagligt eller næsten dagligt</code>, <code>3-4 gange om ugen</code>, <code>1-2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældnere end 1 gang om måneden</code>, <code>Aldrig</code></td>
+</tr>
+<tr class="even">
+<td><code>social_end</code></td>
+<td>social_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>social_compl_time</code></td>
+<td>social_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([alc_end],[social_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>delphi_parents_known</code></td>
+<td>delphi_parents_known</td>
+<td>string</td>
+<td>number of known biological parents<br>Allowed values: <code>Ingen</code>, <code>Min biologiske far</code>, <code>Min biologiske mor</code>, <code>Både min biologiske far og mor</code></td>
+</tr>
+<tr class="odd">
+<td><code>father_alcohol_substance</code></td>
+<td>father_alcohol_substance</td>
+<td>string</td>
+<td>did the participant’s father drink or use drugs<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>father_overweight</code></td>
+<td>father_overweight</td>
+<td>string</td>
+<td>was the participant’s father overweight<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="odd">
+<td><code>body_number_father</code></td>
+<td>body_number_father</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+</tr>
+<tr class="even">
+<td><code>father_diabetes</code></td>
+<td>father_diabetes</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="odd">
+<td><code>delphi_father_dmtype</code></td>
+<td>delphi_father_dmtype</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Type-1 diabetes</code>, <code>Type-2 diabetes</code>, <code>Ved ikke hvilken type</code></td>
+</tr>
+<tr class="even">
+<td><code>father_smoke</code></td>
+<td>father_smoke</td>
+<td>string</td>
+<td>did the participant’s father smoke<br>Allowed values: <code>Ja</code>, <code>Ja, men han er stoppet</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="odd">
+<td><code>delphi_father_smoke_stoped</code></td>
+<td>delphi_father_smoke_stoped</td>
+<td>number</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>mother_alcohol_substance</code></td>
+<td>mother_alcohol_substance</td>
+<td>string</td>
+<td>did the participant’s mother drink or use drugs<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="odd">
+<td><code>mother_overweight</code></td>
+<td>mother_overweight</td>
+<td>string</td>
+<td>was the participant’s mother overweight<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>body_number_mother</code></td>
+<td>body_number_mother</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>, <code>9</code></td>
+</tr>
+<tr class="odd">
+<td><code>mother_diabetes</code></td>
+<td>mother_diabetes</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>delphi_father_dmtype_2</code></td>
+<td>delphi_father_dmtype_2</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Type-1 diabetes</code>, <code>Type-2 diabetes</code>, <code>Ved ikke hvilken type</code></td>
+</tr>
+<tr class="odd">
+<td><code>mother_smoke</code></td>
+<td>mother_smoke</td>
+<td>string</td>
+<td>did the participant’s mother smoke<br>Allowed values: <code>Ja</code>, <code>Ja, men hun er stoppet</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>mother_smoke_years</code></td>
+<td>mother_smoke_years</td>
+<td>number</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>family_end</code></td>
+<td>family_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>family_compl_time</code></td>
+<td>family_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([social_end],[family_end],“s”,true)</td>
+</tr>
+<tr class="odd">
+<td><code>dass_tense</code></td>
+<td>dass_tense</td>
+<td>string</td>
+<td>it is hard for the participant to relax<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_dry_mouth</code></td>
+<td>dass_dry_mouth</td>
+<td>string</td>
+<td>the participant’s experiences dry mouth<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_pos_feelings</code></td>
+<td>dass_pos_feelings</td>
+<td>string</td>
+<td>The participant doesn’t experience positive feelings<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_diffi_breathing</code></td>
+<td>dass_diffi_breathing</td>
+<td>string</td>
+<td>the participant’s experiences respiratory problems<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_lack_motiv</code></td>
+<td>dass_lack_motiv</td>
+<td>string</td>
+<td>the participant was unable to take initiative<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_overreact</code></td>
+<td>dass_overreact</td>
+<td>string</td>
+<td>the participant overreacts<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_shiver_hands</code></td>
+<td>dass_shiver_hands</td>
+<td>string</td>
+<td>the participant was shaking<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_phys_en</code></td>
+<td>dass_phys_en</td>
+<td>string</td>
+<td>the participant used a lot of energy<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_embarras</code></td>
+<td>dass_embarras</td>
+<td>string</td>
+<td>The participant was afraid of panicking and embarrassing him-/herself<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_excitement</code></td>
+<td>dass_excitement</td>
+<td>string</td>
+<td>het participant didn’t have anything to look forward to<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_uneasy</code></td>
+<td>dass_uneasy</td>
+<td>string</td>
+<td>the participant felt restless<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_restless</code></td>
+<td>dass_restless</td>
+<td>string</td>
+<td>the participant couldn’t relax<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_discouraged</code></td>
+<td>dass_discouraged</td>
+<td>string</td>
+<td>the participant felt lost<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_interrupt</code></td>
+<td>dass_interrupt</td>
+<td>string</td>
+<td>the participant couldn’t tolerate interruptions<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_panic</code></td>
+<td>dass_panic</td>
+<td>string</td>
+<td>the participant felt like panicking<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_lack_enthus</code></td>
+<td>dass_lack_enthus</td>
+<td>string</td>
+<td>the participant didn’t feel enthusiastic about anything<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_worthless</code></td>
+<td>dass_worthless</td>
+<td>string</td>
+<td>het participant felt worthless<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_sensitive</code></td>
+<td>dass_sensitive</td>
+<td>string</td>
+<td>The participant felt sensitive<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_heart_rhythm</code></td>
+<td>dass_heart_rhythm</td>
+<td>string</td>
+<td>the participant was aware of his/her heart rhythm<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_scared</code></td>
+<td>dass_scared</td>
+<td>string</td>
+<td>the participant felt scared for no reason<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="odd">
+<td><code>dass_meaningless</code></td>
+<td>dass_meaningless</td>
+<td>string</td>
+<td>the participant felt life was hopeless<br>Allowed values: <code>Passede ikke på mig</code>, <code>Passede en smule eller noget af tiden på mig</code>, <code>Passede I betydelig grad eller en stor del af tiden på mig</code>, <code>Passede rigtigt meget eller det meste af tiden på mig</code></td>
+</tr>
+<tr class="even">
+<td><code>dass_end</code></td>
+<td>dass_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>dass21_compl_time</code></td>
+<td>dass21_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([family_end],[dass_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>pss_upset</code></td>
+<td>pss_upset</td>
+<td>string</td>
+<td>how often the participant felt frustrated the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="odd">
+<td><code>pss_lack_control</code></td>
+<td>pss_lack_control</td>
+<td>string</td>
+<td>how often the participant felt lack of control the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="even">
+<td><code>pss_nervous</code></td>
+<td>pss_nervous</td>
+<td>string</td>
+<td>how often the participant felt nervous the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="odd">
+<td><code>pss_handle_probs</code></td>
+<td>pss_handle_probs</td>
+<td>string</td>
+<td>how often the participant felt confident the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="even">
+<td><code>pss_as_plan</code></td>
+<td>pss_as_plan</td>
+<td>string</td>
+<td>how often the participant felt that things went as planned the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="odd">
+<td><code>pss_resilience</code></td>
+<td>pss_resilience</td>
+<td>string</td>
+<td>how often the participant felt lack of capacity the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="even">
+<td><code>pss_handle_irri</code></td>
+<td>pss_handle_irri</td>
+<td>string</td>
+<td>how often the participant felt able to manage every-day-life the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="odd">
+<td><code>pss_control</code></td>
+<td>pss_control</td>
+<td>string</td>
+<td>how often the participant felt in control the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="even">
+<td><code>pss_lack_influ</code></td>
+<td>pss_lack_influ</td>
+<td>string</td>
+<td>how often the participant felt angry due to lack of control the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="odd">
+<td><code>pss_cumul_prob</code></td>
+<td>pss_cumul_prob</td>
+<td>string</td>
+<td>how often did the participant felt overwhelmed by tasks in the past month<br>Allowed values: <code>Aldrig</code>, <code>Næsten aldrig</code>, <code>Ind imellem</code>, <code>Ret ofte</code>, <code>Meget ofte</code></td>
+</tr>
+<tr class="even">
+<td><code>pss_end</code></td>
+<td>pss_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>pss_compl_time</code></td>
+<td>pss_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([dass_end],[pss_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>berlin_snor</code></td>
+<td>berlin_snor</td>
+<td>string</td>
+<td>Does the participant snor<br>Allowed values: <code>Ja</code>, <code>Nej</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="odd">
+<td><code>berlin_snor_volume</code></td>
+<td>berlin_snor_volume</td>
+<td>string</td>
+<td>the volume of the participant’s snor<br>Allowed values: <code>Lidt højere end din vejrtrækning</code>, <code>Så højt som tale</code>, <code>Højere end tale</code></td>
+</tr>
+<tr class="even">
+<td><code>berlin_snor_freq</code></td>
+<td>berlin_snor_freq</td>
+<td>string</td>
+<td>how often does the participant snor<br>Allowed values: <code>Næsten hver dag</code>, <code>3-4 gange om ugen</code>, <code>1-2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældent eller aldrig</code></td>
+</tr>
+<tr class="odd">
+<td><code>berlin_bother</code></td>
+<td>berlin_bother</td>
+<td>string</td>
+<td>did the snor ever disturb the participant<br>Allowed values: <code>Næsten hver dag</code>, <code>3-4 gange om ugen</code>, <code>1-2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældent eller aldrig</code></td>
+</tr>
+<tr class="even">
+<td><code>berlin_breath</code></td>
+<td>berlin_breath</td>
+<td>string</td>
+<td>Does the participant stop breathing during sleep<br>Allowed values: <code>Næsten hver dag</code>, <code>3-4 gange om ugen</code>, <code>1-2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældent eller aldrig</code></td>
+</tr>
+<tr class="odd">
+<td><code>berlin_tired</code></td>
+<td>berlin_tired</td>
+<td>string</td>
+<td>how often does the participant feel tired<br>Allowed values: <code>Næsten hver dag</code>, <code>3-4 gange om ugen</code>, <code>1-2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældent eller aldrig</code></td>
+</tr>
+<tr class="even">
+<td><code>berlin_tired_daytime</code></td>
+<td>berlin_tired_daytime</td>
+<td>string</td>
+<td>how often does the participant feel tired during the day<br>Allowed values: <code>Næsten hver dag</code>, <code>3-4 gange om ugen</code>, <code>1-2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældent eller aldrig</code></td>
+</tr>
+<tr class="odd">
+<td><code>berlin_sleep_driving</code></td>
+<td>berlin_sleep_driving</td>
+<td>string</td>
+<td>did the participant ever fall asleep while driving<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>berlin_sleep_driv_freq</code></td>
+<td>berlin_sleep_driv_freq</td>
+<td>string</td>
+<td>does sleeping while driving happen often<br>Allowed values: <code>Næsten hver dag</code>, <code>3-4 gange om ugen</code>, <code>1- 2 gange om ugen</code>, <code>1-2 gange om måneden</code>, <code>Sjældent eller aldrig</code></td>
+</tr>
+<tr class="odd">
+<td><code>berlin_end</code></td>
+<td>berlin_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>berlin_complt_time</code></td>
+<td>berlin_complt_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([pss_end],[berlin_end],“s”,true)</td>
+</tr>
+<tr class="odd">
+<td><code>umctq_shift</code></td>
+<td>umctq_shift</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="even">
+<td><code>umctq_sleep_hr</code></td>
+<td>umctq_sleep_hr</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>umctq_sleep_min</code></td>
+<td>umctq_sleep_min</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>umctq_wake_hr</code></td>
+<td>umctq_wake_hr</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>umctq_wake_min</code></td>
+<td>umctq_wake_min</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>umctq_sleep_hr_we</code></td>
+<td>umctq_sleep_hr_we</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>umctq_sleep_min_we</code></td>
+<td>umctq_sleep_min_we</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>umctq_wake_hr_we</code></td>
+<td>umctq_wake_hr_we</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>umctq_wake_min_we</code></td>
+<td>umctq_wake_min_we</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>circadian_var</code></td>
+<td>circadian_var</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Under 1 times forskel mellem ugedage i senge eller stå-op-tider</code>, <code>1-2 timers forskel mellem ugedage i senge eller stå-op-tider</code>, <code>2-3 timers forskel mellem ugedage i senge eller stå-op-tider</code>, <code>3-4 timers forskel mellem ugedage i senge eller stå-op-tider</code>, <code>4-5 timers forskel mellem ugedage i senge eller stå-op-tider</code>, <code>mere end 5 timers forskel mellem ugedage i senge eller stå-op-tider</code></td>
+</tr>
+<tr class="odd">
+<td><code>meq_item</code></td>
+<td>meq_item</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Afgjort morgenmenneske</code>, <code>Mere morgen- end aftenmenneske</code>, <code>Mere aften- end morgenmenneske</code>, <code>Afgjort aftenmenneske</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>mctq_end</code></td>
+<td>mctq_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>mctq_compl_time</code></td>
+<td>mctq_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([berlin_end],[mctq_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>trans_main</code></td>
+<td>trans_main</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Til fods</code>, <code>På cykel</code>, <code>I bil / på motorcykel, knallert eller scooter</code>, <code>Offentlig transport</code></td>
+</tr>
+<tr class="odd">
+<td><code>work_activity</code></td>
+<td>work_activity</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Mest stillesiddende (kontor/pc, meget lidt gang)</code>, <code>Blandet (noget stillesiddende, men også en del stå/gang)</code>, <code>Mest stående/gående (meget gang, men ikke tungt fysisk arbejde)</code>, <code>Fysisk krævende (tungt arbejde/løft, høj fysisk belastning)</code>, <code>Jeg er ikke på arbejdsmarkedet</code></td>
+</tr>
+<tr class="even">
+<td><code>leisure_activity_cat</code></td>
+<td>leisure_activity_cat</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Jeg sidder som regel ned (fx læser, ser tv/streaming, går i biografen) og bruger fritiden på overvejende stillesiddende aktiviteter</code>, <code>Jeg går ture, cykler lidt eller er fysisk aktiv mindst 4 timer om ugen (fx let havearbejde, husligt arbejde, bordtennis eller bowling)</code>, <code>Jeg dyrker motion/sport mindst 3 gange om ugen. Hvis du ikke dyrker sport, men ofte laver tungt havearbejde eller andet tungt fysisk arbejde i fritiden, hører du også til her</code>, <code>Jeg dyrker konkurrencesport eller træner meget hårdt (fx langdistanceløb) flere gange om ugen</code></td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_active_days</code></td>
+<td>ipaq_active_days</td>
+<td>string</td>
+<td>number of days the participant has been active during the last week<br>Allowed values: <code>1 dag om ugen</code>, <code>2 dage om ugen</code>, <code>3 dage om ugen</code>, <code>4 dage om ugen</code>, <code>5 dage om ugen</code>, <code>6 dage om ugen</code>, <code>7 dage om ugen</code>, <code>Ingen dage om ugen</code></td>
+</tr>
+<tr class="even">
+<td><code>ipaq_hours</code></td>
+<td>ipaq_hours</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_minutes</code></td>
+<td>ipaq_minutes</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>ipaq_moderate_days</code></td>
+<td>ipaq_moderate_days</td>
+<td>string</td>
+<td>number of days the participant spend on moderate physical activity<br>Allowed values: <code>1 dag om ugen</code>, <code>2 dage om ugen</code>, <code>3 dage om ugen</code>, <code>4 dage om ugen</code>, <code>5 dage om ugen</code>, <code>6 dage om ugen</code>, <code>7 dage om ugen</code>, <code>ingen dage om ugen</code></td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_moderate_hours</code></td>
+<td>ipaq_moderate_hours</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>ipaq_moderate_minutes</code></td>
+<td>ipaq_moderate_minutes</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_walk_days</code></td>
+<td>ipaq_walk_days</td>
+<td>string</td>
+<td>number of days the participant walked at least 10 min<br>Allowed values: <code>1 dag om ugen</code>, <code>2 dage om ugen</code>, <code>3 dage om ugen</code>, <code>4 dage om ugen</code>, <code>5 dage om ugen</code>, <code>6 dage om ugen</code>, <code>7 dage om ugen</code>, <code>ingen dage om ugen</code></td>
+</tr>
+<tr class="even">
+<td><code>ipaq_walk_hours</code></td>
+<td>ipaq_walk_hours</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_walk_minutes</code></td>
+<td>ipaq_walk_minutes</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>ipaq_sit_hours</code></td>
+<td>ipaq_sit_hours</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_sit_minutes</code></td>
+<td>ipaq_sit_minutes</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>ipaq_end</code></td>
+<td>ipaq_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>ipaq_compl_time</code></td>
+<td>ipaq_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([mctq_end],[ipaq_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>use_personal_tracker</code></td>
+<td>use_personal_tracker</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>other_health_tracker</code></td>
+<td>other_health_tracker</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>smart_watch_type</code></td>
+<td>smart_watch_type</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Apple Watch (Apple)</code>, <code>Garmin</code>, <code>Fitbit</code>, <code>Samsung Galaxy Watch</code>, <code>Polar</code>, <code>Suunto</code>, <code>Huawei Watch</code>, <code>Xiaomi / Mi Band</code>, <code>Andet mærke</code>, <code>kender ikke mærket</code></td>
+</tr>
+<tr class="odd">
+<td><code>smartphone_brand</code></td>
+<td>smartphone_brand</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Android (fx Samsung, Xiaomi, OnePlus, Huawei m.fl.)</code>, <code>Apple iPhone (iOS)</code>, <code>Andet</code>, <code>Ved ikke</code></td>
+</tr>
+<tr class="even">
+<td><code>smart_phone_other</code></td>
+<td>smart_phone_other</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>mvpa_can_report</code></td>
+<td>mvpa_can_report</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, jeg kan se aktiv tid/træningsminutter</code>, <code>Nej, jeg kan ikke finde oplysningerne</code></td>
+</tr>
+<tr class="even">
+<td><code>mvpa_min_7d</code></td>
+<td>mvpa_min_7d</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>steps_can_report</code></td>
+<td>steps_can_report</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, jeg kan se skridttal</code>, <code>Nej, jeg kan ikke finde oplysningerne</code></td>
+</tr>
+<tr class="even">
+<td><code>step_avg_7d</code></td>
+<td>step_avg_7d</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>sleep_can_report</code></td>
+<td>sleep_can_report</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, jeg kan se søvnoplysninger</code>, <code>Nej, jeg kan ikke finde oplysningerne</code></td>
+</tr>
+<tr class="even">
+<td><code>sleep_hours_avg</code></td>
+<td>sleep_hours_avg</td>
+<td>number</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>rhr_can_report</code></td>
+<td>rhr_can_report</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, jeg kan se min hvilepuls</code>, <code>Nej, jeg kan ikke finde oplysningerne</code></td>
+</tr>
+<tr class="even">
+<td><code>rhr_value</code></td>
+<td>rhr_value</td>
+<td>integer</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>vo2max_can_report</code></td>
+<td>vo2max_can_report</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja, jeg kan se et mål for VO₂max/kondital</code>, <code>Nej, jeg kan ikke finde oplysningerne</code></td>
+</tr>
+<tr class="even">
+<td><code>vo2max_value</code></td>
+<td>vo2max_value</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>healthdata_other</code></td>
+<td>healthdata_other</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>healthtrack_end</code></td>
+<td>healthtrack_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>healthtrack_compl</code></td>
+<td>healthtrack_compl</td>
+<td>string</td>
+<td>Derived using the formula: datediff([ipaq_end],[healthtrack_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>bhla_knowledge</code></td>
+<td>bhla_knowledge</td>
+<td>string</td>
+<td>the participant has good knowledge about health<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="odd">
+<td><code>bhla_health_ideas</code></td>
+<td>bhla_health_ideas</td>
+<td>string</td>
+<td>the participant can share knowledge about health with friends and family<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="even">
+<td><code>bhla_comp_info</code></td>
+<td>bhla_comp_info</td>
+<td>string</td>
+<td>the participant can compare health cnowledge<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="odd">
+<td><code>bhla_follow_instruct</code></td>
+<td>bhla_follow_instruct</td>
+<td>string</td>
+<td>the participant can follow health recommendations<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="even">
+<td><code>bhla_better_health</code></td>
+<td>bhla_better_health</td>
+<td>string</td>
+<td>the participant knows how to improve their health<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="odd">
+<td><code>bhla_actions_eff</code></td>
+<td>bhla_actions_eff</td>
+<td>string</td>
+<td>the participant knows how to their actions effect health<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="even">
+<td><code>bhla_understa_health</code></td>
+<td>bhla_understa_health</td>
+<td>string</td>
+<td>the participant can find health informations that are easy to understand<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="odd">
+<td><code>bhla_health_behav</code></td>
+<td>bhla_health_behav</td>
+<td>string</td>
+<td>the participant understands how behaviour effects health<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="even">
+<td><code>bhla_false_info</code></td>
+<td>bhla_false_info</td>
+<td>string</td>
+<td>the participant knows when health information is true or false<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="odd">
+<td><code>bhla_argue_actions</code></td>
+<td>bhla_argue_actions</td>
+<td>string</td>
+<td>the participant can justify the choices they make<br>Allowed values: <code>Slet ikke rigtigt</code>, <code>Ikke helt rigtigt</code>, <code>Nogenlunde rigtigt</code>, <code>Helt rigtigt</code></td>
+</tr>
+<tr class="even">
+<td><code>bhla_end</code></td>
+<td>bhla_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>bhla_compl_time</code></td>
+<td>bhla_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([healthtrack_end],[bhla_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>bfis_quiet</code></td>
+<td>bfis_quiet</td>
+<td>string</td>
+<td>the participant is a quiet type<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_compassion</code></td>
+<td>bfis_compassion</td>
+<td>string</td>
+<td>the participant has a big heart<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_disorganized</code></td>
+<td>bfis_disorganized</td>
+<td>string</td>
+<td>the participant is unorganized<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_worried</code></td>
+<td>bfis_worried</td>
+<td>string</td>
+<td>the participant worry a lot<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_artistic</code></td>
+<td>bfis_artistic</td>
+<td>string</td>
+<td>the participant loves art and music<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_control</code></td>
+<td>bfis_control</td>
+<td>string</td>
+<td>the participant takes control often<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_rude</code></td>
+<td>bfis_rude</td>
+<td>string</td>
+<td>the participant can be rude towads others<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_motivation</code></td>
+<td>bfis_motivation</td>
+<td>string</td>
+<td>the participant has trouble getting started on tasks<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_depressed</code></td>
+<td>bfis_depressed</td>
+<td>string</td>
+<td>the participant feels depressed<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_not_abstract</code></td>
+<td>bfis_not_abstract</td>
+<td>string</td>
+<td>the participant has no interest in abstract ideas<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_energetic</code></td>
+<td>bfis_energetic</td>
+<td>string</td>
+<td>the participant is full of energy<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_naive</code></td>
+<td>bfis_naive</td>
+<td>string</td>
+<td>the participant sees the best in people<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_reliable</code></td>
+<td>bfis_reliable</td>
+<td>string</td>
+<td>the participant is trustworthy<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_stable</code></td>
+<td>bfis_stable</td>
+<td>string</td>
+<td>the participant is emotionally stable<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_innovative</code></td>
+<td>bfis_innovative</td>
+<td>string</td>
+<td>the participant is innovative<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_social</code></td>
+<td>bfis_social</td>
+<td>string</td>
+<td>the participant is social<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_indifferent</code></td>
+<td>bfis_indifferent</td>
+<td>string</td>
+<td>the participant can be careless<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_organized</code></td>
+<td>bfis_organized</td>
+<td>string</td>
+<td>the participant is organized<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_relaxed</code></td>
+<td>bfis_relaxed</td>
+<td>string</td>
+<td>the participant is relaxed<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_not_artistic</code></td>
+<td>bfis_not_artistic</td>
+<td>string</td>
+<td>the participant has few artistic interests<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_compliant</code></td>
+<td>bfis_compliant</td>
+<td>string</td>
+<td>the participant prefer others to decide<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_respectful</code></td>
+<td>bfis_respectful</td>
+<td>string</td>
+<td>the participant is respectful<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_persistent</code></td>
+<td>bfis_persistent</td>
+<td>string</td>
+<td>the participant is persistent<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_self_assured</code></td>
+<td>bfis_self_assured</td>
+<td>string</td>
+<td>the participant feel safe<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_considerate</code></td>
+<td>bfis_considerate</td>
+<td>string</td>
+<td>the participant is considerate<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_less_energetic</code></td>
+<td>bfis_less_energetic</td>
+<td>string</td>
+<td>the participant is less engergetic compared to others<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_dependent</code></td>
+<td>bfis_dependent</td>
+<td>string</td>
+<td>the participant sees other’s mistakes<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_reckless</code></td>
+<td>bfis_reckless</td>
+<td>string</td>
+<td>the participant can be reckless<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_emotional</code></td>
+<td>bfis_emotional</td>
+<td>string</td>
+<td>the participant has a temperament<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>bfis_not_creative</code></td>
+<td>bfis_not_creative</td>
+<td>string</td>
+<td>the participant not creative<br>Allowed values: <code>Helt uenig</code>, <code>Delvist uenig</code>, <code>Neutral</code>, <code>Delvist enig</code>, <code>Helt enig</code></td>
+</tr>
+<tr class="even">
+<td><code>bfis_end</code></td>
+<td>bfis_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>bfi2s_compl_time</code></td>
+<td>bfi2s_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([bhla_end],[bfis_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>diet_intro</code></td>
+<td>diet_intro</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Ja</code>, <code>Nej</code></td>
+</tr>
+<tr class="odd">
+<td><code>diet_foods</code></td>
+<td>diet_foods</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Carnivore (spiser kun kød)</code>, <code>Flexitar (spiser sjældent kød)</code>, <code>Pescetar (spiser ikke kød, men spiser fisk)</code>, <code>Vegetar (spiser ikke kød eller fisk)</code>, <code>Veganer (spiser ikke kød, fisk, mejeriprodukter eller æg)</code>, <code>Mediterranean Diet (meget grønt, fuldkorn, fisk, olivenolie, begrænset rødt kød)</code>, <code>Stenalderkost / paleo (kød, fisk, grønt, nødder; ingen kornprodukter og raffineret sukker)</code>, <code>Atkins (lavkulhydratkost med relativt højt protein- og fedtindtag)</code>, <code>Ketogen diæt (meget få kulhydrater, højt fedtindtag)</code>, <code>Raw food (primært rå, uforarbejdede fødevarer)</code>, <code>Intermittent fasting (spiser kun inden for bestemte tidsvinduer)</code>, <code>Anden diæt</code></td>
+</tr>
+<tr class="even">
+<td><code>diet_foods_other</code></td>
+<td>diet_foods_other</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>diet_fasting</code></td>
+<td>diet_fasting</td>
+<td>string</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>diet_time</code></td>
+<td>diet_time</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Hele livet</code>, <code>20+år</code>, <code>10-19 år</code>, <code>5-9 år</code>, <code>3-4 år</code>, <code>1-2 år</code>, <code>6 måneder - 1 år</code>, <code>1-6 måneder</code>, <code>Mindre end 1 måned</code>, <code>Er lige startet (en uge eller mindre)</code></td>
+</tr>
+<tr class="odd">
+<td><code>aebq2</code></td>
+<td>aebq2</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="even">
+<td><code>aebq5</code></td>
+<td>aebq5</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>aebq7</code></td>
+<td>aebq7</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="even">
+<td><code>aebq8</code></td>
+<td>aebq8</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>aebq9</code></td>
+<td>aebq9</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="even">
+<td><code>aebq10</code></td>
+<td>aebq10</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>aebq11</code></td>
+<td>aebq11</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="even">
+<td><code>aebq12</code></td>
+<td>aebq12</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="odd">
+<td><code>aebq13</code></td>
+<td>aebq13</td>
+<td>string</td>
+<td>N/A<br>Allowed values: <code>Meget uenig</code>, <code>Uenig</code>, <code>Hverken enig eller uenig</code>, <code>Enig</code>, <code>Meget enig</code></td>
+</tr>
+<tr class="even">
+<td><code>genralfood_end</code></td>
+<td>genralfood_end</td>
+<td>datetime</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>gen_food_compl_time</code></td>
+<td>gen_food_compl_time</td>
+<td>string</td>
+<td>Derived using the formula: datediff([bfis_end],[genralfood_end],“s”,true)</td>
+</tr>
+<tr class="even">
+<td><code>myfas_feeling_sick</code></td>
+<td>myfas_feeling_sick</td>
+<td>string</td>
+<td>the participant eats until they feel sick<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>myfas_sluggish</code></td>
+<td>myfas_sluggish</td>
+<td>string</td>
+<td>the participant feels tired due to overeating<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="even">
+<td><code>myfas_overeat</code></td>
+<td>myfas_overeat</td>
+<td>string</td>
+<td>the participant avoided social activities due to overeating<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>myfas_emo_eating</code></td>
+<td>myfas_emo_eating</td>
+<td>string</td>
+<td>the participant ate certain foods to feel better<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="even">
+<td><code>myfas_worry</code></td>
+<td>myfas_worry</td>
+<td>string</td>
+<td>The participant has many worries due to food<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>myfas_life_probs</code></td>
+<td>myfas_life_probs</td>
+<td>string</td>
+<td>the participant had many problems in life due to food<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="even">
+<td><code>myfas_overeating_impa</code></td>
+<td>myfas_overeating_impa</td>
+<td>string</td>
+<td>the participant overeating prevents the him/her from taking care of their family<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>myfas_cont_overeat</code></td>
+<td>myfas_cont_overeat</td>
+<td>string</td>
+<td>the participant continues eating the same way, even though it makes them feel bad<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="even">
+<td><code>myfas_less_enjoy</code></td>
+<td>myfas_less_enjoy</td>
+<td>string</td>
+<td>the participant doesn’t get the same good feeling form the same foods anymore<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>myfas_craving_obses</code></td>
+<td>myfas_craving_obses</td>
+<td>string</td>
+<td>the participant felt the urge to eat a certain food<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="even">
+<td><code>myfas_lack_restraint</code></td>
+<td>myfas_lack_restraint</td>
+<td>string</td>
+<td>the participant is trying to stop eating certain foods, but can’t<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>myfas_distracted</code></td>
+<td>myfas_distracted</td>
+<td>string</td>
+<td>the participant was so distracted by eating that they could have gotten hurt<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="even">
+<td><code>myfas_family_concern</code></td>
+<td>myfas_family_concern</td>
+<td>string</td>
+<td>friends and family were worried about the participant’s eating habits<br>Allowed values: <code>Aldrig</code>, <code>Mindre end en gang om måneden</code>, <code>En gang om måneden</code>, <code>2-3 gange om måneden</code>, <code>En gang om ugen</code>, <code>2-3 gange om ugen</code>, <code>4-6 gange om ugen</code>, <code>Hver dag</code></td>
+</tr>
+<tr class="odd">
+<td><code>health_tracker_devices___1</code></td>
+<td>Smartwatch/aktivitetsur (fx Garmin, Apple Watch, Fitbit, Polar m.fl.)</td>
+<td>boolean</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td><code>health_tracker_devices___2</code></td>
+<td>Mobiltelefon (fx Apple Health, Google Fit, Samsung Health m.fl.)</td>
+<td>boolean</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td><code>health_tracker_devices___3</code></td>
+<td>Andre instrumenter eller måleenheder</td>
+<td>boolean</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dp-next\.github\.io\/wp3-d-quest");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ License: CC-BY 4.0
+  </li>  
+</ul>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dp-next/wp3-d-quest/edit/main/docs/metadata/resources/survey.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dp-next/wp3-d-quest/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/dp-next/wp3-d-quest/blob/main/docs/metadata/resources/survey.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
