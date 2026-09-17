@@ -2406,6 +2406,7 @@ dependencies = [
     { name = "pytask" },
     { name = "requests" },
     { name = "seedcase-flower" },
+    { name = "seedcase-soil" },
     { name = "seedcase-sprout" },
 ]
 
@@ -2422,6 +2423,7 @@ requires-dist = [
     { name = "pytask", specifier = ">=0.6.0" },
     { name = "requests", specifier = ">=2.34.2" },
     { name = "seedcase-flower", specifier = ">=0.30.1" },
+    { name = "seedcase-soil", specifier = ">=0.16.0" },
     { name = "seedcase-sprout", specifier = ">=0.51.0" },
 ]
 

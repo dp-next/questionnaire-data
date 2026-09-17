@@ -1,0 +1,4825 @@
+{
+  "name": "wp3-d-quest",
+  "id": "0b14e351-79ee-4790-a3d5-ba087e38b24f",
+  "title": "Questionnaire data package for Work Package 3 of the DP-Next project",
+  "description": "This repository contains the source raw data and Python code to build the data package for the DP-Next work package 3 population questionnaire. Only metadata and documentation are publicly accessible.",
+  "homepage": "https://dp-next.github.io/wp3-d-quest",
+  "version": "0.1.0",
+  "created": "2026-09-08T16:35:37+02:00",
+  "contributors": [
+    {
+      "title": "Kristiane Beicher",
+      "email": "kris.beicher@clin.au.dk",
+      "givenName": "Kristiane",
+      "familyName": "Beicher",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator",
+        "ContactPerson"
+      ]
+    },
+    {
+      "title": "Signe Kirk Brødbæk",
+      "email": "signekb@clin.au.dk",
+      "givenName": "Signe Kirk",
+      "familyName": "Brødbæk",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator"
+      ]
+    },
+    {
+      "title": "Luke W Johnston",
+      "email": "lwjohnst@clin.au.dk",
+      "givenName": "Luke",
+      "familyName": "Johnston",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator"
+      ]
+    },
+    {
+      "title": "Marton Vago",
+      "email": "mvago@clin.au.dk",
+      "givenName": "Marton",
+      "familyName": "Vago",
+      "organization": "Steno Diabetes Centre Aarhus",
+      "roles": [
+        "DataManager",
+        "DataCurator"
+      ]
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "title": "CC0 1.0 Universal"
+    }
+  ],
+  "resources": [
+    {
+      "name": "registration",
+      "path": "resources/registration/data.parquet",
+      "title": "registration",
+      "description": "registration",
+      "schema": {
+        "fields": [
+          {
+            "name": "participant_id",
+            "title": "participant_id",
+            "type": "string",
+            "description": "Every participant will get a participant ID",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "digital_postcpr",
+            "title": "digital_postcpr",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "municipal_code",
+            "title": "municipal_code",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 100,
+              "maximum": 999
+            }
+          },
+          {
+            "name": "email_eboks",
+            "title": "email_eboks",
+            "type": "string",
+            "format": "email",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "send_date",
+            "title": "send_date",
+            "type": "date",
+            "format": "%m/%d/%Y",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "name",
+            "title": "name",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "status_field",
+            "title": "status_field",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Eboks OK",
+                "Eboks fysisk post",
+                "Ingen Eboks tilknyttet",
+                "Anden fejl"
+              ]
+            },
+            "categories": [
+              "Eboks OK",
+              "Eboks fysisk post",
+              "Ingen Eboks tilknyttet",
+              "Anden fejl"
+            ]
+          },
+          {
+            "name": "status_text_field",
+            "title": "status_text_field",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "no_consent___1",
+            "title": "STOP",
+            "type": "boolean",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          }
+        ],
+        "primaryKey": [
+          "participant_id"
+        ]
+      }
+    },
+    {
+      "name": "survey",
+      "path": "resources/survey/data.parquet",
+      "title": "survey",
+      "description": "survey",
+      "schema": {
+        "fields": [
+          {
+            "name": "participant_id",
+            "title": "participant_id",
+            "type": "string",
+            "description": "Every participant will get a participant ID",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "background_start",
+            "title": "background_start",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "gender",
+            "title": "gender",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "Mand",
+                "Kvinde"
+              ]
+            },
+            "categories": [
+              "Mand",
+              "Kvinde"
+            ]
+          },
+          {
+            "name": "height",
+            "title": "height",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 100,
+              "maximum": 250
+            }
+          },
+          {
+            "name": "weight",
+            "title": "weight",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 15,
+              "maximum": 300
+            }
+          },
+          {
+            "name": "weight_2_female",
+            "title": "weight_2_female",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 15,
+              "maximum": 300
+            }
+          },
+          {
+            "name": "blood_preasure",
+            "title": "blood_preasure",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "cholesterol",
+            "title": "cholesterol",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "weight_20yo",
+            "title": "weight_20yo",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 30,
+              "maximum": 300
+            }
+          },
+          {
+            "name": "highest_weight",
+            "title": "highest_weight",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 20,
+              "maximum": 300
+            }
+          },
+          {
+            "name": "highest_weight_2",
+            "title": "highest_weight_2",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 20,
+              "maximum": 300
+            }
+          },
+          {
+            "name": "time_highest_weight",
+            "title": "time_highest_weight",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 1970,
+              "maximum": 2029
+            }
+          },
+          {
+            "name": "time_highest_weight_2",
+            "title": "time_highest_weight_2",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 1970,
+              "maximum": 2029
+            }
+          },
+          {
+            "name": "menstruation",
+            "title": "menstruation",
+            "type": "string",
+            "description": "Information on whether the participant is still experiencing menstruation.",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "menopause",
+            "title": "menopause",
+            "type": "string",
+            "description": "Information on whether the participant has entered menopause.",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved det ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved det ikke"
+            ]
+          },
+          {
+            "name": "civilstatus",
+            "title": "civilstatus",
+            "type": "string",
+            "description": "The participants civil status",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Gift/Samlevende",
+                "Partner (ikke sammenlevende)",
+                "Enlig",
+                "Fraskilt",
+                "Enke/enkemand",
+                "Ved ikke/vil ikke oplyse"
+              ]
+            },
+            "categories": [
+              "Gift/Samlevende",
+              "Partner (ikke sammenlevende)",
+              "Enlig",
+              "Fraskilt",
+              "Enke/enkemand",
+              "Ved ikke/vil ikke oplyse"
+            ]
+          },
+          {
+            "name": "children_home",
+            "title": "children_home",
+            "type": "string",
+            "description": "Information on whether the participant has any children living at home.",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "smoking",
+            "title": "smoking",
+            "type": "string",
+            "description": "Information on the participant's smoking status",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, hver dag",
+                "Ja, mindst en gang om ugen",
+                "Ja, men sjældnere end hver uge",
+                "Nej, jeg er stoppet inden for de seneste 12 måneder",
+                "Nej, jeg er stoppet for 1-5 år siden",
+                "Nej, jeg er stoppet for mere end 5 år siden",
+                "Nej, jeg har aldrig røget"
+              ]
+            },
+            "categories": [
+              "Ja, hver dag",
+              "Ja, mindst en gang om ugen",
+              "Ja, men sjældnere end hver uge",
+              "Nej, jeg er stoppet inden for de seneste 12 måneder",
+              "Nej, jeg er stoppet for 1-5 år siden",
+              "Nej, jeg er stoppet for mere end 5 år siden",
+              "Nej, jeg har aldrig røget"
+            ]
+          },
+          {
+            "name": "nikotine",
+            "title": "nikotine",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, hver dag",
+                "Ja, mindst en gang om ugen",
+                "Ja, men sjældnere end hver uge",
+                "Nej, jeg er stoppet inden for de seneste 12 måneder",
+                "Nej, jeg er stoppet for 1-5 år siden",
+                "Nej, jeg er stoppet for mere end 5 år siden",
+                "Nej, jeg har aldrig brugt nikotinpræparater"
+              ]
+            },
+            "categories": [
+              "Ja, hver dag",
+              "Ja, mindst en gang om ugen",
+              "Ja, men sjældnere end hver uge",
+              "Nej, jeg er stoppet inden for de seneste 12 måneder",
+              "Nej, jeg er stoppet for 1-5 år siden",
+              "Nej, jeg er stoppet for mere end 5 år siden",
+              "Nej, jeg har aldrig brugt nikotinpræparater"
+            ]
+          },
+          {
+            "name": "background_end",
+            "title": "background_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "compl_time_background",
+            "title": "compl_time_background",
+            "type": "string",
+            "description": "Derived using the formula: datediff([background_start],[background_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "vas_physical",
+            "title": "vas_physical",
+            "type": "integer",
+            "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god eller dårlig du synes, </span>dit fysiske helbred er i dag<span style=\"font-weight: normal;\">. Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værste tænkelige helbredstilstand) |  | 100 (bedst tænkelige helbredstilstand)",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "vas_mentalhealth",
+            "title": "vas_mentalhealth",
+            "type": "integer",
+            "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god eller dårlig du synes, </span>dit mentale helbred er i dag<span style=\"font-weight: normal;\">. Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værste tænkelige helbredstilstand) |  | 100 (bedst tænkelige helbredstilstand)",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "qol_vas",
+            "title": "qol_vas",
+            "type": "integer",
+            "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god </span>din livskvalitet er i dag.<span style=\"font-weight: normal;\"> Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værst tænkelige livskvalitet) |  | 100 (bedst tænkelige livskvalitet)",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "sf_health_overall",
+            "title": "sf_health_overall",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "Fremragende",
+                "Vældig godt",
+                "Godt",
+                "Mindre godt",
+                "Dårligt"
+              ]
+            },
+            "categories": [
+              "Fremragende",
+              "Vældig godt",
+              "Godt",
+              "Mindre godt",
+              "Dårligt"
+            ]
+          },
+          {
+            "name": "sf_activities",
+            "title": "sf_activities",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, meget begrænset",
+                "Ja, lidt begrænset",
+                "Nej, slet ikke begrænset"
+              ]
+            },
+            "categories": [
+              "Ja, meget begrænset",
+              "Ja, lidt begrænset",
+              "Nej, slet ikke begrænset"
+            ]
+          },
+          {
+            "name": "sf_activities_1",
+            "title": "sf_activities_1",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, meget begrænset",
+                "Ja, lidt begrænset",
+                "Nej, slet ikke begrænset"
+              ]
+            },
+            "categories": [
+              "Ja, meget begrænset",
+              "Ja, lidt begrænset",
+              "Nej, slet ikke begrænset"
+            ]
+          },
+          {
+            "name": "sf_daily_activities",
+            "title": "sf_daily_activities",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "sf_daily_activities_limit",
+            "title": "sf_daily_activities_limit",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "sf_activities_mental",
+            "title": "sf_activities_mental",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "sf_activities_careful",
+            "title": "sf_activities_careful",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "sf_physical_pain",
+            "title": "sf_physical_pain",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke",
+                "Lidt",
+                "Noget",
+                "En hel del",
+                "Virkelig meget"
+              ]
+            },
+            "categories": [
+              "Slet ikke",
+              "Lidt",
+              "Noget",
+              "En hel del",
+              "Virkelig meget"
+            ]
+          },
+          {
+            "name": "sf_mental_relaxed",
+            "title": "sf_mental_relaxed",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Hele tiden",
+                "Det meste af tiden",
+                "En hel del af tiden",
+                "Noget af tiden",
+                "Lidt af tiden",
+                "På Intet tidspunkt"
+              ]
+            },
+            "categories": [
+              "Hele tiden",
+              "Det meste af tiden",
+              "En hel del af tiden",
+              "Noget af tiden",
+              "Lidt af tiden",
+              "På Intet tidspunkt"
+            ]
+          },
+          {
+            "name": "sf_mental_energy",
+            "title": "sf_mental_energy",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Hele tiden",
+                "Det meste af tiden",
+                "En hel del af tiden",
+                "Noget af tiden",
+                "Lidt af tiden",
+                "På Intet tidspunkt"
+              ]
+            },
+            "categories": [
+              "Hele tiden",
+              "Det meste af tiden",
+              "En hel del af tiden",
+              "Noget af tiden",
+              "Lidt af tiden",
+              "På Intet tidspunkt"
+            ]
+          },
+          {
+            "name": "sf_mental_sad",
+            "title": "sf_mental_sad",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Hele tiden",
+                "Det meste af tiden",
+                "En hel del af tiden",
+                "Noget af tiden",
+                "Lidt af tiden",
+                "På Intet tidspunkt"
+              ]
+            },
+            "categories": [
+              "Hele tiden",
+              "Det meste af tiden",
+              "En hel del af tiden",
+              "Noget af tiden",
+              "Lidt af tiden",
+              "På Intet tidspunkt"
+            ]
+          },
+          {
+            "name": "sf_mental_social",
+            "title": "sf_mental_social",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Hele tiden",
+                "Det meste af tiden",
+                "Noget af tiden",
+                "Lidt af tiden",
+                "På Intet tidspunkt"
+              ]
+            },
+            "categories": [
+              "Hele tiden",
+              "Det meste af tiden",
+              "Noget af tiden",
+              "Lidt af tiden",
+              "På Intet tidspunkt"
+            ]
+          },
+          {
+            "name": "sf12v2_end",
+            "title": "sf12v2_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "sf12v2_complt_time",
+            "title": "sf12v2_complt_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([background_end],[sf12v2_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "obesity",
+            "title": "obesity",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Undervægtig",
+                "Normalvægtig",
+                "Overvægtig",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Undervægtig",
+              "Normalvægtig",
+              "Overvægtig",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "body_number",
+            "title": "body_number",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "categories": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ]
+          },
+          {
+            "name": "ses_dk_slider",
+            "title": "ses_dk_slider",
+            "type": "integer",
+            "description": "the participant's self-perceived SES Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Hvor vil du placere dig selv på denne skala på nuværende tidspunkt i dit liv</span> sammenlignet med Danmarks øvrige befolkning?</p></div>. Slider scale labels: 1 (laveste sociale rang) |  | 10 (højeste sociale rang)",
+            "constraints": {
+              "required": false,
+              "minimum": 1,
+              "maximum": 10
+            }
+          },
+          {
+            "name": "ses_lokal_slider",
+            "title": "ses_lokal_slider",
+            "type": "integer",
+            "description": "the participant's self-perceived SES comparet to the local community Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Hvor vil du placere dig selv på skalaen på nuværende tidspunkt i dit liv </span>sammenlignet med andre i dit lokalsamfund?</p></div>. Slider scale labels: 1 (laveste sociale rang) |  | 10 (højeste sociale rang)",
+            "constraints": {
+              "required": false,
+              "minimum": 1,
+              "maximum": 10
+            }
+          },
+          {
+            "name": "self_rate_end",
+            "title": "self_rate_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "compl_time_self_rate",
+            "title": "compl_time_self_rate",
+            "type": "string",
+            "description": "Derived using the formula: datediff([sf12v2_end],[self_rate_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "alc_12mo",
+            "title": "alc_12mo",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "alc_days_per_week",
+            "title": "alc_days_per_week",
+            "type": "string",
+            "description": "The number of days per week the participant usually consumes alcohol.",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Mindre end en dag om ugen",
+                "1 dag om ugen",
+                "2 dage om ugen",
+                "3 dage om ugen",
+                "4 dage om ugen",
+                "5 dage om ugen",
+                "6 dage om ugen",
+                "7 dage om ugen"
+              ]
+            },
+            "categories": [
+              "Mindre end en dag om ugen",
+              "1 dag om ugen",
+              "2 dage om ugen",
+              "3 dage om ugen",
+              "4 dage om ugen",
+              "5 dage om ugen",
+              "6 dage om ugen",
+              "7 dage om ugen"
+            ]
+          },
+          {
+            "name": "alc_mon",
+            "title": "alc_mon",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_tue",
+            "title": "alc_tue",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_wed",
+            "title": "alc_wed",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_thu",
+            "title": "alc_thu",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_fri",
+            "title": "alc_fri",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_sat",
+            "title": "alc_sat",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_sun",
+            "title": "alc_sun",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "alc_freq_per_occa",
+            "title": "alc_freq_per_occa",
+            "type": "string",
+            "description": "Information on how often the participant consumes five or more drinks on a single occasion.",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten dagligt eller dagligt",
+                "Ugentligt",
+                "Månedligt",
+                "Sjældent",
+                "Aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten dagligt eller dagligt",
+              "Ugentligt",
+              "Månedligt",
+              "Sjældent",
+              "Aldrig"
+            ]
+          },
+          {
+            "name": "alc_want_lower",
+            "title": "alc_want_lower",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "ja",
+                "nej",
+                "ved ikke"
+              ]
+            },
+            "categories": [
+              "ja",
+              "nej",
+              "ved ikke"
+            ]
+          },
+          {
+            "name": "alc_bad_health",
+            "title": "alc_bad_health",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, meget",
+                "Ja, lidt",
+                "Nej",
+                "ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja, meget",
+              "Ja, lidt",
+              "Nej",
+              "ved ikke"
+            ]
+          },
+          {
+            "name": "alc_prev_daily_use",
+            "title": "alc_prev_daily_use",
+            "type": "string",
+            "description": "Information on whether the participant has previously had a daily alcohol consumption.",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "alc_per_week_earlier",
+            "title": "alc_per_week_earlier",
+            "type": "number",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0.0,
+              "maximum": 100.0
+            }
+          },
+          {
+            "name": "alc_period_start",
+            "title": "alc_period_start",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 1950,
+              "maximum": 2030
+            }
+          },
+          {
+            "name": "alc_period_start_2",
+            "title": "alc_period_start_2",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 1950,
+              "maximum": 2030
+            }
+          },
+          {
+            "name": "alc_end",
+            "title": "alc_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "alc_compl_time",
+            "title": "alc_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([self_rate_end],[alc_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "lonely_single",
+            "title": "lonely_single",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Nej, det passer ikke",
+                "Ja, det passer, men jeg lider ikke under det",
+                "Ja, det passer, og jeg lider lidt under det",
+                "Ja, det passer, og jeg lider moderat under det",
+                "Ja, det passer, og jeg lider meget under det"
+              ]
+            },
+            "categories": [
+              "Nej, det passer ikke",
+              "Ja, det passer, men jeg lider ikke under det",
+              "Ja, det passer, og jeg lider lidt under det",
+              "Ja, det passer, og jeg lider moderat under det",
+              "Ja, det passer, og jeg lider meget under det"
+            ]
+          },
+          {
+            "name": "social_support",
+            "title": "social_support",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "contact_helpwithprob",
+            "title": "contact_helpwithprob",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Dagligt eller næsten dagligt",
+                "3-4 gange om ugen",
+                "1-2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældnere end 1 gang om måneden",
+                "Aldrig"
+              ]
+            },
+            "categories": [
+              "Dagligt eller næsten dagligt",
+              "3-4 gange om ugen",
+              "1-2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældnere end 1 gang om måneden",
+              "Aldrig"
+            ]
+          },
+          {
+            "name": "social_end",
+            "title": "social_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "social_compl_time",
+            "title": "social_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([alc_end],[social_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "delphi_parents_known",
+            "title": "delphi_parents_known",
+            "type": "string",
+            "description": "number of known biological parents",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ingen",
+                "Min biologiske far",
+                "Min biologiske mor",
+                "Både min biologiske far og mor"
+              ]
+            },
+            "categories": [
+              "Ingen",
+              "Min biologiske far",
+              "Min biologiske mor",
+              "Både min biologiske far og mor"
+            ]
+          },
+          {
+            "name": "father_alcohol_substance",
+            "title": "father_alcohol_substance",
+            "type": "string",
+            "description": "did the participant's father drink or use drugs",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "father_overweight",
+            "title": "father_overweight",
+            "type": "string",
+            "description": "was the participant's father overweight",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "body_number_father",
+            "title": "body_number_father",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "categories": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ]
+          },
+          {
+            "name": "father_diabetes",
+            "title": "father_diabetes",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "delphi_father_dmtype",
+            "title": "delphi_father_dmtype",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Type-1 diabetes",
+                "Type-2 diabetes",
+                "Ved ikke hvilken type"
+              ]
+            },
+            "categories": [
+              "Type-1 diabetes",
+              "Type-2 diabetes",
+              "Ved ikke hvilken type"
+            ]
+          },
+          {
+            "name": "father_smoke",
+            "title": "father_smoke",
+            "type": "string",
+            "description": "did the participant's father smoke",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Ja, men han er stoppet",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Ja, men han er stoppet",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "delphi_father_smoke_stoped",
+            "title": "delphi_father_smoke_stoped",
+            "type": "number",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 1.0,
+              "maximum": 100.0
+            }
+          },
+          {
+            "name": "mother_alcohol_substance",
+            "title": "mother_alcohol_substance",
+            "type": "string",
+            "description": "did the participant's mother drink or use drugs",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "mother_overweight",
+            "title": "mother_overweight",
+            "type": "string",
+            "description": "was the participant's mother overweight",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "body_number_mother",
+            "title": "body_number_mother",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "categories": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ]
+          },
+          {
+            "name": "mother_diabetes",
+            "title": "mother_diabetes",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "delphi_father_dmtype_2",
+            "title": "delphi_father_dmtype_2",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Type-1 diabetes",
+                "Type-2 diabetes",
+                "Ved ikke hvilken type"
+              ]
+            },
+            "categories": [
+              "Type-1 diabetes",
+              "Type-2 diabetes",
+              "Ved ikke hvilken type"
+            ]
+          },
+          {
+            "name": "mother_smoke",
+            "title": "mother_smoke",
+            "type": "string",
+            "description": "did the participant's mother smoke",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Ja, men hun er stoppet",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Ja, men hun er stoppet",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "mother_smoke_years",
+            "title": "mother_smoke_years",
+            "type": "number",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 1.0,
+              "maximum": 100.0
+            }
+          },
+          {
+            "name": "family_end",
+            "title": "family_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "family_compl_time",
+            "title": "family_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([social_end],[family_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "dass_tense",
+            "title": "dass_tense",
+            "type": "string",
+            "description": "it is hard for the participant to relax",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_dry_mouth",
+            "title": "dass_dry_mouth",
+            "type": "string",
+            "description": "the participant's experiences dry mouth",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_pos_feelings",
+            "title": "dass_pos_feelings",
+            "type": "string",
+            "description": "The participant doesn't experience positive feelings",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_diffi_breathing",
+            "title": "dass_diffi_breathing",
+            "type": "string",
+            "description": "the participant's experiences respiratory problems",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_lack_motiv",
+            "title": "dass_lack_motiv",
+            "type": "string",
+            "description": "the participant was unable to take initiative",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_overreact",
+            "title": "dass_overreact",
+            "type": "string",
+            "description": "the participant overreacts",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_shiver_hands",
+            "title": "dass_shiver_hands",
+            "type": "string",
+            "description": "the participant was shaking",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_phys_en",
+            "title": "dass_phys_en",
+            "type": "string",
+            "description": "the participant used a lot of energy",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_embarras",
+            "title": "dass_embarras",
+            "type": "string",
+            "description": "The participant was afraid of panicking and embarrassing him-/herself",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_excitement",
+            "title": "dass_excitement",
+            "type": "string",
+            "description": "het participant didn't have anything to look forward to",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_uneasy",
+            "title": "dass_uneasy",
+            "type": "string",
+            "description": "the participant felt restless",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_restless",
+            "title": "dass_restless",
+            "type": "string",
+            "description": "the participant couldn't relax",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_discouraged",
+            "title": "dass_discouraged",
+            "type": "string",
+            "description": "the participant felt lost",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_interrupt",
+            "title": "dass_interrupt",
+            "type": "string",
+            "description": "the participant couldn't tolerate interruptions",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_panic",
+            "title": "dass_panic",
+            "type": "string",
+            "description": "the participant felt like panicking",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_lack_enthus",
+            "title": "dass_lack_enthus",
+            "type": "string",
+            "description": "the participant didn't feel enthusiastic about anything",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_worthless",
+            "title": "dass_worthless",
+            "type": "string",
+            "description": "het participant felt worthless",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_sensitive",
+            "title": "dass_sensitive",
+            "type": "string",
+            "description": "The participant felt sensitive",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_heart_rhythm",
+            "title": "dass_heart_rhythm",
+            "type": "string",
+            "description": "the participant was aware of his/her heart rhythm",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_scared",
+            "title": "dass_scared",
+            "type": "string",
+            "description": "the participant felt scared for no reason",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_meaningless",
+            "title": "dass_meaningless",
+            "type": "string",
+            "description": "the participant felt life was hopeless",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Passede ikke på mig",
+                "Passede en smule eller noget af tiden på mig",
+                "Passede I betydelig grad eller en stor del af tiden på mig",
+                "Passede rigtigt meget eller det meste af tiden på mig"
+              ]
+            },
+            "categories": [
+              "Passede ikke på mig",
+              "Passede en smule eller noget af tiden på mig",
+              "Passede I betydelig grad eller en stor del af tiden på mig",
+              "Passede rigtigt meget eller det meste af tiden på mig"
+            ]
+          },
+          {
+            "name": "dass_end",
+            "title": "dass_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "dass21_compl_time",
+            "title": "dass21_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([family_end],[dass_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "pss_upset",
+            "title": "pss_upset",
+            "type": "string",
+            "description": "how often the participant felt frustrated the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_lack_control",
+            "title": "pss_lack_control",
+            "type": "string",
+            "description": "how often the participant felt lack of control the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_nervous",
+            "title": "pss_nervous",
+            "type": "string",
+            "description": "how often the participant felt nervous the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_handle_probs",
+            "title": "pss_handle_probs",
+            "type": "string",
+            "description": "how often the participant felt confident the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_as_plan",
+            "title": "pss_as_plan",
+            "type": "string",
+            "description": "how often the participant felt that things went as planned the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_resilience",
+            "title": "pss_resilience",
+            "type": "string",
+            "description": "how often the participant felt lack of capacity the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_handle_irri",
+            "title": "pss_handle_irri",
+            "type": "string",
+            "description": "how often the participant felt able to manage every-day-life the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_control",
+            "title": "pss_control",
+            "type": "string",
+            "description": "how often the participant felt in control the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_lack_influ",
+            "title": "pss_lack_influ",
+            "type": "string",
+            "description": "how often the participant felt angry due to lack of control the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_cumul_prob",
+            "title": "pss_cumul_prob",
+            "type": "string",
+            "description": "how often did the participant felt overwhelmed by tasks in the past month",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Næsten aldrig",
+                "Ind imellem",
+                "Ret ofte",
+                "Meget ofte"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Næsten aldrig",
+              "Ind imellem",
+              "Ret ofte",
+              "Meget ofte"
+            ]
+          },
+          {
+            "name": "pss_end",
+            "title": "pss_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "pss_compl_time",
+            "title": "pss_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([dass_end],[pss_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "berlin_snor",
+            "title": "berlin_snor",
+            "type": "string",
+            "description": "Does the participant snor",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "berlin_snor_volume",
+            "title": "berlin_snor_volume",
+            "type": "string",
+            "description": "the volume of the participant's snor",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Lidt højere end din vejrtrækning",
+                "Så højt som tale",
+                "Højere end tale"
+              ]
+            },
+            "categories": [
+              "Lidt højere end din vejrtrækning",
+              "Så højt som tale",
+              "Højere end tale"
+            ]
+          },
+          {
+            "name": "berlin_snor_freq",
+            "title": "berlin_snor_freq",
+            "type": "string",
+            "description": "how often does the participant snor",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten hver dag",
+                "3-4 gange om ugen",
+                "1-2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældent eller aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten hver dag",
+              "3-4 gange om ugen",
+              "1-2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældent eller aldrig"
+            ]
+          },
+          {
+            "name": "berlin_bother",
+            "title": "berlin_bother",
+            "type": "string",
+            "description": "did the snor ever disturb the participant",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten hver dag",
+                "3-4 gange om ugen",
+                "1-2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældent eller aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten hver dag",
+              "3-4 gange om ugen",
+              "1-2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældent eller aldrig"
+            ]
+          },
+          {
+            "name": "berlin_breath",
+            "title": "berlin_breath",
+            "type": "string",
+            "description": "Does the participant stop breathing during sleep",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten hver dag",
+                "3-4 gange om ugen",
+                "1-2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældent eller aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten hver dag",
+              "3-4 gange om ugen",
+              "1-2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældent eller aldrig"
+            ]
+          },
+          {
+            "name": "berlin_tired",
+            "title": "berlin_tired",
+            "type": "string",
+            "description": "how often does the participant feel tired",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten hver dag",
+                "3-4 gange om ugen",
+                "1-2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældent eller aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten hver dag",
+              "3-4 gange om ugen",
+              "1-2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældent eller aldrig"
+            ]
+          },
+          {
+            "name": "berlin_tired_daytime",
+            "title": "berlin_tired_daytime",
+            "type": "string",
+            "description": "how often does the participant feel tired during the day",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten hver dag",
+                "3-4 gange om ugen",
+                "1-2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældent eller aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten hver dag",
+              "3-4 gange om ugen",
+              "1-2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældent eller aldrig"
+            ]
+          },
+          {
+            "name": "berlin_sleep_driving",
+            "title": "berlin_sleep_driving",
+            "type": "string",
+            "description": "did the participant ever fall asleep while driving",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "berlin_sleep_driv_freq",
+            "title": "berlin_sleep_driv_freq",
+            "type": "string",
+            "description": "does sleeping while driving happen often",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Næsten hver dag",
+                "3-4 gange om ugen",
+                "1- 2 gange om ugen",
+                "1-2 gange om måneden",
+                "Sjældent eller aldrig"
+              ]
+            },
+            "categories": [
+              "Næsten hver dag",
+              "3-4 gange om ugen",
+              "1- 2 gange om ugen",
+              "1-2 gange om måneden",
+              "Sjældent eller aldrig"
+            ]
+          },
+          {
+            "name": "berlin_end",
+            "title": "berlin_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "berlin_complt_time",
+            "title": "berlin_complt_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([pss_end],[berlin_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "umctq_shift",
+            "title": "umctq_shift",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "umctq_sleep_hr",
+            "title": "umctq_sleep_hr",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 24
+            }
+          },
+          {
+            "name": "umctq_sleep_min",
+            "title": "umctq_sleep_min",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "umctq_wake_hr",
+            "title": "umctq_wake_hr",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 24
+            }
+          },
+          {
+            "name": "umctq_wake_min",
+            "title": "umctq_wake_min",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "umctq_sleep_hr_we",
+            "title": "umctq_sleep_hr_we",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 24
+            }
+          },
+          {
+            "name": "umctq_sleep_min_we",
+            "title": "umctq_sleep_min_we",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "umctq_wake_hr_we",
+            "title": "umctq_wake_hr_we",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 24
+            }
+          },
+          {
+            "name": "umctq_wake_min_we",
+            "title": "umctq_wake_min_we",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "circadian_var",
+            "title": "circadian_var",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Under 1 times forskel mellem ugedage i senge eller stå-op-tider",
+                "1-2 timers forskel mellem ugedage i senge eller stå-op-tider",
+                "2-3 timers forskel mellem ugedage i senge eller stå-op-tider",
+                "3-4 timers forskel mellem ugedage i senge eller stå-op-tider",
+                "4-5 timers forskel mellem ugedage i senge eller stå-op-tider",
+                "mere end 5 timers forskel mellem ugedage i senge eller stå-op-tider"
+              ]
+            },
+            "categories": [
+              "Under 1 times forskel mellem ugedage i senge eller stå-op-tider",
+              "1-2 timers forskel mellem ugedage i senge eller stå-op-tider",
+              "2-3 timers forskel mellem ugedage i senge eller stå-op-tider",
+              "3-4 timers forskel mellem ugedage i senge eller stå-op-tider",
+              "4-5 timers forskel mellem ugedage i senge eller stå-op-tider",
+              "mere end 5 timers forskel mellem ugedage i senge eller stå-op-tider"
+            ]
+          },
+          {
+            "name": "meq_item",
+            "title": "meq_item",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Afgjort morgenmenneske",
+                "Mere morgen- end aftenmenneske",
+                "Mere aften- end morgenmenneske",
+                "Afgjort aftenmenneske",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Afgjort morgenmenneske",
+              "Mere morgen- end aftenmenneske",
+              "Mere aften- end morgenmenneske",
+              "Afgjort aftenmenneske",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "mctq_end",
+            "title": "mctq_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "mctq_compl_time",
+            "title": "mctq_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([berlin_end],[mctq_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "trans_main",
+            "title": "trans_main",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Til fods",
+                "På cykel",
+                "I bil / på motorcykel, knallert eller scooter",
+                "Offentlig transport"
+              ]
+            },
+            "categories": [
+              "Til fods",
+              "På cykel",
+              "I bil / på motorcykel, knallert eller scooter",
+              "Offentlig transport"
+            ]
+          },
+          {
+            "name": "work_activity",
+            "title": "work_activity",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Mest stillesiddende (kontor/pc, meget lidt gang)",
+                "Blandet (noget stillesiddende, men også en del stå/gang)",
+                "Mest stående/gående (meget gang, men ikke tungt fysisk arbejde)",
+                "Fysisk krævende (tungt arbejde/løft, høj fysisk belastning)",
+                "Jeg er ikke på arbejdsmarkedet"
+              ]
+            },
+            "categories": [
+              "Mest stillesiddende (kontor/pc, meget lidt gang)",
+              "Blandet (noget stillesiddende, men også en del stå/gang)",
+              "Mest stående/gående (meget gang, men ikke tungt fysisk arbejde)",
+              "Fysisk krævende (tungt arbejde/løft, høj fysisk belastning)",
+              "Jeg er ikke på arbejdsmarkedet"
+            ]
+          },
+          {
+            "name": "leisure_activity_cat",
+            "title": "leisure_activity_cat",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Jeg sidder som regel ned (fx læser, ser tv/streaming, går i biografen) og bruger fritiden på overvejende stillesiddende aktiviteter",
+                "Jeg går ture, cykler lidt eller er fysisk aktiv mindst 4 timer om ugen (fx let havearbejde, husligt arbejde, bordtennis eller bowling)",
+                "Jeg dyrker motion/sport mindst 3 gange om ugen. Hvis du ikke dyrker sport, men ofte laver tungt havearbejde eller andet tungt fysisk arbejde i fritiden, hører du også til her",
+                "Jeg dyrker konkurrencesport eller træner meget hårdt (fx langdistanceløb) flere gange om ugen"
+              ]
+            },
+            "categories": [
+              "Jeg sidder som regel ned (fx læser, ser tv/streaming, går i biografen) og bruger fritiden på overvejende stillesiddende aktiviteter",
+              "Jeg går ture, cykler lidt eller er fysisk aktiv mindst 4 timer om ugen (fx let havearbejde, husligt arbejde, bordtennis eller bowling)",
+              "Jeg dyrker motion/sport mindst 3 gange om ugen. Hvis du ikke dyrker sport, men ofte laver tungt havearbejde eller andet tungt fysisk arbejde i fritiden, hører du også til her",
+              "Jeg dyrker konkurrencesport eller træner meget hårdt (fx langdistanceløb) flere gange om ugen"
+            ]
+          },
+          {
+            "name": "ipaq_active_days",
+            "title": "ipaq_active_days",
+            "type": "string",
+            "description": "number of days the participant has been active during the last week",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "1 dag om ugen",
+                "2 dage om ugen",
+                "3 dage om ugen",
+                "4 dage om ugen",
+                "5 dage om ugen",
+                "6 dage om ugen",
+                "7 dage om ugen",
+                "Ingen dage om ugen"
+              ]
+            },
+            "categories": [
+              "1 dag om ugen",
+              "2 dage om ugen",
+              "3 dage om ugen",
+              "4 dage om ugen",
+              "5 dage om ugen",
+              "6 dage om ugen",
+              "7 dage om ugen",
+              "Ingen dage om ugen"
+            ]
+          },
+          {
+            "name": "ipaq_hours",
+            "title": "ipaq_hours",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 12
+            }
+          },
+          {
+            "name": "ipaq_minutes",
+            "title": "ipaq_minutes",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "ipaq_moderate_days",
+            "title": "ipaq_moderate_days",
+            "type": "string",
+            "description": "number of days the participant spend on moderate physical activity",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "1 dag om ugen",
+                "2 dage om ugen",
+                "3 dage om ugen",
+                "4 dage om ugen",
+                "5 dage om ugen",
+                "6 dage om ugen",
+                "7 dage om ugen",
+                "ingen dage om ugen"
+              ]
+            },
+            "categories": [
+              "1 dag om ugen",
+              "2 dage om ugen",
+              "3 dage om ugen",
+              "4 dage om ugen",
+              "5 dage om ugen",
+              "6 dage om ugen",
+              "7 dage om ugen",
+              "ingen dage om ugen"
+            ]
+          },
+          {
+            "name": "ipaq_moderate_hours",
+            "title": "ipaq_moderate_hours",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 12
+            }
+          },
+          {
+            "name": "ipaq_moderate_minutes",
+            "title": "ipaq_moderate_minutes",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "ipaq_walk_days",
+            "title": "ipaq_walk_days",
+            "type": "string",
+            "description": "number of days the participant walked at least 10 min",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "1 dag om ugen",
+                "2 dage om ugen",
+                "3 dage om ugen",
+                "4 dage om ugen",
+                "5 dage om ugen",
+                "6 dage om ugen",
+                "7 dage om ugen",
+                "ingen dage om ugen"
+              ]
+            },
+            "categories": [
+              "1 dag om ugen",
+              "2 dage om ugen",
+              "3 dage om ugen",
+              "4 dage om ugen",
+              "5 dage om ugen",
+              "6 dage om ugen",
+              "7 dage om ugen",
+              "ingen dage om ugen"
+            ]
+          },
+          {
+            "name": "ipaq_walk_hours",
+            "title": "ipaq_walk_hours",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 12
+            }
+          },
+          {
+            "name": "ipaq_walk_minutes",
+            "title": "ipaq_walk_minutes",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "ipaq_sit_hours",
+            "title": "ipaq_sit_hours",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 12
+            }
+          },
+          {
+            "name": "ipaq_sit_minutes",
+            "title": "ipaq_sit_minutes",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          {
+            "name": "ipaq_end",
+            "title": "ipaq_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "ipaq_compl_time",
+            "title": "ipaq_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([mctq_end],[ipaq_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "use_personal_tracker",
+            "title": "use_personal_tracker",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "other_health_tracker",
+            "title": "other_health_tracker",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "smart_watch_type",
+            "title": "smart_watch_type",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Apple Watch (Apple)",
+                "Garmin",
+                "Fitbit",
+                "Samsung Galaxy Watch",
+                "Polar",
+                "Suunto",
+                "Huawei Watch",
+                "Xiaomi / Mi Band",
+                "Andet mærke",
+                "kender ikke mærket"
+              ]
+            },
+            "categories": [
+              "Apple Watch (Apple)",
+              "Garmin",
+              "Fitbit",
+              "Samsung Galaxy Watch",
+              "Polar",
+              "Suunto",
+              "Huawei Watch",
+              "Xiaomi / Mi Band",
+              "Andet mærke",
+              "kender ikke mærket"
+            ]
+          },
+          {
+            "name": "smartphone_brand",
+            "title": "smartphone_brand",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Android (fx Samsung, Xiaomi, OnePlus, Huawei m.fl.)",
+                "Apple iPhone (iOS)",
+                "Andet",
+                "Ved ikke"
+              ]
+            },
+            "categories": [
+              "Android (fx Samsung, Xiaomi, OnePlus, Huawei m.fl.)",
+              "Apple iPhone (iOS)",
+              "Andet",
+              "Ved ikke"
+            ]
+          },
+          {
+            "name": "smart_phone_other",
+            "title": "smart_phone_other",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "mvpa_can_report",
+            "title": "mvpa_can_report",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, jeg kan se aktiv tid/træningsminutter",
+                "Nej, jeg kan ikke finde oplysningerne"
+              ]
+            },
+            "categories": [
+              "Ja, jeg kan se aktiv tid/træningsminutter",
+              "Nej, jeg kan ikke finde oplysningerne"
+            ]
+          },
+          {
+            "name": "mvpa_min_7d",
+            "title": "mvpa_min_7d",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0,
+              "maximum": 600
+            }
+          },
+          {
+            "name": "steps_can_report",
+            "title": "steps_can_report",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, jeg kan se skridttal",
+                "Nej, jeg kan ikke finde oplysningerne"
+              ]
+            },
+            "categories": [
+              "Ja, jeg kan se skridttal",
+              "Nej, jeg kan ikke finde oplysningerne"
+            ]
+          },
+          {
+            "name": "step_avg_7d",
+            "title": "step_avg_7d",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "sleep_can_report",
+            "title": "sleep_can_report",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, jeg kan se søvnoplysninger",
+                "Nej, jeg kan ikke finde oplysningerne"
+              ]
+            },
+            "categories": [
+              "Ja, jeg kan se søvnoplysninger",
+              "Nej, jeg kan ikke finde oplysningerne"
+            ]
+          },
+          {
+            "name": "sleep_hours_avg",
+            "title": "sleep_hours_avg",
+            "type": "number",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 0.0,
+              "maximum": 24.0
+            }
+          },
+          {
+            "name": "rhr_can_report",
+            "title": "rhr_can_report",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, jeg kan se min hvilepuls",
+                "Nej, jeg kan ikke finde oplysningerne"
+              ]
+            },
+            "categories": [
+              "Ja, jeg kan se min hvilepuls",
+              "Nej, jeg kan ikke finde oplysningerne"
+            ]
+          },
+          {
+            "name": "rhr_value",
+            "title": "rhr_value",
+            "type": "integer",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "minimum": 20,
+              "maximum": 200
+            }
+          },
+          {
+            "name": "vo2max_can_report",
+            "title": "vo2max_can_report",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja, jeg kan se et mål for VO₂max/kondital",
+                "Nej, jeg kan ikke finde oplysningerne"
+              ]
+            },
+            "categories": [
+              "Ja, jeg kan se et mål for VO₂max/kondital",
+              "Nej, jeg kan ikke finde oplysningerne"
+            ]
+          },
+          {
+            "name": "vo2max_value",
+            "title": "vo2max_value",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "healthdata_other",
+            "title": "healthdata_other",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "healthtrack_end",
+            "title": "healthtrack_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "healthtrack_compl",
+            "title": "healthtrack_compl",
+            "type": "string",
+            "description": "Derived using the formula: datediff([ipaq_end],[healthtrack_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "bhla_knowledge",
+            "title": "bhla_knowledge",
+            "type": "string",
+            "description": "the participant has good knowledge about health",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_health_ideas",
+            "title": "bhla_health_ideas",
+            "type": "string",
+            "description": "the participant can share knowledge about health with friends and family",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_comp_info",
+            "title": "bhla_comp_info",
+            "type": "string",
+            "description": "the participant can compare health cnowledge",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_follow_instruct",
+            "title": "bhla_follow_instruct",
+            "type": "string",
+            "description": "the participant can follow health recommendations",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_better_health",
+            "title": "bhla_better_health",
+            "type": "string",
+            "description": "the participant knows how to improve their health",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_actions_eff",
+            "title": "bhla_actions_eff",
+            "type": "string",
+            "description": "the participant knows how to their actions effect health",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_understa_health",
+            "title": "bhla_understa_health",
+            "type": "string",
+            "description": "the participant can find health informations that are easy to understand",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_health_behav",
+            "title": "bhla_health_behav",
+            "type": "string",
+            "description": "the participant understands how behaviour effects health",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_false_info",
+            "title": "bhla_false_info",
+            "type": "string",
+            "description": "the participant knows when health information is true or false",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_argue_actions",
+            "title": "bhla_argue_actions",
+            "type": "string",
+            "description": "the participant can justify the choices they make",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Slet ikke rigtigt",
+                "Ikke helt rigtigt",
+                "Nogenlunde rigtigt",
+                "Helt rigtigt"
+              ]
+            },
+            "categories": [
+              "Slet ikke rigtigt",
+              "Ikke helt rigtigt",
+              "Nogenlunde rigtigt",
+              "Helt rigtigt"
+            ]
+          },
+          {
+            "name": "bhla_end",
+            "title": "bhla_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "bhla_compl_time",
+            "title": "bhla_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([healthtrack_end],[bhla_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "bfis_quiet",
+            "title": "bfis_quiet",
+            "type": "string",
+            "description": "the participant is a quiet type",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_compassion",
+            "title": "bfis_compassion",
+            "type": "string",
+            "description": "the participant has a big heart",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_disorganized",
+            "title": "bfis_disorganized",
+            "type": "string",
+            "description": "the participant is unorganized",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_worried",
+            "title": "bfis_worried",
+            "type": "string",
+            "description": "the participant worry a lot",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_artistic",
+            "title": "bfis_artistic",
+            "type": "string",
+            "description": "the participant loves art and music",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_control",
+            "title": "bfis_control",
+            "type": "string",
+            "description": "the participant takes control often",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_rude",
+            "title": "bfis_rude",
+            "type": "string",
+            "description": "the participant can be rude towads others",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_motivation",
+            "title": "bfis_motivation",
+            "type": "string",
+            "description": "the participant has trouble getting started on tasks",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_depressed",
+            "title": "bfis_depressed",
+            "type": "string",
+            "description": "the participant feels depressed",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_not_abstract",
+            "title": "bfis_not_abstract",
+            "type": "string",
+            "description": "the participant has no interest in abstract ideas",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_energetic",
+            "title": "bfis_energetic",
+            "type": "string",
+            "description": "the participant is full of energy",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_naive",
+            "title": "bfis_naive",
+            "type": "string",
+            "description": "the participant sees the best in people",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_reliable",
+            "title": "bfis_reliable",
+            "type": "string",
+            "description": "the participant is trustworthy",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_stable",
+            "title": "bfis_stable",
+            "type": "string",
+            "description": "the participant is emotionally stable",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_innovative",
+            "title": "bfis_innovative",
+            "type": "string",
+            "description": "the participant is innovative",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_social",
+            "title": "bfis_social",
+            "type": "string",
+            "description": "the participant is social",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_indifferent",
+            "title": "bfis_indifferent",
+            "type": "string",
+            "description": "the participant can be careless",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_organized",
+            "title": "bfis_organized",
+            "type": "string",
+            "description": "the participant is organized",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_relaxed",
+            "title": "bfis_relaxed",
+            "type": "string",
+            "description": "the participant is relaxed",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_not_artistic",
+            "title": "bfis_not_artistic",
+            "type": "string",
+            "description": "the participant has few artistic interests",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_compliant",
+            "title": "bfis_compliant",
+            "type": "string",
+            "description": "the participant prefer others to decide",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_respectful",
+            "title": "bfis_respectful",
+            "type": "string",
+            "description": "the participant is respectful",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_persistent",
+            "title": "bfis_persistent",
+            "type": "string",
+            "description": "the participant is persistent",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_self_assured",
+            "title": "bfis_self_assured",
+            "type": "string",
+            "description": "the participant feel safe",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_considerate",
+            "title": "bfis_considerate",
+            "type": "string",
+            "description": "the participant is considerate",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_less_energetic",
+            "title": "bfis_less_energetic",
+            "type": "string",
+            "description": "the participant is less engergetic compared to others",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_dependent",
+            "title": "bfis_dependent",
+            "type": "string",
+            "description": "the participant sees other's mistakes",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_reckless",
+            "title": "bfis_reckless",
+            "type": "string",
+            "description": "the participant can be reckless",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_emotional",
+            "title": "bfis_emotional",
+            "type": "string",
+            "description": "the participant has a temperament",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_not_creative",
+            "title": "bfis_not_creative",
+            "type": "string",
+            "description": "the participant not creative",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Helt uenig",
+                "Delvist uenig",
+                "Neutral",
+                "Delvist enig",
+                "Helt enig"
+              ]
+            },
+            "categories": [
+              "Helt uenig",
+              "Delvist uenig",
+              "Neutral",
+              "Delvist enig",
+              "Helt enig"
+            ]
+          },
+          {
+            "name": "bfis_end",
+            "title": "bfis_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "bfi2s_compl_time",
+            "title": "bfi2s_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([bhla_end],[bfis_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "diet_intro",
+            "title": "diet_intro",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Ja",
+                "Nej"
+              ]
+            },
+            "categories": [
+              "Ja",
+              "Nej"
+            ]
+          },
+          {
+            "name": "diet_foods",
+            "title": "diet_foods",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Carnivore (spiser kun kød)",
+                "Flexitar (spiser sjældent kød)",
+                "Pescetar (spiser ikke kød, men spiser fisk)",
+                "Vegetar (spiser ikke kød eller fisk)",
+                "Veganer (spiser ikke kød, fisk, mejeriprodukter eller æg)",
+                "Mediterranean Diet (meget grønt, fuldkorn, fisk, olivenolie, begrænset rødt kød)",
+                "Stenalderkost / paleo (kød, fisk, grønt, nødder; ingen kornprodukter og raffineret sukker)",
+                "Atkins (lavkulhydratkost med relativt højt protein- og fedtindtag)",
+                "Ketogen diæt (meget få kulhydrater, højt fedtindtag)",
+                "Raw food (primært rå, uforarbejdede fødevarer)",
+                "Intermittent fasting (spiser kun inden for bestemte tidsvinduer)",
+                "Anden diæt"
+              ]
+            },
+            "categories": [
+              "Carnivore (spiser kun kød)",
+              "Flexitar (spiser sjældent kød)",
+              "Pescetar (spiser ikke kød, men spiser fisk)",
+              "Vegetar (spiser ikke kød eller fisk)",
+              "Veganer (spiser ikke kød, fisk, mejeriprodukter eller æg)",
+              "Mediterranean Diet (meget grønt, fuldkorn, fisk, olivenolie, begrænset rødt kød)",
+              "Stenalderkost / paleo (kød, fisk, grønt, nødder; ingen kornprodukter og raffineret sukker)",
+              "Atkins (lavkulhydratkost med relativt højt protein- og fedtindtag)",
+              "Ketogen diæt (meget få kulhydrater, højt fedtindtag)",
+              "Raw food (primært rå, uforarbejdede fødevarer)",
+              "Intermittent fasting (spiser kun inden for bestemte tidsvinduer)",
+              "Anden diæt"
+            ]
+          },
+          {
+            "name": "diet_foods_other",
+            "title": "diet_foods_other",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "diet_fasting",
+            "title": "diet_fasting",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "diet_time",
+            "title": "diet_time",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Hele livet",
+                "20+år",
+                "10-19 år",
+                "5-9 år",
+                "3-4 år",
+                "1-2 år",
+                "6 måneder - 1 år",
+                "1-6 måneder",
+                "Mindre end 1 måned",
+                "Er lige startet (en uge eller mindre)"
+              ]
+            },
+            "categories": [
+              "Hele livet",
+              "20+år",
+              "10-19 år",
+              "5-9 år",
+              "3-4 år",
+              "1-2 år",
+              "6 måneder - 1 år",
+              "1-6 måneder",
+              "Mindre end 1 måned",
+              "Er lige startet (en uge eller mindre)"
+            ]
+          },
+          {
+            "name": "aebq2",
+            "title": "aebq2",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq5",
+            "title": "aebq5",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq7",
+            "title": "aebq7",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq8",
+            "title": "aebq8",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq9",
+            "title": "aebq9",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq10",
+            "title": "aebq10",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq11",
+            "title": "aebq11",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq12",
+            "title": "aebq12",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "aebq13",
+            "title": "aebq13",
+            "type": "string",
+            "description": "",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Meget uenig",
+                "Uenig",
+                "Hverken enig eller uenig",
+                "Enig",
+                "Meget enig"
+              ]
+            },
+            "categories": [
+              "Meget uenig",
+              "Uenig",
+              "Hverken enig eller uenig",
+              "Enig",
+              "Meget enig"
+            ]
+          },
+          {
+            "name": "genralfood_end",
+            "title": "genralfood_end",
+            "type": "datetime",
+            "format": "%d/%m/%Y %H:%M:%S",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "gen_food_compl_time",
+            "title": "gen_food_compl_time",
+            "type": "string",
+            "description": "Derived using the formula: datediff([bfis_end],[genralfood_end],\"s\",true)",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "myfas_feeling_sick",
+            "title": "myfas_feeling_sick",
+            "type": "string",
+            "description": "the participant eats until they feel sick",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_sluggish",
+            "title": "myfas_sluggish",
+            "type": "string",
+            "description": "the participant feels tired due to overeating",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_overeat",
+            "title": "myfas_overeat",
+            "type": "string",
+            "description": "the participant avoided social activities due to overeating",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_emo_eating",
+            "title": "myfas_emo_eating",
+            "type": "string",
+            "description": "the participant ate certain foods to feel better",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_worry",
+            "title": "myfas_worry",
+            "type": "string",
+            "description": "The participant has many worries due to food",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_life_probs",
+            "title": "myfas_life_probs",
+            "type": "string",
+            "description": "the participant had many problems in life due to food",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_overeating_impa",
+            "title": "myfas_overeating_impa",
+            "type": "string",
+            "description": "the participant overeating prevents the him/her from taking care of their family",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_cont_overeat",
+            "title": "myfas_cont_overeat",
+            "type": "string",
+            "description": "the participant continues eating the same way, even though it makes them feel bad",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_less_enjoy",
+            "title": "myfas_less_enjoy",
+            "type": "string",
+            "description": "the participant doesn't get the same good feeling form the same foods anymore",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_craving_obses",
+            "title": "myfas_craving_obses",
+            "type": "string",
+            "description": "the participant felt the urge to eat a certain food",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_lack_restraint",
+            "title": "myfas_lack_restraint",
+            "type": "string",
+            "description": "the participant is trying to stop eating certain foods, but can't",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_distracted",
+            "title": "myfas_distracted",
+            "type": "string",
+            "description": "the participant was so distracted by eating that they could have gotten hurt",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "myfas_family_concern",
+            "title": "myfas_family_concern",
+            "type": "string",
+            "description": "friends and family were worried about the participant's eating habits",
+            "constraints": {
+              "required": false,
+              "enum": [
+                "Aldrig",
+                "Mindre end en gang om måneden",
+                "En gang om måneden",
+                "2-3 gange om måneden",
+                "En gang om ugen",
+                "2-3 gange om ugen",
+                "4-6 gange om ugen",
+                "Hver dag"
+              ]
+            },
+            "categories": [
+              "Aldrig",
+              "Mindre end en gang om måneden",
+              "En gang om måneden",
+              "2-3 gange om måneden",
+              "En gang om ugen",
+              "2-3 gange om ugen",
+              "4-6 gange om ugen",
+              "Hver dag"
+            ]
+          },
+          {
+            "name": "health_tracker_devices___1",
+            "title": "Smartwatch/aktivitetsur (fx Garmin, Apple Watch, Fitbit, Polar  m.fl.)",
+            "type": "boolean",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "health_tracker_devices___2",
+            "title": "Mobiltelefon (fx Apple Health, Google Fit, Samsung Health m.fl.)",
+            "type": "boolean",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          },
+          {
+            "name": "health_tracker_devices___3",
+            "title": "Andre instrumenter eller måleenheder",
+            "type": "boolean",
+            "description": "",
+            "constraints": {
+              "required": false
+            }
+          }
+        ],
+        "primaryKey": [
+          "participant_id"
+        ]
+      }
+    }
+  ]
+}

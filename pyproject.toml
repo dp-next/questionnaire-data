@@ -21,6 +21,7 @@ dependencies = [
     "pytask>=0.6.0",
     "requests>=2.34.2",
     "seedcase-flower>=0.30.1",
+    "seedcase-soil>=0.16.0",
     "seedcase-sprout>=0.51.0",
 ]
 
