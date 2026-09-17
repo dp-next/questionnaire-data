@@ -57,3 +57,7 @@ task_files = ["task_*.py", "build.py"]
 metadata = "Tasks to process and build the metadata for the data package."
 raw = "Tasks to download and save data (and maybe metadata) from different source locations into 'raw/'."
 staging = "Tasks to process data from 'raw/' to 'staging/'."
+
+[tool.seedcase-flower]
+style = "quarto-resource-tables"
+output-dir = "docs/metadata"
