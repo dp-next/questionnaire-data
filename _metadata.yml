@@ -1,9 +1,9 @@
 gh:
   org: dp-next
-  repo: wp3-d-quest
+  repo: questionnaire-data
 
 tagline: "Questionnaire data package for Work Package 3 of the DP-Next project"
 
 links:
-  github: "https://github.com/dp-next/wp3-d-quest"
-  site: "https://dp-next.github.io/wp3-d-quest"
+  github: "https://github.com/dp-next/questionnaire-data"
+  site: "https://dp-next.github.io/questionnaire-data"

@@ -28,5 +28,5 @@ keywords:
   - "population survey"
 license: "CC0-1.0"
 message: "If you use this data package, please cite it using these metadata."
-repository-code: "https://github.com/dp-next/wp3-d-quest"
-url: "https://dp-next.github.io/wp3-d-quest"
+repository-code: "https://github.com/dp-next/questionnaire-data"
+url: "https://dp-next.github.io/questionnaire-data"
