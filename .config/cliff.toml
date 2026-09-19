@@ -4,7 +4,7 @@ offline = false
 
 [remote.github]
 owner = "dp-next"
-repo = "wp3-d-quest"
+repo = "questionnaire-data"
 
 [changelog]
 # A Tera template to be rendered for each release in the changelog.
@@ -105,7 +105,7 @@ output = "CHANGELOG.md"
 [git]
 commit_preprocessors = [
   # Replace pull request numbers with links to GitHub.
-  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "[#${2}](https://github.com/dp-next/wp3-d-quest/pull/${2})" },
+  { pattern = '\((\w+\s)?#([0-9]+)\)', replace = "[#${2}](https://github.com/dp-next/questionnaire-data/pull/${2})" },
   # Check spelling of the commit message using https://github.com/crate-ci/typos.
   # If the spelling is incorrect, it will be fixed automatically.
   { pattern = '.*', replace_command = 'uvx typos --write-changes -' },

@@ -8,11 +8,11 @@ from typing import Annotated
 import seedcase_sprout as sp
 from pytask import Product, PythonNode, mark
 
-from wp3_d_quest import common, metadata
+from questionnaire_data import common, metadata
 
 common.dotenv.load_env_vars()
 
-SRC = Path(str(files("wp3_d_quest"))).joinpath("..").resolve()
+SRC = Path(str(files("questionnaire_data"))).joinpath("..").resolve()
 RAW = SRC.joinpath("..", "raw").resolve()
 STAGING = SRC.joinpath("..", "staging").resolve()
 

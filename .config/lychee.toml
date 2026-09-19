@@ -6,5 +6,5 @@ extensions = ["md", "qmd", "py"]
 exclude_path = [
   "_badges.qmd",
   "CHANGELOG.md",
-  "src/wp3_d_quest/common/redcap.py",
+  "src/questionnaire_data/common/redcap.py",
 ]

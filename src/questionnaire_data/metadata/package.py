@@ -1,7 +1,7 @@
 import seedcase_sprout as sp
 
 package_properties = sp.SproutProperties(
-    name="wp3-d-quest",
+    name="questionnaire-data",
     title="Questionnaire data package for Work Package 3 of the DP-Next project",
     description=(
         "This package contains the data and metadata from a questionnaire sent out to "
@@ -10,7 +10,7 @@ package_properties = sp.SproutProperties(
         "the DP-Next project. Only metadata and documentation are publicly accessible, "
         "personal data is kept within GenomeDK."
     ),
-    homepage="https://dp-next.github.io/wp3-d-quest",
+    homepage="https://dp-next.github.io/questionnaire-data",
     contributors=[
         sp.ContributorProperties(
             title="Kristiane Beicher",
