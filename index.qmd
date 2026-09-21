@@ -1,4 +1,6 @@
-# DP-Next questionnaire data package
+---
+title: "DP-Next questionnaire data package"
+---
 
 {{< include /docs/includes/_badges.qmd >}}
 
@@ -30,7 +32,7 @@ Specifically, this website has:
   data package and a brief description of the changes that have been made within
   each release.
 
-## Citing
+## Citing us
 
 {{< include /docs/includes/_cite-us.md >}}
 
