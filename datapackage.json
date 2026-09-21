@@ -1,9 +1,9 @@
 {
-  "name": "wp3-d-quest",
+  "name": "questionnaire-data",
   "id": "0b14e351-79ee-4790-a3d5-ba087e38b24f",
   "title": "Questionnaire data package for Work Package 3 of the DP-Next project",
   "description": "This repository contains the source raw data and Python code to build the data package for the DP-Next work package 3 population questionnaire. Only metadata and documentation are publicly accessible.",
-  "homepage": "https://dp-next.github.io/wp3-d-quest",
+  "homepage": "https://dp-next.github.io/questionnaire-data",
   "version": "0.1.0",
   "created": "2026-09-08T16:35:37+02:00",
   "contributors": [

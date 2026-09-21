@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2026 wp3-d-quest authors
+Copyright (c) 2026 questionnaire-data authors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

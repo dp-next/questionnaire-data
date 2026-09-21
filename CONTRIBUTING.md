@@ -3,8 +3,8 @@
 ## :bug: Issues and bugs
 
 The easiest way to contribute is to report issues or bugs that you might find
-while using wp3-d-quest. You can do this by creating a new issue on our GitHub
-repository.
+while using questionnaire-data. You can do this by creating a new issue on our
+GitHub repository.
 
 ## :pencil2: Adding or modifying content
 
@@ -13,7 +13,7 @@ If you would like to contribute content, please check out our
 on how we work and develop. It is a regularly evolving document, so is at
 various states of completion.
 
-To contribute to wp3-d-quest, you first need to install
+To contribute to questionnaire-data, you first need to install
 [uv](https://docs.astral.sh/uv/) and
 [justfile](https://just.systems/man/en/packages.html). We use uv and justfile to
 manage our project, such as to run checks on the data package and build the
@@ -43,7 +43,8 @@ just <recipe-name>
 
 As you contribute, make sure your changes will pass our checks by opening a
 terminal so that the working directory is the root of this project
-(`wp3-d-quest/`) and running our recipes. Some recipes to run regularly are:
+(`questionnaire-data/`) and running our recipes. Some recipes to run regularly
+are:
 
 ```bash
 just check-all
@@ -84,12 +85,12 @@ This is a brief description of some of the files in this repository.
   for data processing, while the actual data processing is done in `main.py` to
   keep all the processing steps in one place.
   - Use the naming convention
-    `src/wp3_d_quest/<data-source>/<data-resource>_(data|metadata).py` for your
-    Python files. `data-source` is the source that your data comes from (see
-    `raw/` below) and `data-resource` is the name of the (eventual) data
+    `src/questionnaire_data/<data-source>/<data-resource>_(data|metadata).py`
+    for your Python files. `data-source` is the source that your data comes from
+    (see `raw/` below) and `data-resource` is the name of the (eventual) data
     resource.
-  - Utility or common functions should be kept in a `src/wp3_d_quest/common/`
-    folder.
+  - Utility or common functions should be kept in a
+    `src/questionnaire_data/common/` folder.
 - `raw/`: The folder for all your raw data files. These data files should come
   directly from their source locations (e.g. a database, an API, or a downloaded
   file) without having been modified in any way. Name the files using the
@@ -151,6 +152,6 @@ This is a brief description of some of the files in this repository.
 ## Developing your data package
 
 The first steps for creating and developing your data package are kept in the
-`src/wp3-d-quest/build.py`. For more detailed instructions on developing data
-packages, check out the [Building Data
+`src/questionnaire-data/build.py`. For more detailed instructions on developing
+data packages, check out the [Building Data
 Packages](https://data-pkg-guide.seedcase-project.org) guide.

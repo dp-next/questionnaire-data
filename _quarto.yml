@@ -3,8 +3,8 @@ project:
 
 website:
   title: "DP-Next Questionnaire Data Package"
-  site-url: "https://dp-next.github.io/wp3-d-quest"
-  repo-url: "https://github.com/dp-next/wp3-d-quest"
+  site-url: "https://dp-next.github.io/questionnaire-data"
+  repo-url: "https://github.com/dp-next/questionnaire-data"
   # TODO: Set favicon if relevant.
   # favicon: ""
   navbar:
@@ -19,11 +19,20 @@ website:
         href: docs/metadata/index.qmd
     tools:
       - icon: github
-        href: "https://github.com/dp-next/wp3-d-quest"
+        href: "https://github.com/dp-next/questionnaire-data"
         aria-label: "GitHub icon: Source repository"
   sidebar:
-    contents:
-      - index.qmd
-      - docs/metadata/index.qmd
+    - id: overview
+      style: "docked"
+      contents:
+        - index.md
+        - CONTRIBUTING.md
+        - CHANGELOG.md
+    - id: package
+      style: "docked"
+      contents:
+        - text: "Package"
+          href: docs/metadata/index.qmd
+        - auto: docs/metadata/resources/
 
 format: dp-next-theme-html
