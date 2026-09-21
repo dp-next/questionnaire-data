@@ -1,3 +1,43 @@
-# Overview
+# DP-Next questionnaire data package
 
-<!-- TODO: Add a short description of the package and how to contribute. -->
+{{< include /docs/includes/_badges.qmd >}}
+
+This is the website for the DP-Next questionnaire data package. It contains
+information on how the data was collected, where and how it's stored, what is
+found within the data package (the metadata), and how to contribute or use the
+data package.
+
+::: callout-important
+The data itself is not kept on GitHub as it contains personal health data. The
+data is stored in [GenomeDK](https://genome.au.dk).
+:::
+
+Specifically, this website has:
+
+- The [protocol](docs/protocol.qmd) page that contains information on why this
+  study was done and how it was conducted. Go there if you want details on the
+  methods.
+- The [metadata documentation](docs/metadata/index.qmd) pages that have
+  information on what data was collected. These pages have tables listing all
+  the columns in the data package and a description about them. Use these pages
+  as a reference if you are analysing the data and want more details about what
+  is available and what the columns mean.
+- The [contributing](CONTRIBUTING.md) page that has details about how you can
+  contribute to developing the data package, as well as details about how the
+  data was processed and structured. This page is helpful if you find an issue
+  with the data and want or need to fix those issues (or get help fixing them).
+- The [changelog](CHANGELOG.md) page that lists all the releases made for the
+  data package and a brief description of the changes that have been made within
+  each release.
+
+## Citing
+
+{{< include /docs/includes/_cite-us.md >}}
+
+## Contributors
+
+{{< include /docs/includes/_contributors.qmd >}}
+
+## Changelog
+
+For a list of changes, see our [changelog](CHANGELOG.md) page.
