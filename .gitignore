@@ -45,7 +45,7 @@ public
 site
 
 # Auto-generated from Flower
-docs/metadata/resources
+docs/metadata/resources/*.qmd
 docs/metadata/index.qmd
 
 # Misc files
