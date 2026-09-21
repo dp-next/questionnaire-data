@@ -6,8 +6,6 @@
 
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json?raw=true.svg)](https://github.com/copier-org/copier)
 [![GitHub
-License](https://img.shields.io/github/license/dp-next/questionnaire-data.svg)](https://github.com/dp-next/questionnaire-data/blob/main/LICENSE.md)
-[![GitHub
 Release](https://img.shields.io/github/v/release/dp-next/questionnaire-data.svg)](https://github.com/dp-next/questionnaire-data/releases/latest)
 [![Checks](https://github.com/dp-next/questionnaire-data/actions/workflows/checks.yml/badge.svg)](https://github.com/dp-next/questionnaire-data/actions/workflows/checks.yml)
 [![Build
@@ -27,10 +25,10 @@ LFS](https://decisions.seedcase-project.org/why-git-lfs/) stores within
 [GenomeDK](https://genome.au.dk) and no personal data is uploaded to
 GitHub. Only metadata and documentation is publicly accessible.
 
-Check out our [website](https://dp-next.github.io/questionnaire-data) for more
-information, such as the
-[metadata](https://dp-next.github.io/questionnaire-data/docs/metadata/) on the
-data package and its contents.
+Check out our [website](https://dp-next.github.io/questionnaire-data)
+for more information, such as the
+[metadata](https://dp-next.github.io/questionnaire-data/docs/metadata/)
+on the data package and its contents.
 
 > [!TIP]
 >
@@ -47,6 +45,14 @@ development environment.
 Please note that this project is released with a [Contributor Code of
 Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree
 to abide by its terms.
+
+### Contributors
+
+The following people have contributed to this project by submitting pull
+requests :tada:
+
+[@lwjohnst86](https://github.com/lwjohnst86),
+[@martonvago](https://github.com/martonvago)
 
 ## Licensing
 
