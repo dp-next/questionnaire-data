@@ -23,13 +23,13 @@ website:
         aria-label: "GitHub icon: Source repository"
   sidebar:
     - id: overview
-      style: "docked"
+      style: "floating"
       contents:
-        - index.md
+        - text: "Overview"
+          href: index.qmd
         - CONTRIBUTING.md
-        - CHANGELOG.md
+        # - CHANGELOG.md
     - id: package
-      style: "docked"
       contents:
         - text: "Package"
           href: docs/metadata/index.qmd
