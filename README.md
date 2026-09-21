@@ -58,7 +58,7 @@ License](LICENSE.md).
 
 For a list of changes, see our [changelog](CHANGELOG.md) page.
 
-## Citing
+## Citing us
 
 If you use this package in your work, please cite it as follows:
 

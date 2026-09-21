@@ -132,17 +132,21 @@ build-package version="0.0.0": build-staging build-metadata build-resources buil
 build-contributors:
     sh ./tools/get-contributors.sh dp-next/questionnaire-data > docs/includes/_contributors.qmd
 
+# Generate the citation include file
+build-citation:
+  uv run quarto render docs/includes/_cite-us.qmd --to gfm
+
 # Re-build the README file from the Quarto version
-build-readme:
-    uv run quarto render README.qmd --to gfm
+build-readme: build-citation
+  uv run quarto render README.qmd --to gfm
 
 # Build the documentation for the data package
 build-metadata-docs:
-    uv run seedcase-flower build
+  uv run seedcase-flower build
 
 # Build the documentation website using Quarto
-build-website: build-metadata-docs
-    uv run quarto render --execute
+build-website: build-citation build-metadata-docs
+  uv run quarto render --execute
 
 # Build data package and create a new release
 [confirm("Are you sure you want to run the release process? (yes/no)")]
