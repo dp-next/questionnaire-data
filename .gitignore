@@ -27,6 +27,8 @@ __pycache__/
 *.py[cod]
 
 # Raw data files and folders
+raw/data/**/*.csv
+*.parquet
 
 # MacOS
 .DS_Store

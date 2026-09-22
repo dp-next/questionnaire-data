@@ -42,8 +42,9 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
             else field["form_name"],
         },
     )
+    kept_fields = so.fmap(redcap_fields, _remove_unused_fields)
 
-    return redcap_fields
+    return kept_fields
 
 
 def create_resource_properties(
@@ -54,8 +55,8 @@ def create_resource_properties(
     content_fields = so.keep(
         redcap_fields, lambda field: field["field_type"] != "descriptive"
     )
-    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])  # type: ignore
-    grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])  # type: ignore
+    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])
+    grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])
     return so.fmap(
         grouped_by_form,
         lambda group: _form_to_resource(group[0], list(group[1])),
@@ -306,3 +307,15 @@ def _get_error_message(field: dict[str, str], key: str) -> str:
         f"Unexpected value {field[key]!r} for `{key}` in field {field['field_name']!r} "
         f"in form {field['form_name']!r}."
     )
+
+
+def _remove_unused_fields(metadata: dict[str, str]) -> dict[str, str]:
+    """Remove any field not used for `datapackage.json`."""
+    metadata.pop("section_header")
+    metadata.pop("identifier")
+    metadata.pop("branching_logic")
+    metadata.pop("custom_alignment")
+    metadata.pop("question_number")
+    metadata.pop("matrix_group_name")
+    metadata.pop("matrix_ranking")
+    return metadata

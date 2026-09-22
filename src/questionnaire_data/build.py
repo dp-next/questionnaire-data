@@ -17,7 +17,7 @@ RAW = SRC.joinpath("..", "raw").resolve()
 STAGING = SRC.joinpath("..", "staging").resolve()
 
 RAW_METADATA_PATH = RAW / "metadata" / "metadata.json"
-STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.json"
+STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.yaml"
 
 DATAPACKAGE_PATH = SRC.parent / "datapackage.json"
 
@@ -28,6 +28,7 @@ def _hash_properties(props: sp.SproutProperties) -> str:
     ).hexdigest()
 
 
+@mark.persist
 @mark.metadata
 def task_download_metadata(
     raw_metadata_path: Annotated[Path, Product] = RAW_METADATA_PATH,
@@ -45,7 +46,7 @@ def task_stage_metadata(
     """Prepare the REDCap metadata for transformation into datapackage.json."""
     raw_metadata = common.json.read(raw_metadata_path)
     staged_metadata = metadata.redcap.stage_metadata(raw_metadata)
-    common.json.write(staging_metadata_path, staged_metadata)
+    common.yaml.write(staged_metadata, staging_metadata_path)
 
 
 @mark.metadata
@@ -60,7 +61,7 @@ def task_create_datapackage_json(
     staging_metadata_path: Path = STAGING_METADATA_PATH,
 ) -> None:
     """Create the datapackage.json file from the REDCap metadata."""
-    staging_metadata = common.json.read(staging_metadata_path)
+    staging_metadata = common.yaml.read(staging_metadata_path)
     resources = metadata.redcap.create_resource_properties(staging_metadata)
     package_properties = replace(package_properties, resources=resources)
     common.json.write(datapackage_path, package_properties.compact_dict)
