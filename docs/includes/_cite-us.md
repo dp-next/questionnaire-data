@@ -6,7 +6,7 @@ Work Package 3 of the DP-Next project URL:
 
 Or as a BibTeX entry:
 
-```
+```bibtex
 @misc{YourReferenceHere,
 author = {Beicher, Kristiane and Brødbæk, Signe Kirk and Johnston, Luke William and Vago, Marton},
 title = {Questionnaire data package for Work Package 3 of the DP-Next project},
