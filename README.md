@@ -52,7 +52,8 @@ The following people have contributed to this project by submitting pull
 requests :tada:
 
 [@lwjohnst86](https://github.com/lwjohnst86),
-[@martonvago](https://github.com/martonvago)
+[@martonvago](https://github.com/martonvago),
+[@signekb](https://github.com/signekb)
 
 ## Licensing
 
