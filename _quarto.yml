@@ -13,8 +13,6 @@ website:
     # logo-alt: ""
     pinned: true
     left:
-      - text: "Overview"
-        href: index.qmd
       - text: "Data Package"
         href: docs/metadata/index.qmd
     tools:
