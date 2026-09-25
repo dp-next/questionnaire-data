@@ -6,6 +6,9 @@ from typing import Literal, cast
 import seedcase_soil as so
 import seedcase_sprout as sp
 
+obs_unit_id_col = "participant_id"
+main_resource_name = "registration"
+
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
@@ -13,7 +16,7 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
 
     # Create a `participant_id` field for all forms
     participant_id_field = so.keep(
-        redcap_fields, lambda field: field["field_name"] == "participant_id"
+        redcap_fields, lambda field: field["field_name"] == obs_unit_id_col
     )[0]
     participant_id_fields = so.fmap(
         forms,
@@ -25,7 +28,7 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     redcap_fields = so.keep(
         redcap_fields,
         lambda field: (
-            field["form_name"] in forms and field["field_name"] != "participant_id"
+            field["form_name"] in forms and field["field_name"] != obs_unit_id_col
         ),
     )
 
@@ -98,10 +101,26 @@ def _form_to_resource(
         title=form_name,
         description=form_name,
         schema=sp.TableSchemaProperties(
-            primary_key=["participant_id"],
+            primary_key=[obs_unit_id_col],
+            foreign_keys=_get_foreign_keys(form_name),
             fields=form_fields + checkbox_fields,
         ),
     )
+
+
+def _get_foreign_keys(
+    form_name: str,
+) -> list[sp.TableSchemaForeignKeyProperties] | None:
+    if form_name == main_resource_name:
+        return None
+    return [
+        sp.TableSchemaForeignKeyProperties(
+            fields=[obs_unit_id_col],
+            reference=sp.ReferenceProperties(
+                resource=main_resource_name, fields=[obs_unit_id_col]
+            ),
+        )
+    ]
 
 
 def _expand_checkbox_field(checkbox_field: dict[str, str]) -> list[sp.FieldProperties]:
