@@ -64,8 +64,8 @@
     {
       "name": "registration",
       "path": "resources/registration/data.parquet",
-      "title": "registration",
-      "description": "registration",
+      "title": "Registration",
+      "description": "Registration",
       "schema": {
         "fields": [
           {
@@ -174,8 +174,8 @@
     {
       "name": "survey",
       "path": "resources/survey/data.parquet",
-      "title": "survey",
-      "description": "survey",
+      "title": "Survey",
+      "description": "Survey",
       "schema": {
         "fields": [
           {
