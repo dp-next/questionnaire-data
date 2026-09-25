@@ -73,7 +73,7 @@ def _form_to_resource(
         non_checkbox_fields,
         lambda field: sp.FieldProperties(
             name=field["field_name"],
-            title=field["field_name"],
+            title=_get_title(field),
             type=_get_type(field),
             format=_get_format(field),
             description=_get_description(field),
@@ -117,6 +117,10 @@ def _expand_checkbox_field(checkbox_field: dict[str, str]) -> list[sp.FieldPrope
             ),
         ),
     )
+
+
+def _get_title(field: dict[str, str]) -> str:
+    return field["field_name"].replace("_", " ").capitalize()
 
 
 def _get_choices(field: dict[str, str]) -> list[tuple[str, str]]:
