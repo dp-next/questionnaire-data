@@ -1,10 +1,12 @@
 import hashlib
 import json
+import tomllib
 from dataclasses import replace
 from importlib.resources import files
 from pathlib import Path
 from typing import Annotated
 
+import polars as pl
 import seedcase_sprout as sp
 from pytask import Product, PythonNode, mark
 
@@ -16,7 +18,7 @@ SRC = Path(str(files("questionnaire_data"))).joinpath("..").resolve()
 RAW = SRC.joinpath("..", "raw").resolve()
 STAGING = SRC.joinpath("..", "staging").resolve()
 
-RAW_METADATA_PATH = RAW / "metadata" / "metadata.json"
+RAW_METADATA_PATH = RAW / "metadata" / "redcap.csv"
 STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.yaml"
 
 DATAPACKAGE_PATH = SRC.parent / "datapackage.json"
@@ -29,13 +31,15 @@ def _hash_properties(props: sp.SproutProperties) -> str:
 
 
 @mark.persist
-@mark.metadata
+@mark.raw
 def task_download_metadata(
     raw_metadata_path: Annotated[Path, Product] = RAW_METADATA_PATH,
 ) -> None:
     """Download the metadata to raw."""
-    redcap_metadata = common.redcap.get_json("metadata")
-    common.json.write(raw_metadata_path, redcap_metadata)
+    from_redcap = common.redcap.get_json("metadata")
+    kept_fields = metadata.redcap.remove_unused_fields(from_redcap)
+    metadata_df = pl.DataFrame(kept_fields)
+    metadata_df.write_csv(raw_metadata_path)
 
 
 @mark.metadata
@@ -44,8 +48,10 @@ def task_stage_metadata(
     raw_metadata_path: Path = RAW_METADATA_PATH,
 ) -> None:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-    raw_metadata = common.json.read(raw_metadata_path)
-    staged_metadata = metadata.redcap.stage_metadata(raw_metadata)
+    metadata_dicts = pl.read_csv(raw_metadata_path).filter(pl.cols("form_names"))
+    staged_metadata = metadata.redcap.stage_metadata(metadata_dicts)
+    Path("test.toml").write_text(tomllib)
+
     common.yaml.write(staged_metadata, staging_metadata_path)
 
 

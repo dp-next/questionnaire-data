@@ -3,34 +3,42 @@ from itertools import groupby
 from operator import itemgetter
 from typing import Literal, cast
 
+import polars as pl
 import seedcase_soil as so
 import seedcase_sprout as sp
+
+FORMS = ["registration", "dp_next"]
+
+
+def remove_unused_fields(metadata: dict[str, str]) -> dict[str, str]:
+    """Remove any field not used for `datapackage.json`."""
+    metadata.pop("section_header")
+    metadata.pop("identifier")
+    metadata.pop("branching_logic")
+    metadata.pop("custom_alignment")
+    metadata.pop("question_number")
+    metadata.pop("matrix_group_name")
+    metadata.pop("matrix_ranking")
+    return metadata
+
+
+def keep_needed_forms(data: pl.DataFrame) -> pl.DataFrame:
+    """Drop unused forms from the REDCap metadata."""
+    return data.filter(pl.col("form_name") in FORMS)
+
+
+def add_participant_id(data: pl.DataFrame) -> pl.DataFrame:
+    """Add participant ID column to kept forms"""
+    participants_df = pl.DataFrame({"participant_id": ["", ""], "form_name": FORMS})
+    return pl.concat([data, participants_df])
+
+
+def rename_form_names(data: pl.DataFrame) -> pl.DataFrame:
+    """"""
 
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-    forms = ["registration", "dp_next"]
-
-    # Create a `participant_id` field for all forms
-    participant_id_field = so.keep(
-        redcap_fields, lambda field: field["field_name"] == "participant_id"
-    )[0]
-    participant_id_fields = so.fmap(
-        forms,
-        lambda form: {**participant_id_field, "form_name": form},
-    )
-
-    # Discard fields in forms that are not in the data package
-    # and `participant_id`, which will be added separately
-    redcap_fields = so.keep(
-        redcap_fields,
-        lambda field: (
-            field["form_name"] in forms and field["field_name"] != "participant_id"
-        ),
-    )
-
-    # Add `participant_id` for all forms
-    redcap_fields = participant_id_fields + redcap_fields
 
     # Rename the `dp_next` form to `survey`
     redcap_fields = so.fmap(
@@ -42,9 +50,8 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
             else field["form_name"],
         },
     )
-    kept_fields = so.fmap(redcap_fields, _remove_unused_fields)
 
-    return kept_fields
+    return redcap_fields
 
 
 def create_resource_properties(
@@ -307,15 +314,3 @@ def _get_error_message(field: dict[str, str], key: str) -> str:
         f"Unexpected value {field[key]!r} for `{key}` in field {field['field_name']!r} "
         f"in form {field['form_name']!r}."
     )
-
-
-def _remove_unused_fields(metadata: dict[str, str]) -> dict[str, str]:
-    """Remove any field not used for `datapackage.json`."""
-    metadata.pop("section_header")
-    metadata.pop("identifier")
-    metadata.pop("branching_logic")
-    metadata.pop("custom_alignment")
-    metadata.pop("question_number")
-    metadata.pop("matrix_group_name")
-    metadata.pop("matrix_ranking")
-    return metadata
