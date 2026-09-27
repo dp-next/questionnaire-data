@@ -63,4 +63,4 @@ def task_create_datapackage_json(
     staging_metadata = common.json.read(staging_metadata_path)
     resources = metadata.redcap.create_resource_properties(staging_metadata)
     package_properties = replace(package_properties, resources=resources)
-    common.json.write(datapackage_path, package_properties.compact_dict)
+    sp.write_properties(package_properties, datapackage_path)
