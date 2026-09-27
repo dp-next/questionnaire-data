@@ -1,5 +1,5 @@
 field_name,form_name,field_type,field_label,select_choices_or_calculations,field_note,text_validation_type_or_show_slider_number,text_validation_min,text_validation_max,required_field,field_annotation
-participant_id,registration,text,Participant ID,"","","","","",y,Every participant will get a participant ID 
+participant_id,registration,text,Participant ID,"","","","","",y,Every participant will get a participant ID
 digital_postcpr,registration,text,CPR med bindestreg,"",Angiv CPR-nr MED bindestreg (xxxxxx-xxxx),dk_cpr_dash,"","","",""
 municipal_code,registration,text,3-cifret kommunekode,"",kommunekode (100-999),integer,100,999,"",""
 email_eboks,registration,text,E-mail (til udsendelse af spørgeskema),"","",email,"","","","@DEFAULT = ""send@openngdp.local"""
