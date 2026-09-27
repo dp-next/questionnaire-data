@@ -28,29 +28,18 @@ def keep_needed_forms(data: pl.DataFrame) -> pl.DataFrame:
 
 
 def add_participant_id(data: pl.DataFrame) -> pl.DataFrame:
-    """Add participant ID column to kept forms"""
+    """Add participant ID column to kept forms."""
     participants_df = pl.DataFrame({"participant_id": ["", ""], "form_name": FORMS})
     return pl.concat([data, participants_df])
 
 
-def rename_form_names(data: pl.DataFrame) -> pl.DataFrame:
-    """"""
+def rename_form_names(data: pl.DataFrame):
+    """Rename forms."""
+    return data
 
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-
-    # Rename the `dp_next` form to `survey`
-    redcap_fields = so.fmap(
-        redcap_fields,
-        lambda field: {
-            **field,
-            "form_name": "survey"
-            if field["form_name"] == "dp_next"
-            else field["form_name"],
-        },
-    )
-
     return redcap_fields
 
 

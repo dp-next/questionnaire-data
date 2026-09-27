@@ -1,6 +1,5 @@
 import hashlib
 import json
-import tomllib
 from dataclasses import replace
 from importlib.resources import files
 from pathlib import Path
@@ -30,7 +29,9 @@ def _hash_properties(props: sp.SproutProperties) -> str:
     ).hexdigest()
 
 
-@mark.persist
+@mark.skipif(
+    common.redcap.is_empty_env(), reason="API env key is not present, so skipping."
+)
 @mark.raw
 def task_download_metadata(
     raw_metadata_path: Annotated[Path, Product] = RAW_METADATA_PATH,
@@ -48,11 +49,11 @@ def task_stage_metadata(
     raw_metadata_path: Path = RAW_METADATA_PATH,
 ) -> None:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-    metadata_dicts = pl.read_csv(raw_metadata_path).filter(pl.cols("form_names"))
-    staged_metadata = metadata.redcap.stage_metadata(metadata_dicts)
-    Path("test.toml").write_text(tomllib)
+    metadata_df = pl.read_csv(raw_metadata_path)
+    kept_forms = metadata.redcap.keep_needed_forms(metadata_df)
+    # staged_metadata = metadata.redcap.stage_metadata(metadata_dicts)
 
-    common.yaml.write(staged_metadata, staging_metadata_path)
+    common.yaml.write(kept_forms, staging_metadata_path)
 
 
 @mark.metadata

@@ -1,6 +1,6 @@
 import os
 from dataclasses import dataclass
-from typing import Any, Literal
+from typing import Any, Literal, Optional
 
 import requests
 
@@ -23,7 +23,7 @@ def get(
     api_config: APIConfig = API_CONFIG,
 ) -> requests.Response:
     """Send a request to the REDCap API."""
-    token = os.environ.get(api_config.env_key)
+    token = _get_env(api_config)
     if not token:
         raise RuntimeError(f"{api_config.env_key} environment variable is not set.")
 
@@ -46,3 +46,12 @@ def get_json(
     }
     response = get(request_data)
     return response.json()
+
+
+def is_empty_env() -> bool:
+    """Check if env is empty."""
+    return _get_env(API_CONFIG) == ""
+
+
+def _get_env(api_config: APIConfig) -> Optional[str]:
+    return os.environ.get(api_config.env_key)
