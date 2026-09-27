@@ -9,5 +9,5 @@ def load_env_vars() -> None:
     Otherwise it will use the default, though empty, `.env.example`.
     """
     load_dotenv(".env.example")
-    load_dotenv("/faststorage/project/sdca-dpnext-study/env/.quest-env")
+    load_dotenv("/faststorage/project/sdca-dpnext-study/env/.quest-env", override=True)
     load_dotenv(".env", override=True)

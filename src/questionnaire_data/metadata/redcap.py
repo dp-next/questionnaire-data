@@ -10,21 +10,21 @@ import seedcase_sprout as sp
 FORMS = ["registration", "dp_next"]
 
 
-def remove_unused_fields(metadata: dict[str, str]) -> dict[str, str]:
+def remove_unused_fields(redcap_metadata: dict[str, str]) -> dict[str, str]:
     """Remove any field not used for `datapackage.json`."""
-    metadata.pop("section_header")
-    metadata.pop("identifier")
-    metadata.pop("branching_logic")
-    metadata.pop("custom_alignment")
-    metadata.pop("question_number")
-    metadata.pop("matrix_group_name")
-    metadata.pop("matrix_ranking")
-    return metadata
+    redcap_metadata.pop("section_header")
+    redcap_metadata.pop("identifier")
+    redcap_metadata.pop("branching_logic")
+    redcap_metadata.pop("custom_alignment")
+    redcap_metadata.pop("question_number")
+    redcap_metadata.pop("matrix_group_name")
+    redcap_metadata.pop("matrix_ranking")
+    return redcap_metadata
 
 
 def keep_needed_forms(data: pl.DataFrame) -> pl.DataFrame:
     """Drop unused forms from the REDCap metadata."""
-    return data.filter(pl.col("form_name") in FORMS)
+    return data.filter(pl.col("form_name").is_in(FORMS))
 
 
 def add_participant_id(data: pl.DataFrame) -> pl.DataFrame:
@@ -33,9 +33,9 @@ def add_participant_id(data: pl.DataFrame) -> pl.DataFrame:
     return pl.concat([data, participants_df])
 
 
-def rename_form_names(data: pl.DataFrame):
+def rename_forms(data: pl.DataFrame) -> pl.DataFrame:
     """Rename forms."""
-    return data
+    return data.with_columns(pl.col("form_name").str.replace("dp_next", "survey"))
 
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:

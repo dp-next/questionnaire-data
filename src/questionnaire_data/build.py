@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Annotated
 
 import polars as pl
+import seedcase_soil as so
 import seedcase_sprout as sp
 from pytask import Product, PythonNode, mark
 
@@ -38,9 +39,11 @@ def task_download_metadata(
 ) -> None:
     """Download the metadata to raw."""
     from_redcap = common.redcap.get_json("metadata")
-    kept_fields = metadata.redcap.remove_unused_fields(from_redcap)
+    kept_fields = so.fmap(from_redcap, metadata.redcap.remove_unused_fields)
     metadata_df = pl.DataFrame(kept_fields)
-    metadata_df.write_csv(raw_metadata_path)
+    kept_forms = metadata.redcap.keep_needed_forms(metadata_df)
+    renamed_forms = metadata.redcap.rename_forms(kept_forms)
+    renamed_forms.write_csv(raw_metadata_path)
 
 
 @mark.metadata
@@ -50,7 +53,6 @@ def task_stage_metadata(
 ) -> None:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
     metadata_df = pl.read_csv(raw_metadata_path)
-    kept_forms = metadata.redcap.keep_needed_forms(metadata_df)
     # staged_metadata = metadata.redcap.stage_metadata(metadata_dicts)
 
     common.yaml.write(kept_forms, staging_metadata_path)

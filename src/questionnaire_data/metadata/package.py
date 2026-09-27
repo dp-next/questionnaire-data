@@ -18,7 +18,7 @@ package_properties = sp.SproutProperties(
             given_name="Kristiane",
             family_name="Beicher",
             organization="Steno Diabetes Centre Aarhus",
-            roles=["DataManager", "DataCurator", "ContactPerson"],
+            roles=["DataManager", "DataCurator", "ContactPerson", "Distributor"],
         ),
         sp.ContributorProperties(
             title="Signe Kirk Brødbæk",
@@ -26,15 +26,15 @@ package_properties = sp.SproutProperties(
             given_name="Signe Kirk",
             family_name="Brødbæk",
             organization="Steno Diabetes Centre Aarhus",
-            roles=["DataManager", "DataCurator"],
+            roles=["DataCurator"],
         ),
         sp.ContributorProperties(
             title="Luke W Johnston",
-            email="lwjohnst@clin.au.dk",
+            email="lwjohnst@gmail.com",
             given_name="Luke",
             family_name="Johnston",
             organization="Steno Diabetes Centre Aarhus",
-            roles=["DataManager", "DataCurator"],
+            roles=["WorkPackageLeader", "DataCurator", "Distributor"],
         ),
         sp.ContributorProperties(
             title="Marton Vago",
@@ -42,7 +42,7 @@ package_properties = sp.SproutProperties(
             given_name="Marton",
             family_name="Vago",
             organization="Steno Diabetes Centre Aarhus",
-            roles=["DataManager", "DataCurator"],
+            roles=["DataCurator"],
         ),
         # TODO: Add other contributors, like David, Kristina, etc.
     ],

@@ -1,31 +1,10 @@
 lock-version = "1"
 
 [[task]]
-id = "src/questionnaire_data/build.py::task_create_datapackage_json"
-state = "3abf168395451b602c095bccf69348cfe729ee038a5e57f7924215f8ee5b73d7"
-
-[task.depends_on]
-"src/questionnaire_data/build.py::task_create_datapackage_json::package_properties" = "810cbdc8eea2b066e02e5f249fc1e5c9f82a9ac88163a895913413cfdb1c8d44"
-"staging/metadata/metadata.yaml" = "0039ed8b05341a1e9f77472c199ed3a509376ee82c80d0afef7d9be86d0036f5"
-
-[task.produces]
-"datapackage.json" = "e5a0f1f3f562a257dfcf57815450977dff1cb0ca8bf361c65d4e86b27c354fa0"
-
-[[task]]
 id = "src/questionnaire_data/build.py::task_download_metadata"
-state = "3abf168395451b602c095bccf69348cfe729ee038a5e57f7924215f8ee5b73d7"
+state = "0e2e0ffaa54fb88b7098ca2358bafbe48241488b85d951e73f1e40bc350dd168"
 
 [task.depends_on]
 
 [task.produces]
-"raw/metadata/metadata.json" = "f39de6b41f7645605addc795b2e2fe9c430610d70369f528d70c4a3300825a08"
-
-[[task]]
-id = "src/questionnaire_data/build.py::task_stage_metadata"
-state = "3abf168395451b602c095bccf69348cfe729ee038a5e57f7924215f8ee5b73d7"
-
-[task.depends_on]
-"raw/metadata/metadata.json" = "f39de6b41f7645605addc795b2e2fe9c430610d70369f528d70c4a3300825a08"
-
-[task.produces]
-"staging/metadata/metadata.yaml" = "0039ed8b05341a1e9f77472c199ed3a509376ee82c80d0afef7d9be86d0036f5"
+"raw/metadata/redcap.csv" = "082453c4e0079fd9be1c5124dbb93d60ecdeec74ea2b290a90674786f118dffd"
