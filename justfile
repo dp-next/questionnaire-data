@@ -170,3 +170,7 @@ update-from-template:
 # Reset repo changes to match the template
 reset-from-template:
     uvx copier recopy --defaults
+
+# Cleans up the pytask build files, to have a fresh re-build
+clean-pytask:
+  rm -rf .pytask/ pytask.lock bld/
