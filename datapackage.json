@@ -2,7 +2,7 @@
   "name": "questionnaire-data",
   "id": "0b14e351-79ee-4790-a3d5-ba087e38b24f",
   "title": "Questionnaire data package for Work Package 3 of the DP-Next project",
-  "description": "This repository contains the source raw data and Python code to build the data package for the DP-Next work package 3 population questionnaire. Only metadata and documentation are publicly accessible.",
+  "description": "This package contains the data and metadata from a questionnaire sent out to residents in Denmark who had an HbA1c measurement taken in the last 24 months and who are between 40-50 years of age. The questionnaire study is part of the DP-Next project. Only metadata and documentation are publicly accessible, personal data is kept within GenomeDK.",
   "homepage": "https://dp-next.github.io/questionnaire-data",
   "version": "0.1.0",
   "created": "2026-09-08T16:35:37+02:00",
@@ -64,13 +64,13 @@
     {
       "name": "registration",
       "path": "resources/registration/data.parquet",
-      "title": "registration",
-      "description": "registration",
+      "title": "Registration",
+      "description": "Registration",
       "schema": {
         "fields": [
           {
             "name": "participant_id",
-            "title": "participant_id",
+            "title": "Participant id",
             "type": "string",
             "description": "Every participant will get a participant ID",
             "constraints": {
@@ -79,7 +79,7 @@
           },
           {
             "name": "digital_postcpr",
-            "title": "digital_postcpr",
+            "title": "Digital postcpr",
             "type": "string",
             "description": "",
             "constraints": {
@@ -88,7 +88,7 @@
           },
           {
             "name": "municipal_code",
-            "title": "municipal_code",
+            "title": "Municipal code",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -99,7 +99,7 @@
           },
           {
             "name": "email_eboks",
-            "title": "email_eboks",
+            "title": "Email eboks",
             "type": "string",
             "format": "email",
             "description": "",
@@ -109,7 +109,7 @@
           },
           {
             "name": "send_date",
-            "title": "send_date",
+            "title": "Send date",
             "type": "date",
             "format": "%m/%d/%Y",
             "description": "",
@@ -119,7 +119,7 @@
           },
           {
             "name": "name",
-            "title": "name",
+            "title": "Name",
             "type": "string",
             "description": "",
             "constraints": {
@@ -128,7 +128,7 @@
           },
           {
             "name": "status_field",
-            "title": "status_field",
+            "title": "Status field",
             "type": "string",
             "description": "",
             "constraints": {
@@ -149,7 +149,7 @@
           },
           {
             "name": "status_text_field",
-            "title": "status_text_field",
+            "title": "Status text field",
             "type": "string",
             "description": "",
             "constraints": {
@@ -174,13 +174,13 @@
     {
       "name": "survey",
       "path": "resources/survey/data.parquet",
-      "title": "survey",
-      "description": "survey",
+      "title": "Survey",
+      "description": "Survey",
       "schema": {
         "fields": [
           {
             "name": "participant_id",
-            "title": "participant_id",
+            "title": "Participant id",
             "type": "string",
             "description": "Every participant will get a participant ID",
             "constraints": {
@@ -189,7 +189,7 @@
           },
           {
             "name": "background_start",
-            "title": "background_start",
+            "title": "Background start",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -199,7 +199,7 @@
           },
           {
             "name": "gender",
-            "title": "gender",
+            "title": "Gender",
             "type": "string",
             "description": "",
             "constraints": {
@@ -216,7 +216,7 @@
           },
           {
             "name": "height",
-            "title": "height",
+            "title": "Height",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -227,7 +227,7 @@
           },
           {
             "name": "weight",
-            "title": "weight",
+            "title": "Weight",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -238,7 +238,7 @@
           },
           {
             "name": "weight_2_female",
-            "title": "weight_2_female",
+            "title": "Weight 2 female",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -249,7 +249,7 @@
           },
           {
             "name": "blood_preasure",
-            "title": "blood_preasure",
+            "title": "Blood preasure",
             "type": "string",
             "description": "",
             "constraints": {
@@ -266,7 +266,7 @@
           },
           {
             "name": "cholesterol",
-            "title": "cholesterol",
+            "title": "Cholesterol",
             "type": "string",
             "description": "",
             "constraints": {
@@ -283,7 +283,7 @@
           },
           {
             "name": "weight_20yo",
-            "title": "weight_20yo",
+            "title": "Weight 20yo",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -294,7 +294,7 @@
           },
           {
             "name": "highest_weight",
-            "title": "highest_weight",
+            "title": "Highest weight",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -305,7 +305,7 @@
           },
           {
             "name": "highest_weight_2",
-            "title": "highest_weight_2",
+            "title": "Highest weight 2",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -316,7 +316,7 @@
           },
           {
             "name": "time_highest_weight",
-            "title": "time_highest_weight",
+            "title": "Time highest weight",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -327,7 +327,7 @@
           },
           {
             "name": "time_highest_weight_2",
-            "title": "time_highest_weight_2",
+            "title": "Time highest weight 2",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -338,7 +338,7 @@
           },
           {
             "name": "menstruation",
-            "title": "menstruation",
+            "title": "Menstruation",
             "type": "string",
             "description": "Information on whether the participant is still experiencing menstruation.",
             "constraints": {
@@ -355,7 +355,7 @@
           },
           {
             "name": "menopause",
-            "title": "menopause",
+            "title": "Menopause",
             "type": "string",
             "description": "Information on whether the participant has entered menopause.",
             "constraints": {
@@ -374,7 +374,7 @@
           },
           {
             "name": "civilstatus",
-            "title": "civilstatus",
+            "title": "Civilstatus",
             "type": "string",
             "description": "The participants civil status",
             "constraints": {
@@ -399,7 +399,7 @@
           },
           {
             "name": "children_home",
-            "title": "children_home",
+            "title": "Children home",
             "type": "string",
             "description": "Information on whether the participant has any children living at home.",
             "constraints": {
@@ -416,7 +416,7 @@
           },
           {
             "name": "smoking",
-            "title": "smoking",
+            "title": "Smoking",
             "type": "string",
             "description": "Information on the participant's smoking status",
             "constraints": {
@@ -443,7 +443,7 @@
           },
           {
             "name": "nikotine",
-            "title": "nikotine",
+            "title": "Nikotine",
             "type": "string",
             "description": "",
             "constraints": {
@@ -470,7 +470,7 @@
           },
           {
             "name": "background_end",
-            "title": "background_end",
+            "title": "Background end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -480,7 +480,7 @@
           },
           {
             "name": "compl_time_background",
-            "title": "compl_time_background",
+            "title": "Compl time background",
             "type": "string",
             "description": "Derived using the formula: datediff([background_start],[background_end],\"s\",true)",
             "constraints": {
@@ -489,7 +489,7 @@
           },
           {
             "name": "vas_physical",
-            "title": "vas_physical",
+            "title": "Vas physical",
             "type": "integer",
             "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god eller dårlig du synes, </span>dit fysiske helbred er i dag<span style=\"font-weight: normal;\">. Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værste tænkelige helbredstilstand) |  | 100 (bedst tænkelige helbredstilstand)",
             "constraints": {
@@ -500,7 +500,7 @@
           },
           {
             "name": "vas_mentalhealth",
-            "title": "vas_mentalhealth",
+            "title": "Vas mentalhealth",
             "type": "integer",
             "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god eller dårlig du synes, </span>dit mentale helbred er i dag<span style=\"font-weight: normal;\">. Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værste tænkelige helbredstilstand) |  | 100 (bedst tænkelige helbredstilstand)",
             "constraints": {
@@ -511,7 +511,7 @@
           },
           {
             "name": "qol_vas",
-            "title": "qol_vas",
+            "title": "Qol vas",
             "type": "integer",
             "description": "Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Angiv på denne skala, hvor god </span>din livskvalitet er i dag.<span style=\"font-weight: normal;\"> Gør dette ved at trække i skyderen til det punkt på skalaen, der passer bedst.</span></p></div>. Slider scale labels: 0 (værst tænkelige livskvalitet) |  | 100 (bedst tænkelige livskvalitet)",
             "constraints": {
@@ -522,7 +522,7 @@
           },
           {
             "name": "sf_health_overall",
-            "title": "sf_health_overall",
+            "title": "Sf health overall",
             "type": "string",
             "description": "",
             "constraints": {
@@ -545,7 +545,7 @@
           },
           {
             "name": "sf_activities",
-            "title": "sf_activities",
+            "title": "Sf activities",
             "type": "string",
             "description": "",
             "constraints": {
@@ -564,7 +564,7 @@
           },
           {
             "name": "sf_activities_1",
-            "title": "sf_activities_1",
+            "title": "Sf activities 1",
             "type": "string",
             "description": "",
             "constraints": {
@@ -583,7 +583,7 @@
           },
           {
             "name": "sf_daily_activities",
-            "title": "sf_daily_activities",
+            "title": "Sf daily activities",
             "type": "string",
             "description": "",
             "constraints": {
@@ -600,7 +600,7 @@
           },
           {
             "name": "sf_daily_activities_limit",
-            "title": "sf_daily_activities_limit",
+            "title": "Sf daily activities limit",
             "type": "string",
             "description": "",
             "constraints": {
@@ -617,7 +617,7 @@
           },
           {
             "name": "sf_activities_mental",
-            "title": "sf_activities_mental",
+            "title": "Sf activities mental",
             "type": "string",
             "description": "",
             "constraints": {
@@ -634,7 +634,7 @@
           },
           {
             "name": "sf_activities_careful",
-            "title": "sf_activities_careful",
+            "title": "Sf activities careful",
             "type": "string",
             "description": "",
             "constraints": {
@@ -651,7 +651,7 @@
           },
           {
             "name": "sf_physical_pain",
-            "title": "sf_physical_pain",
+            "title": "Sf physical pain",
             "type": "string",
             "description": "",
             "constraints": {
@@ -674,7 +674,7 @@
           },
           {
             "name": "sf_mental_relaxed",
-            "title": "sf_mental_relaxed",
+            "title": "Sf mental relaxed",
             "type": "string",
             "description": "",
             "constraints": {
@@ -699,7 +699,7 @@
           },
           {
             "name": "sf_mental_energy",
-            "title": "sf_mental_energy",
+            "title": "Sf mental energy",
             "type": "string",
             "description": "",
             "constraints": {
@@ -724,7 +724,7 @@
           },
           {
             "name": "sf_mental_sad",
-            "title": "sf_mental_sad",
+            "title": "Sf mental sad",
             "type": "string",
             "description": "",
             "constraints": {
@@ -749,7 +749,7 @@
           },
           {
             "name": "sf_mental_social",
-            "title": "sf_mental_social",
+            "title": "Sf mental social",
             "type": "string",
             "description": "",
             "constraints": {
@@ -772,7 +772,7 @@
           },
           {
             "name": "sf12v2_end",
-            "title": "sf12v2_end",
+            "title": "Sf12v2 end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -782,7 +782,7 @@
           },
           {
             "name": "sf12v2_complt_time",
-            "title": "sf12v2_complt_time",
+            "title": "Sf12v2 complt time",
             "type": "string",
             "description": "Derived using the formula: datediff([background_end],[sf12v2_end],\"s\",true)",
             "constraints": {
@@ -791,7 +791,7 @@
           },
           {
             "name": "obesity",
-            "title": "obesity",
+            "title": "Obesity",
             "type": "string",
             "description": "",
             "constraints": {
@@ -812,7 +812,7 @@
           },
           {
             "name": "body_number",
-            "title": "body_number",
+            "title": "Body number",
             "type": "string",
             "description": "",
             "constraints": {
@@ -843,7 +843,7 @@
           },
           {
             "name": "ses_dk_slider",
-            "title": "ses_dk_slider",
+            "title": "Ses dk slider",
             "type": "integer",
             "description": "the participant's self-perceived SES Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Hvor vil du placere dig selv på denne skala på nuværende tidspunkt i dit liv</span> sammenlignet med Danmarks øvrige befolkning?</p></div>. Slider scale labels: 1 (laveste sociale rang) |  | 10 (højeste sociale rang)",
             "constraints": {
@@ -854,7 +854,7 @@
           },
           {
             "name": "ses_lokal_slider",
-            "title": "ses_lokal_slider",
+            "title": "Ses lokal slider",
             "type": "integer",
             "description": "the participant's self-perceived SES comparet to the local community Question: <div class=\"rich-text-field-label\"><p><span style=\"font-weight: normal;\">Hvor vil du placere dig selv på skalaen på nuværende tidspunkt i dit liv </span>sammenlignet med andre i dit lokalsamfund?</p></div>. Slider scale labels: 1 (laveste sociale rang) |  | 10 (højeste sociale rang)",
             "constraints": {
@@ -865,7 +865,7 @@
           },
           {
             "name": "self_rate_end",
-            "title": "self_rate_end",
+            "title": "Self rate end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -875,7 +875,7 @@
           },
           {
             "name": "compl_time_self_rate",
-            "title": "compl_time_self_rate",
+            "title": "Compl time self rate",
             "type": "string",
             "description": "Derived using the formula: datediff([sf12v2_end],[self_rate_end],\"s\",true)",
             "constraints": {
@@ -884,7 +884,7 @@
           },
           {
             "name": "alc_12mo",
-            "title": "alc_12mo",
+            "title": "Alc 12mo",
             "type": "string",
             "description": "",
             "constraints": {
@@ -901,7 +901,7 @@
           },
           {
             "name": "alc_days_per_week",
-            "title": "alc_days_per_week",
+            "title": "Alc days per week",
             "type": "string",
             "description": "The number of days per week the participant usually consumes alcohol.",
             "constraints": {
@@ -930,7 +930,7 @@
           },
           {
             "name": "alc_mon",
-            "title": "alc_mon",
+            "title": "Alc mon",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -941,7 +941,7 @@
           },
           {
             "name": "alc_tue",
-            "title": "alc_tue",
+            "title": "Alc tue",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -952,7 +952,7 @@
           },
           {
             "name": "alc_wed",
-            "title": "alc_wed",
+            "title": "Alc wed",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -963,7 +963,7 @@
           },
           {
             "name": "alc_thu",
-            "title": "alc_thu",
+            "title": "Alc thu",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -974,7 +974,7 @@
           },
           {
             "name": "alc_fri",
-            "title": "alc_fri",
+            "title": "Alc fri",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -985,7 +985,7 @@
           },
           {
             "name": "alc_sat",
-            "title": "alc_sat",
+            "title": "Alc sat",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -996,7 +996,7 @@
           },
           {
             "name": "alc_sun",
-            "title": "alc_sun",
+            "title": "Alc sun",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -1007,7 +1007,7 @@
           },
           {
             "name": "alc_freq_per_occa",
-            "title": "alc_freq_per_occa",
+            "title": "Alc freq per occa",
             "type": "string",
             "description": "Information on how often the participant consumes five or more drinks on a single occasion.",
             "constraints": {
@@ -1030,7 +1030,7 @@
           },
           {
             "name": "alc_want_lower",
-            "title": "alc_want_lower",
+            "title": "Alc want lower",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1049,7 +1049,7 @@
           },
           {
             "name": "alc_bad_health",
-            "title": "alc_bad_health",
+            "title": "Alc bad health",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1070,7 +1070,7 @@
           },
           {
             "name": "alc_prev_daily_use",
-            "title": "alc_prev_daily_use",
+            "title": "Alc prev daily use",
             "type": "string",
             "description": "Information on whether the participant has previously had a daily alcohol consumption.",
             "constraints": {
@@ -1087,7 +1087,7 @@
           },
           {
             "name": "alc_per_week_earlier",
-            "title": "alc_per_week_earlier",
+            "title": "Alc per week earlier",
             "type": "number",
             "description": "",
             "constraints": {
@@ -1098,7 +1098,7 @@
           },
           {
             "name": "alc_period_start",
-            "title": "alc_period_start",
+            "title": "Alc period start",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -1109,7 +1109,7 @@
           },
           {
             "name": "alc_period_start_2",
-            "title": "alc_period_start_2",
+            "title": "Alc period start 2",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -1120,7 +1120,7 @@
           },
           {
             "name": "alc_end",
-            "title": "alc_end",
+            "title": "Alc end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -1130,7 +1130,7 @@
           },
           {
             "name": "alc_compl_time",
-            "title": "alc_compl_time",
+            "title": "Alc compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([self_rate_end],[alc_end],\"s\",true)",
             "constraints": {
@@ -1139,7 +1139,7 @@
           },
           {
             "name": "lonely_single",
-            "title": "lonely_single",
+            "title": "Lonely single",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1162,7 +1162,7 @@
           },
           {
             "name": "social_support",
-            "title": "social_support",
+            "title": "Social support",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1179,7 +1179,7 @@
           },
           {
             "name": "contact_helpwithprob",
-            "title": "contact_helpwithprob",
+            "title": "Contact helpwithprob",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1204,7 +1204,7 @@
           },
           {
             "name": "social_end",
-            "title": "social_end",
+            "title": "Social end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -1214,7 +1214,7 @@
           },
           {
             "name": "social_compl_time",
-            "title": "social_compl_time",
+            "title": "Social compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([alc_end],[social_end],\"s\",true)",
             "constraints": {
@@ -1223,7 +1223,7 @@
           },
           {
             "name": "delphi_parents_known",
-            "title": "delphi_parents_known",
+            "title": "Delphi parents known",
             "type": "string",
             "description": "number of known biological parents",
             "constraints": {
@@ -1244,7 +1244,7 @@
           },
           {
             "name": "father_alcohol_substance",
-            "title": "father_alcohol_substance",
+            "title": "Father alcohol substance",
             "type": "string",
             "description": "did the participant's father drink or use drugs",
             "constraints": {
@@ -1263,7 +1263,7 @@
           },
           {
             "name": "father_overweight",
-            "title": "father_overweight",
+            "title": "Father overweight",
             "type": "string",
             "description": "was the participant's father overweight",
             "constraints": {
@@ -1282,7 +1282,7 @@
           },
           {
             "name": "body_number_father",
-            "title": "body_number_father",
+            "title": "Body number father",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1313,7 +1313,7 @@
           },
           {
             "name": "father_diabetes",
-            "title": "father_diabetes",
+            "title": "Father diabetes",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1332,7 +1332,7 @@
           },
           {
             "name": "delphi_father_dmtype",
-            "title": "delphi_father_dmtype",
+            "title": "Delphi father dmtype",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1351,7 +1351,7 @@
           },
           {
             "name": "father_smoke",
-            "title": "father_smoke",
+            "title": "Father smoke",
             "type": "string",
             "description": "did the participant's father smoke",
             "constraints": {
@@ -1372,7 +1372,7 @@
           },
           {
             "name": "delphi_father_smoke_stoped",
-            "title": "delphi_father_smoke_stoped",
+            "title": "Delphi father smoke stoped",
             "type": "number",
             "description": "",
             "constraints": {
@@ -1383,7 +1383,7 @@
           },
           {
             "name": "mother_alcohol_substance",
-            "title": "mother_alcohol_substance",
+            "title": "Mother alcohol substance",
             "type": "string",
             "description": "did the participant's mother drink or use drugs",
             "constraints": {
@@ -1402,7 +1402,7 @@
           },
           {
             "name": "mother_overweight",
-            "title": "mother_overweight",
+            "title": "Mother overweight",
             "type": "string",
             "description": "was the participant's mother overweight",
             "constraints": {
@@ -1421,7 +1421,7 @@
           },
           {
             "name": "body_number_mother",
-            "title": "body_number_mother",
+            "title": "Body number mother",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1452,7 +1452,7 @@
           },
           {
             "name": "mother_diabetes",
-            "title": "mother_diabetes",
+            "title": "Mother diabetes",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1471,7 +1471,7 @@
           },
           {
             "name": "delphi_father_dmtype_2",
-            "title": "delphi_father_dmtype_2",
+            "title": "Delphi father dmtype 2",
             "type": "string",
             "description": "",
             "constraints": {
@@ -1490,7 +1490,7 @@
           },
           {
             "name": "mother_smoke",
-            "title": "mother_smoke",
+            "title": "Mother smoke",
             "type": "string",
             "description": "did the participant's mother smoke",
             "constraints": {
@@ -1511,7 +1511,7 @@
           },
           {
             "name": "mother_smoke_years",
-            "title": "mother_smoke_years",
+            "title": "Mother smoke years",
             "type": "number",
             "description": "",
             "constraints": {
@@ -1522,7 +1522,7 @@
           },
           {
             "name": "family_end",
-            "title": "family_end",
+            "title": "Family end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -1532,7 +1532,7 @@
           },
           {
             "name": "family_compl_time",
-            "title": "family_compl_time",
+            "title": "Family compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([social_end],[family_end],\"s\",true)",
             "constraints": {
@@ -1541,7 +1541,7 @@
           },
           {
             "name": "dass_tense",
-            "title": "dass_tense",
+            "title": "Dass tense",
             "type": "string",
             "description": "it is hard for the participant to relax",
             "constraints": {
@@ -1562,7 +1562,7 @@
           },
           {
             "name": "dass_dry_mouth",
-            "title": "dass_dry_mouth",
+            "title": "Dass dry mouth",
             "type": "string",
             "description": "the participant's experiences dry mouth",
             "constraints": {
@@ -1583,7 +1583,7 @@
           },
           {
             "name": "dass_pos_feelings",
-            "title": "dass_pos_feelings",
+            "title": "Dass pos feelings",
             "type": "string",
             "description": "The participant doesn't experience positive feelings",
             "constraints": {
@@ -1604,7 +1604,7 @@
           },
           {
             "name": "dass_diffi_breathing",
-            "title": "dass_diffi_breathing",
+            "title": "Dass diffi breathing",
             "type": "string",
             "description": "the participant's experiences respiratory problems",
             "constraints": {
@@ -1625,7 +1625,7 @@
           },
           {
             "name": "dass_lack_motiv",
-            "title": "dass_lack_motiv",
+            "title": "Dass lack motiv",
             "type": "string",
             "description": "the participant was unable to take initiative",
             "constraints": {
@@ -1646,7 +1646,7 @@
           },
           {
             "name": "dass_overreact",
-            "title": "dass_overreact",
+            "title": "Dass overreact",
             "type": "string",
             "description": "the participant overreacts",
             "constraints": {
@@ -1667,7 +1667,7 @@
           },
           {
             "name": "dass_shiver_hands",
-            "title": "dass_shiver_hands",
+            "title": "Dass shiver hands",
             "type": "string",
             "description": "the participant was shaking",
             "constraints": {
@@ -1688,7 +1688,7 @@
           },
           {
             "name": "dass_phys_en",
-            "title": "dass_phys_en",
+            "title": "Dass phys en",
             "type": "string",
             "description": "the participant used a lot of energy",
             "constraints": {
@@ -1709,7 +1709,7 @@
           },
           {
             "name": "dass_embarras",
-            "title": "dass_embarras",
+            "title": "Dass embarras",
             "type": "string",
             "description": "The participant was afraid of panicking and embarrassing him-/herself",
             "constraints": {
@@ -1730,7 +1730,7 @@
           },
           {
             "name": "dass_excitement",
-            "title": "dass_excitement",
+            "title": "Dass excitement",
             "type": "string",
             "description": "het participant didn't have anything to look forward to",
             "constraints": {
@@ -1751,7 +1751,7 @@
           },
           {
             "name": "dass_uneasy",
-            "title": "dass_uneasy",
+            "title": "Dass uneasy",
             "type": "string",
             "description": "the participant felt restless",
             "constraints": {
@@ -1772,7 +1772,7 @@
           },
           {
             "name": "dass_restless",
-            "title": "dass_restless",
+            "title": "Dass restless",
             "type": "string",
             "description": "the participant couldn't relax",
             "constraints": {
@@ -1793,7 +1793,7 @@
           },
           {
             "name": "dass_discouraged",
-            "title": "dass_discouraged",
+            "title": "Dass discouraged",
             "type": "string",
             "description": "the participant felt lost",
             "constraints": {
@@ -1814,7 +1814,7 @@
           },
           {
             "name": "dass_interrupt",
-            "title": "dass_interrupt",
+            "title": "Dass interrupt",
             "type": "string",
             "description": "the participant couldn't tolerate interruptions",
             "constraints": {
@@ -1835,7 +1835,7 @@
           },
           {
             "name": "dass_panic",
-            "title": "dass_panic",
+            "title": "Dass panic",
             "type": "string",
             "description": "the participant felt like panicking",
             "constraints": {
@@ -1856,7 +1856,7 @@
           },
           {
             "name": "dass_lack_enthus",
-            "title": "dass_lack_enthus",
+            "title": "Dass lack enthus",
             "type": "string",
             "description": "the participant didn't feel enthusiastic about anything",
             "constraints": {
@@ -1877,7 +1877,7 @@
           },
           {
             "name": "dass_worthless",
-            "title": "dass_worthless",
+            "title": "Dass worthless",
             "type": "string",
             "description": "het participant felt worthless",
             "constraints": {
@@ -1898,7 +1898,7 @@
           },
           {
             "name": "dass_sensitive",
-            "title": "dass_sensitive",
+            "title": "Dass sensitive",
             "type": "string",
             "description": "The participant felt sensitive",
             "constraints": {
@@ -1919,7 +1919,7 @@
           },
           {
             "name": "dass_heart_rhythm",
-            "title": "dass_heart_rhythm",
+            "title": "Dass heart rhythm",
             "type": "string",
             "description": "the participant was aware of his/her heart rhythm",
             "constraints": {
@@ -1940,7 +1940,7 @@
           },
           {
             "name": "dass_scared",
-            "title": "dass_scared",
+            "title": "Dass scared",
             "type": "string",
             "description": "the participant felt scared for no reason",
             "constraints": {
@@ -1961,7 +1961,7 @@
           },
           {
             "name": "dass_meaningless",
-            "title": "dass_meaningless",
+            "title": "Dass meaningless",
             "type": "string",
             "description": "the participant felt life was hopeless",
             "constraints": {
@@ -1982,7 +1982,7 @@
           },
           {
             "name": "dass_end",
-            "title": "dass_end",
+            "title": "Dass end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -1992,7 +1992,7 @@
           },
           {
             "name": "dass21_compl_time",
-            "title": "dass21_compl_time",
+            "title": "Dass21 compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([family_end],[dass_end],\"s\",true)",
             "constraints": {
@@ -2001,7 +2001,7 @@
           },
           {
             "name": "pss_upset",
-            "title": "pss_upset",
+            "title": "Pss upset",
             "type": "string",
             "description": "how often the participant felt frustrated the past month",
             "constraints": {
@@ -2024,7 +2024,7 @@
           },
           {
             "name": "pss_lack_control",
-            "title": "pss_lack_control",
+            "title": "Pss lack control",
             "type": "string",
             "description": "how often the participant felt lack of control the past month",
             "constraints": {
@@ -2047,7 +2047,7 @@
           },
           {
             "name": "pss_nervous",
-            "title": "pss_nervous",
+            "title": "Pss nervous",
             "type": "string",
             "description": "how often the participant felt nervous the past month",
             "constraints": {
@@ -2070,7 +2070,7 @@
           },
           {
             "name": "pss_handle_probs",
-            "title": "pss_handle_probs",
+            "title": "Pss handle probs",
             "type": "string",
             "description": "how often the participant felt confident the past month",
             "constraints": {
@@ -2093,7 +2093,7 @@
           },
           {
             "name": "pss_as_plan",
-            "title": "pss_as_plan",
+            "title": "Pss as plan",
             "type": "string",
             "description": "how often the participant felt that things went as planned the past month",
             "constraints": {
@@ -2116,7 +2116,7 @@
           },
           {
             "name": "pss_resilience",
-            "title": "pss_resilience",
+            "title": "Pss resilience",
             "type": "string",
             "description": "how often the participant felt lack of capacity the past month",
             "constraints": {
@@ -2139,7 +2139,7 @@
           },
           {
             "name": "pss_handle_irri",
-            "title": "pss_handle_irri",
+            "title": "Pss handle irri",
             "type": "string",
             "description": "how often the participant felt able to manage every-day-life the past month",
             "constraints": {
@@ -2162,7 +2162,7 @@
           },
           {
             "name": "pss_control",
-            "title": "pss_control",
+            "title": "Pss control",
             "type": "string",
             "description": "how often the participant felt in control the past month",
             "constraints": {
@@ -2185,7 +2185,7 @@
           },
           {
             "name": "pss_lack_influ",
-            "title": "pss_lack_influ",
+            "title": "Pss lack influ",
             "type": "string",
             "description": "how often the participant felt angry due to lack of control the past month",
             "constraints": {
@@ -2208,7 +2208,7 @@
           },
           {
             "name": "pss_cumul_prob",
-            "title": "pss_cumul_prob",
+            "title": "Pss cumul prob",
             "type": "string",
             "description": "how often did the participant felt overwhelmed by tasks in the past month",
             "constraints": {
@@ -2231,7 +2231,7 @@
           },
           {
             "name": "pss_end",
-            "title": "pss_end",
+            "title": "Pss end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -2241,7 +2241,7 @@
           },
           {
             "name": "pss_compl_time",
-            "title": "pss_compl_time",
+            "title": "Pss compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([dass_end],[pss_end],\"s\",true)",
             "constraints": {
@@ -2250,7 +2250,7 @@
           },
           {
             "name": "berlin_snor",
-            "title": "berlin_snor",
+            "title": "Berlin snor",
             "type": "string",
             "description": "Does the participant snor",
             "constraints": {
@@ -2269,7 +2269,7 @@
           },
           {
             "name": "berlin_snor_volume",
-            "title": "berlin_snor_volume",
+            "title": "Berlin snor volume",
             "type": "string",
             "description": "the volume of the participant's snor",
             "constraints": {
@@ -2288,7 +2288,7 @@
           },
           {
             "name": "berlin_snor_freq",
-            "title": "berlin_snor_freq",
+            "title": "Berlin snor freq",
             "type": "string",
             "description": "how often does the participant snor",
             "constraints": {
@@ -2311,7 +2311,7 @@
           },
           {
             "name": "berlin_bother",
-            "title": "berlin_bother",
+            "title": "Berlin bother",
             "type": "string",
             "description": "did the snor ever disturb the participant",
             "constraints": {
@@ -2334,7 +2334,7 @@
           },
           {
             "name": "berlin_breath",
-            "title": "berlin_breath",
+            "title": "Berlin breath",
             "type": "string",
             "description": "Does the participant stop breathing during sleep",
             "constraints": {
@@ -2357,7 +2357,7 @@
           },
           {
             "name": "berlin_tired",
-            "title": "berlin_tired",
+            "title": "Berlin tired",
             "type": "string",
             "description": "how often does the participant feel tired",
             "constraints": {
@@ -2380,7 +2380,7 @@
           },
           {
             "name": "berlin_tired_daytime",
-            "title": "berlin_tired_daytime",
+            "title": "Berlin tired daytime",
             "type": "string",
             "description": "how often does the participant feel tired during the day",
             "constraints": {
@@ -2403,7 +2403,7 @@
           },
           {
             "name": "berlin_sleep_driving",
-            "title": "berlin_sleep_driving",
+            "title": "Berlin sleep driving",
             "type": "string",
             "description": "did the participant ever fall asleep while driving",
             "constraints": {
@@ -2420,7 +2420,7 @@
           },
           {
             "name": "berlin_sleep_driv_freq",
-            "title": "berlin_sleep_driv_freq",
+            "title": "Berlin sleep driv freq",
             "type": "string",
             "description": "does sleeping while driving happen often",
             "constraints": {
@@ -2443,7 +2443,7 @@
           },
           {
             "name": "berlin_end",
-            "title": "berlin_end",
+            "title": "Berlin end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -2453,7 +2453,7 @@
           },
           {
             "name": "berlin_complt_time",
-            "title": "berlin_complt_time",
+            "title": "Berlin complt time",
             "type": "string",
             "description": "Derived using the formula: datediff([pss_end],[berlin_end],\"s\",true)",
             "constraints": {
@@ -2462,7 +2462,7 @@
           },
           {
             "name": "umctq_shift",
-            "title": "umctq_shift",
+            "title": "Umctq shift",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2479,7 +2479,7 @@
           },
           {
             "name": "umctq_sleep_hr",
-            "title": "umctq_sleep_hr",
+            "title": "Umctq sleep hr",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2490,7 +2490,7 @@
           },
           {
             "name": "umctq_sleep_min",
-            "title": "umctq_sleep_min",
+            "title": "Umctq sleep min",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2501,7 +2501,7 @@
           },
           {
             "name": "umctq_wake_hr",
-            "title": "umctq_wake_hr",
+            "title": "Umctq wake hr",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2512,7 +2512,7 @@
           },
           {
             "name": "umctq_wake_min",
-            "title": "umctq_wake_min",
+            "title": "Umctq wake min",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2523,7 +2523,7 @@
           },
           {
             "name": "umctq_sleep_hr_we",
-            "title": "umctq_sleep_hr_we",
+            "title": "Umctq sleep hr we",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2534,7 +2534,7 @@
           },
           {
             "name": "umctq_sleep_min_we",
-            "title": "umctq_sleep_min_we",
+            "title": "Umctq sleep min we",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2545,7 +2545,7 @@
           },
           {
             "name": "umctq_wake_hr_we",
-            "title": "umctq_wake_hr_we",
+            "title": "Umctq wake hr we",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2556,7 +2556,7 @@
           },
           {
             "name": "umctq_wake_min_we",
-            "title": "umctq_wake_min_we",
+            "title": "Umctq wake min we",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2567,7 +2567,7 @@
           },
           {
             "name": "circadian_var",
-            "title": "circadian_var",
+            "title": "Circadian var",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2592,7 +2592,7 @@
           },
           {
             "name": "meq_item",
-            "title": "meq_item",
+            "title": "Meq item",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2615,7 +2615,7 @@
           },
           {
             "name": "mctq_end",
-            "title": "mctq_end",
+            "title": "Mctq end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -2625,7 +2625,7 @@
           },
           {
             "name": "mctq_compl_time",
-            "title": "mctq_compl_time",
+            "title": "Mctq compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([berlin_end],[mctq_end],\"s\",true)",
             "constraints": {
@@ -2634,7 +2634,7 @@
           },
           {
             "name": "trans_main",
-            "title": "trans_main",
+            "title": "Trans main",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2655,7 +2655,7 @@
           },
           {
             "name": "work_activity",
-            "title": "work_activity",
+            "title": "Work activity",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2678,7 +2678,7 @@
           },
           {
             "name": "leisure_activity_cat",
-            "title": "leisure_activity_cat",
+            "title": "Leisure activity cat",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2699,7 +2699,7 @@
           },
           {
             "name": "ipaq_active_days",
-            "title": "ipaq_active_days",
+            "title": "Ipaq active days",
             "type": "string",
             "description": "number of days the participant has been active during the last week",
             "constraints": {
@@ -2728,7 +2728,7 @@
           },
           {
             "name": "ipaq_hours",
-            "title": "ipaq_hours",
+            "title": "Ipaq hours",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2739,7 +2739,7 @@
           },
           {
             "name": "ipaq_minutes",
-            "title": "ipaq_minutes",
+            "title": "Ipaq minutes",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2748,7 +2748,7 @@
           },
           {
             "name": "ipaq_moderate_days",
-            "title": "ipaq_moderate_days",
+            "title": "Ipaq moderate days",
             "type": "string",
             "description": "number of days the participant spend on moderate physical activity",
             "constraints": {
@@ -2777,7 +2777,7 @@
           },
           {
             "name": "ipaq_moderate_hours",
-            "title": "ipaq_moderate_hours",
+            "title": "Ipaq moderate hours",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2788,7 +2788,7 @@
           },
           {
             "name": "ipaq_moderate_minutes",
-            "title": "ipaq_moderate_minutes",
+            "title": "Ipaq moderate minutes",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2799,7 +2799,7 @@
           },
           {
             "name": "ipaq_walk_days",
-            "title": "ipaq_walk_days",
+            "title": "Ipaq walk days",
             "type": "string",
             "description": "number of days the participant walked at least 10 min",
             "constraints": {
@@ -2828,7 +2828,7 @@
           },
           {
             "name": "ipaq_walk_hours",
-            "title": "ipaq_walk_hours",
+            "title": "Ipaq walk hours",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2839,7 +2839,7 @@
           },
           {
             "name": "ipaq_walk_minutes",
-            "title": "ipaq_walk_minutes",
+            "title": "Ipaq walk minutes",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2850,7 +2850,7 @@
           },
           {
             "name": "ipaq_sit_hours",
-            "title": "ipaq_sit_hours",
+            "title": "Ipaq sit hours",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2861,7 +2861,7 @@
           },
           {
             "name": "ipaq_sit_minutes",
-            "title": "ipaq_sit_minutes",
+            "title": "Ipaq sit minutes",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -2872,7 +2872,7 @@
           },
           {
             "name": "ipaq_end",
-            "title": "ipaq_end",
+            "title": "Ipaq end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -2882,7 +2882,7 @@
           },
           {
             "name": "ipaq_compl_time",
-            "title": "ipaq_compl_time",
+            "title": "Ipaq compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([mctq_end],[ipaq_end],\"s\",true)",
             "constraints": {
@@ -2891,7 +2891,7 @@
           },
           {
             "name": "use_personal_tracker",
-            "title": "use_personal_tracker",
+            "title": "Use personal tracker",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2908,7 +2908,7 @@
           },
           {
             "name": "other_health_tracker",
-            "title": "other_health_tracker",
+            "title": "Other health tracker",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2917,7 +2917,7 @@
           },
           {
             "name": "smart_watch_type",
-            "title": "smart_watch_type",
+            "title": "Smart watch type",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2950,7 +2950,7 @@
           },
           {
             "name": "smartphone_brand",
-            "title": "smartphone_brand",
+            "title": "Smartphone brand",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2971,7 +2971,7 @@
           },
           {
             "name": "smart_phone_other",
-            "title": "smart_phone_other",
+            "title": "Smart phone other",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2980,7 +2980,7 @@
           },
           {
             "name": "mvpa_can_report",
-            "title": "mvpa_can_report",
+            "title": "Mvpa can report",
             "type": "string",
             "description": "",
             "constraints": {
@@ -2997,7 +2997,7 @@
           },
           {
             "name": "mvpa_min_7d",
-            "title": "mvpa_min_7d",
+            "title": "Mvpa min 7d",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -3008,7 +3008,7 @@
           },
           {
             "name": "steps_can_report",
-            "title": "steps_can_report",
+            "title": "Steps can report",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3025,7 +3025,7 @@
           },
           {
             "name": "step_avg_7d",
-            "title": "step_avg_7d",
+            "title": "Step avg 7d",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3034,7 +3034,7 @@
           },
           {
             "name": "sleep_can_report",
-            "title": "sleep_can_report",
+            "title": "Sleep can report",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3051,7 +3051,7 @@
           },
           {
             "name": "sleep_hours_avg",
-            "title": "sleep_hours_avg",
+            "title": "Sleep hours avg",
             "type": "number",
             "description": "",
             "constraints": {
@@ -3062,7 +3062,7 @@
           },
           {
             "name": "rhr_can_report",
-            "title": "rhr_can_report",
+            "title": "Rhr can report",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3079,7 +3079,7 @@
           },
           {
             "name": "rhr_value",
-            "title": "rhr_value",
+            "title": "Rhr value",
             "type": "integer",
             "description": "",
             "constraints": {
@@ -3090,7 +3090,7 @@
           },
           {
             "name": "vo2max_can_report",
-            "title": "vo2max_can_report",
+            "title": "Vo2max can report",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3107,7 +3107,7 @@
           },
           {
             "name": "vo2max_value",
-            "title": "vo2max_value",
+            "title": "Vo2max value",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3116,7 +3116,7 @@
           },
           {
             "name": "healthdata_other",
-            "title": "healthdata_other",
+            "title": "Healthdata other",
             "type": "string",
             "description": "",
             "constraints": {
@@ -3125,7 +3125,7 @@
           },
           {
             "name": "healthtrack_end",
-            "title": "healthtrack_end",
+            "title": "Healthtrack end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -3135,7 +3135,7 @@
           },
           {
             "name": "healthtrack_compl",
-            "title": "healthtrack_compl",
+            "title": "Healthtrack compl",
             "type": "string",
             "description": "Derived using the formula: datediff([ipaq_end],[healthtrack_end],\"s\",true)",
             "constraints": {
@@ -3144,7 +3144,7 @@
           },
           {
             "name": "bhla_knowledge",
-            "title": "bhla_knowledge",
+            "title": "Bhla knowledge",
             "type": "string",
             "description": "the participant has good knowledge about health",
             "constraints": {
@@ -3165,7 +3165,7 @@
           },
           {
             "name": "bhla_health_ideas",
-            "title": "bhla_health_ideas",
+            "title": "Bhla health ideas",
             "type": "string",
             "description": "the participant can share knowledge about health with friends and family",
             "constraints": {
@@ -3186,7 +3186,7 @@
           },
           {
             "name": "bhla_comp_info",
-            "title": "bhla_comp_info",
+            "title": "Bhla comp info",
             "type": "string",
             "description": "the participant can compare health cnowledge",
             "constraints": {
@@ -3207,7 +3207,7 @@
           },
           {
             "name": "bhla_follow_instruct",
-            "title": "bhla_follow_instruct",
+            "title": "Bhla follow instruct",
             "type": "string",
             "description": "the participant can follow health recommendations",
             "constraints": {
@@ -3228,7 +3228,7 @@
           },
           {
             "name": "bhla_better_health",
-            "title": "bhla_better_health",
+            "title": "Bhla better health",
             "type": "string",
             "description": "the participant knows how to improve their health",
             "constraints": {
@@ -3249,7 +3249,7 @@
           },
           {
             "name": "bhla_actions_eff",
-            "title": "bhla_actions_eff",
+            "title": "Bhla actions eff",
             "type": "string",
             "description": "the participant knows how to their actions effect health",
             "constraints": {
@@ -3270,7 +3270,7 @@
           },
           {
             "name": "bhla_understa_health",
-            "title": "bhla_understa_health",
+            "title": "Bhla understa health",
             "type": "string",
             "description": "the participant can find health informations that are easy to understand",
             "constraints": {
@@ -3291,7 +3291,7 @@
           },
           {
             "name": "bhla_health_behav",
-            "title": "bhla_health_behav",
+            "title": "Bhla health behav",
             "type": "string",
             "description": "the participant understands how behaviour effects health",
             "constraints": {
@@ -3312,7 +3312,7 @@
           },
           {
             "name": "bhla_false_info",
-            "title": "bhla_false_info",
+            "title": "Bhla false info",
             "type": "string",
             "description": "the participant knows when health information is true or false",
             "constraints": {
@@ -3333,7 +3333,7 @@
           },
           {
             "name": "bhla_argue_actions",
-            "title": "bhla_argue_actions",
+            "title": "Bhla argue actions",
             "type": "string",
             "description": "the participant can justify the choices they make",
             "constraints": {
@@ -3354,7 +3354,7 @@
           },
           {
             "name": "bhla_end",
-            "title": "bhla_end",
+            "title": "Bhla end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -3364,7 +3364,7 @@
           },
           {
             "name": "bhla_compl_time",
-            "title": "bhla_compl_time",
+            "title": "Bhla compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([healthtrack_end],[bhla_end],\"s\",true)",
             "constraints": {
@@ -3373,7 +3373,7 @@
           },
           {
             "name": "bfis_quiet",
-            "title": "bfis_quiet",
+            "title": "Bfis quiet",
             "type": "string",
             "description": "the participant is a quiet type",
             "constraints": {
@@ -3396,7 +3396,7 @@
           },
           {
             "name": "bfis_compassion",
-            "title": "bfis_compassion",
+            "title": "Bfis compassion",
             "type": "string",
             "description": "the participant has a big heart",
             "constraints": {
@@ -3419,7 +3419,7 @@
           },
           {
             "name": "bfis_disorganized",
-            "title": "bfis_disorganized",
+            "title": "Bfis disorganized",
             "type": "string",
             "description": "the participant is unorganized",
             "constraints": {
@@ -3442,7 +3442,7 @@
           },
           {
             "name": "bfis_worried",
-            "title": "bfis_worried",
+            "title": "Bfis worried",
             "type": "string",
             "description": "the participant worry a lot",
             "constraints": {
@@ -3465,7 +3465,7 @@
           },
           {
             "name": "bfis_artistic",
-            "title": "bfis_artistic",
+            "title": "Bfis artistic",
             "type": "string",
             "description": "the participant loves art and music",
             "constraints": {
@@ -3488,7 +3488,7 @@
           },
           {
             "name": "bfis_control",
-            "title": "bfis_control",
+            "title": "Bfis control",
             "type": "string",
             "description": "the participant takes control often",
             "constraints": {
@@ -3511,7 +3511,7 @@
           },
           {
             "name": "bfis_rude",
-            "title": "bfis_rude",
+            "title": "Bfis rude",
             "type": "string",
             "description": "the participant can be rude towads others",
             "constraints": {
@@ -3534,7 +3534,7 @@
           },
           {
             "name": "bfis_motivation",
-            "title": "bfis_motivation",
+            "title": "Bfis motivation",
             "type": "string",
             "description": "the participant has trouble getting started on tasks",
             "constraints": {
@@ -3557,7 +3557,7 @@
           },
           {
             "name": "bfis_depressed",
-            "title": "bfis_depressed",
+            "title": "Bfis depressed",
             "type": "string",
             "description": "the participant feels depressed",
             "constraints": {
@@ -3580,7 +3580,7 @@
           },
           {
             "name": "bfis_not_abstract",
-            "title": "bfis_not_abstract",
+            "title": "Bfis not abstract",
             "type": "string",
             "description": "the participant has no interest in abstract ideas",
             "constraints": {
@@ -3603,7 +3603,7 @@
           },
           {
             "name": "bfis_energetic",
-            "title": "bfis_energetic",
+            "title": "Bfis energetic",
             "type": "string",
             "description": "the participant is full of energy",
             "constraints": {
@@ -3626,7 +3626,7 @@
           },
           {
             "name": "bfis_naive",
-            "title": "bfis_naive",
+            "title": "Bfis naive",
             "type": "string",
             "description": "the participant sees the best in people",
             "constraints": {
@@ -3649,7 +3649,7 @@
           },
           {
             "name": "bfis_reliable",
-            "title": "bfis_reliable",
+            "title": "Bfis reliable",
             "type": "string",
             "description": "the participant is trustworthy",
             "constraints": {
@@ -3672,7 +3672,7 @@
           },
           {
             "name": "bfis_stable",
-            "title": "bfis_stable",
+            "title": "Bfis stable",
             "type": "string",
             "description": "the participant is emotionally stable",
             "constraints": {
@@ -3695,7 +3695,7 @@
           },
           {
             "name": "bfis_innovative",
-            "title": "bfis_innovative",
+            "title": "Bfis innovative",
             "type": "string",
             "description": "the participant is innovative",
             "constraints": {
@@ -3718,7 +3718,7 @@
           },
           {
             "name": "bfis_social",
-            "title": "bfis_social",
+            "title": "Bfis social",
             "type": "string",
             "description": "the participant is social",
             "constraints": {
@@ -3741,7 +3741,7 @@
           },
           {
             "name": "bfis_indifferent",
-            "title": "bfis_indifferent",
+            "title": "Bfis indifferent",
             "type": "string",
             "description": "the participant can be careless",
             "constraints": {
@@ -3764,7 +3764,7 @@
           },
           {
             "name": "bfis_organized",
-            "title": "bfis_organized",
+            "title": "Bfis organized",
             "type": "string",
             "description": "the participant is organized",
             "constraints": {
@@ -3787,7 +3787,7 @@
           },
           {
             "name": "bfis_relaxed",
-            "title": "bfis_relaxed",
+            "title": "Bfis relaxed",
             "type": "string",
             "description": "the participant is relaxed",
             "constraints": {
@@ -3810,7 +3810,7 @@
           },
           {
             "name": "bfis_not_artistic",
-            "title": "bfis_not_artistic",
+            "title": "Bfis not artistic",
             "type": "string",
             "description": "the participant has few artistic interests",
             "constraints": {
@@ -3833,7 +3833,7 @@
           },
           {
             "name": "bfis_compliant",
-            "title": "bfis_compliant",
+            "title": "Bfis compliant",
             "type": "string",
             "description": "the participant prefer others to decide",
             "constraints": {
@@ -3856,7 +3856,7 @@
           },
           {
             "name": "bfis_respectful",
-            "title": "bfis_respectful",
+            "title": "Bfis respectful",
             "type": "string",
             "description": "the participant is respectful",
             "constraints": {
@@ -3879,7 +3879,7 @@
           },
           {
             "name": "bfis_persistent",
-            "title": "bfis_persistent",
+            "title": "Bfis persistent",
             "type": "string",
             "description": "the participant is persistent",
             "constraints": {
@@ -3902,7 +3902,7 @@
           },
           {
             "name": "bfis_self_assured",
-            "title": "bfis_self_assured",
+            "title": "Bfis self assured",
             "type": "string",
             "description": "the participant feel safe",
             "constraints": {
@@ -3925,7 +3925,7 @@
           },
           {
             "name": "bfis_considerate",
-            "title": "bfis_considerate",
+            "title": "Bfis considerate",
             "type": "string",
             "description": "the participant is considerate",
             "constraints": {
@@ -3948,7 +3948,7 @@
           },
           {
             "name": "bfis_less_energetic",
-            "title": "bfis_less_energetic",
+            "title": "Bfis less energetic",
             "type": "string",
             "description": "the participant is less engergetic compared to others",
             "constraints": {
@@ -3971,7 +3971,7 @@
           },
           {
             "name": "bfis_dependent",
-            "title": "bfis_dependent",
+            "title": "Bfis dependent",
             "type": "string",
             "description": "the participant sees other's mistakes",
             "constraints": {
@@ -3994,7 +3994,7 @@
           },
           {
             "name": "bfis_reckless",
-            "title": "bfis_reckless",
+            "title": "Bfis reckless",
             "type": "string",
             "description": "the participant can be reckless",
             "constraints": {
@@ -4017,7 +4017,7 @@
           },
           {
             "name": "bfis_emotional",
-            "title": "bfis_emotional",
+            "title": "Bfis emotional",
             "type": "string",
             "description": "the participant has a temperament",
             "constraints": {
@@ -4040,7 +4040,7 @@
           },
           {
             "name": "bfis_not_creative",
-            "title": "bfis_not_creative",
+            "title": "Bfis not creative",
             "type": "string",
             "description": "the participant not creative",
             "constraints": {
@@ -4063,7 +4063,7 @@
           },
           {
             "name": "bfis_end",
-            "title": "bfis_end",
+            "title": "Bfis end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -4073,7 +4073,7 @@
           },
           {
             "name": "bfi2s_compl_time",
-            "title": "bfi2s_compl_time",
+            "title": "Bfi2s compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([bhla_end],[bfis_end],\"s\",true)",
             "constraints": {
@@ -4082,7 +4082,7 @@
           },
           {
             "name": "diet_intro",
-            "title": "diet_intro",
+            "title": "Diet intro",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4099,7 +4099,7 @@
           },
           {
             "name": "diet_foods",
-            "title": "diet_foods",
+            "title": "Diet foods",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4136,7 +4136,7 @@
           },
           {
             "name": "diet_foods_other",
-            "title": "diet_foods_other",
+            "title": "Diet foods other",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4145,7 +4145,7 @@
           },
           {
             "name": "diet_fasting",
-            "title": "diet_fasting",
+            "title": "Diet fasting",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4154,7 +4154,7 @@
           },
           {
             "name": "diet_time",
-            "title": "diet_time",
+            "title": "Diet time",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4187,7 +4187,7 @@
           },
           {
             "name": "aebq2",
-            "title": "aebq2",
+            "title": "Aebq2",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4210,7 +4210,7 @@
           },
           {
             "name": "aebq5",
-            "title": "aebq5",
+            "title": "Aebq5",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4233,7 +4233,7 @@
           },
           {
             "name": "aebq7",
-            "title": "aebq7",
+            "title": "Aebq7",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4256,7 +4256,7 @@
           },
           {
             "name": "aebq8",
-            "title": "aebq8",
+            "title": "Aebq8",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4279,7 +4279,7 @@
           },
           {
             "name": "aebq9",
-            "title": "aebq9",
+            "title": "Aebq9",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4302,7 +4302,7 @@
           },
           {
             "name": "aebq10",
-            "title": "aebq10",
+            "title": "Aebq10",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4325,7 +4325,7 @@
           },
           {
             "name": "aebq11",
-            "title": "aebq11",
+            "title": "Aebq11",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4348,7 +4348,7 @@
           },
           {
             "name": "aebq12",
-            "title": "aebq12",
+            "title": "Aebq12",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4371,7 +4371,7 @@
           },
           {
             "name": "aebq13",
-            "title": "aebq13",
+            "title": "Aebq13",
             "type": "string",
             "description": "",
             "constraints": {
@@ -4394,7 +4394,7 @@
           },
           {
             "name": "genralfood_end",
-            "title": "genralfood_end",
+            "title": "Genralfood end",
             "type": "datetime",
             "format": "%d/%m/%Y %H:%M:%S",
             "description": "",
@@ -4404,7 +4404,7 @@
           },
           {
             "name": "gen_food_compl_time",
-            "title": "gen_food_compl_time",
+            "title": "Gen food compl time",
             "type": "string",
             "description": "Derived using the formula: datediff([bfis_end],[genralfood_end],\"s\",true)",
             "constraints": {
@@ -4413,7 +4413,7 @@
           },
           {
             "name": "myfas_feeling_sick",
-            "title": "myfas_feeling_sick",
+            "title": "Myfas feeling sick",
             "type": "string",
             "description": "the participant eats until they feel sick",
             "constraints": {
@@ -4442,7 +4442,7 @@
           },
           {
             "name": "myfas_sluggish",
-            "title": "myfas_sluggish",
+            "title": "Myfas sluggish",
             "type": "string",
             "description": "the participant feels tired due to overeating",
             "constraints": {
@@ -4471,7 +4471,7 @@
           },
           {
             "name": "myfas_overeat",
-            "title": "myfas_overeat",
+            "title": "Myfas overeat",
             "type": "string",
             "description": "the participant avoided social activities due to overeating",
             "constraints": {
@@ -4500,7 +4500,7 @@
           },
           {
             "name": "myfas_emo_eating",
-            "title": "myfas_emo_eating",
+            "title": "Myfas emo eating",
             "type": "string",
             "description": "the participant ate certain foods to feel better",
             "constraints": {
@@ -4529,7 +4529,7 @@
           },
           {
             "name": "myfas_worry",
-            "title": "myfas_worry",
+            "title": "Myfas worry",
             "type": "string",
             "description": "The participant has many worries due to food",
             "constraints": {
@@ -4558,7 +4558,7 @@
           },
           {
             "name": "myfas_life_probs",
-            "title": "myfas_life_probs",
+            "title": "Myfas life probs",
             "type": "string",
             "description": "the participant had many problems in life due to food",
             "constraints": {
@@ -4587,7 +4587,7 @@
           },
           {
             "name": "myfas_overeating_impa",
-            "title": "myfas_overeating_impa",
+            "title": "Myfas overeating impa",
             "type": "string",
             "description": "the participant overeating prevents the him/her from taking care of their family",
             "constraints": {
@@ -4616,7 +4616,7 @@
           },
           {
             "name": "myfas_cont_overeat",
-            "title": "myfas_cont_overeat",
+            "title": "Myfas cont overeat",
             "type": "string",
             "description": "the participant continues eating the same way, even though it makes them feel bad",
             "constraints": {
@@ -4645,7 +4645,7 @@
           },
           {
             "name": "myfas_less_enjoy",
-            "title": "myfas_less_enjoy",
+            "title": "Myfas less enjoy",
             "type": "string",
             "description": "the participant doesn't get the same good feeling form the same foods anymore",
             "constraints": {
@@ -4674,7 +4674,7 @@
           },
           {
             "name": "myfas_craving_obses",
-            "title": "myfas_craving_obses",
+            "title": "Myfas craving obses",
             "type": "string",
             "description": "the participant felt the urge to eat a certain food",
             "constraints": {
@@ -4703,7 +4703,7 @@
           },
           {
             "name": "myfas_lack_restraint",
-            "title": "myfas_lack_restraint",
+            "title": "Myfas lack restraint",
             "type": "string",
             "description": "the participant is trying to stop eating certain foods, but can't",
             "constraints": {
@@ -4732,7 +4732,7 @@
           },
           {
             "name": "myfas_distracted",
-            "title": "myfas_distracted",
+            "title": "Myfas distracted",
             "type": "string",
             "description": "the participant was so distracted by eating that they could have gotten hurt",
             "constraints": {
@@ -4761,7 +4761,7 @@
           },
           {
             "name": "myfas_family_concern",
-            "title": "myfas_family_concern",
+            "title": "Myfas family concern",
             "type": "string",
             "description": "friends and family were worried about the participant's eating habits",
             "constraints": {

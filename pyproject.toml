@@ -4,12 +4,14 @@ version = "0.1.0"
 description = "Data package for the questionnaire from Work Package 3 of the DP-Next project."
 authors = [
   { name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  { name = "Signe Kirk Brødbæk", email = "signekb@clin.au.dk" },
   { name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
   { name = "Marton Vago", email = "martonvago@gmail.com" },
   # TODO: Add the other authors (Kristina, Daniel, Jonas, Mikkel, etc)
 ]
 maintainers = [
   { name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
+  { name = "Signe Kirk Brødbæk", email = "signekb@clin.au.dk" },
   { name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
   { name = "Marton Vago", email = "martonvago@gmail.com" },
 ]
