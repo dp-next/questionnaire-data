@@ -13,8 +13,14 @@ extend-select = [
   # Check for unused arguments
   "ARG",
 ]
-# Ignore missing docstring at the top of files
-ignore = ["D100"]
+ignore = [
+  # Ignore missing docstring at the top of files.
+  "D100",
+  # Use `Optional[]` typing.
+  "UP045",
+  # Use `Union[]` typing (not `|`) to be aligned with `Optional[]`.
+  "UP007",
+]
 
 [lint.pydocstyle]
 convention = "google"
