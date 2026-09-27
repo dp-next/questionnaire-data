@@ -73,7 +73,7 @@ def _form_to_resource(
         non_checkbox_fields,
         lambda field: sp.FieldProperties(
             name=field["field_name"],
-            title=field["field_name"],
+            title=_get_title(field["field_name"]),
             type=_get_type(field),
             format=_get_format(field),
             description=_get_description(field),
@@ -94,9 +94,9 @@ def _form_to_resource(
 
     return sp.ResourceProperties(
         name=form_name,
-        # TODO: fill in title and description
-        title=form_name,
-        description=form_name,
+        title=_get_title(form_name),
+        # TODO: Improve description
+        description=_get_title(form_name),
         schema=sp.TableSchemaProperties(
             primary_key=["participant_id"],
             fields=form_fields + checkbox_fields,
@@ -117,6 +117,10 @@ def _expand_checkbox_field(checkbox_field: dict[str, str]) -> list[sp.FieldPrope
             ),
         ),
     )
+
+
+def _get_title(name: str) -> str:
+    return name.replace("_", " ").capitalize()
 
 
 def _get_choices(field: dict[str, str]) -> list[tuple[str, str]]:
