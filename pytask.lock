@@ -1,0 +1,10 @@
+lock-version = "1"
+
+[[task]]
+id = "src/questionnaire_data/build.py::task_download_metadata"
+state = "25d0dc48d03b5f523a5cf836d7c4ff34bb09d01e1f01772cf59194ab783314e4"
+
+[task.depends_on]
+
+[task.produces]
+"raw/metadata/redcap.csv" = "082453c4e0079fd9be1c5124dbb93d60ecdeec74ea2b290a90674786f118dffd"
