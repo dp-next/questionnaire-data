@@ -8,6 +8,7 @@ import seedcase_soil as so
 import seedcase_sprout as sp
 
 FORMS = ["registration", "dp_next"]
+QUESTIONNAIRES = ["berlin", "aeb", "bfis", "myfas", "bhla"]
 
 
 def remove_unused_fields(redcap_metadata: dict[str, str]) -> dict[str, str]:
@@ -36,6 +37,13 @@ def add_participant_id(data: pl.DataFrame) -> pl.DataFrame:
 def rename_forms(data: pl.DataFrame) -> pl.DataFrame:
     """Rename forms."""
     return data.with_columns(pl.col("form_name").str.replace("dp_next", "survey"))
+
+
+def fix_variable_names(data: pl.DataFrame) -> pl.DataFrame:
+    """Fix any variable names that don't match the pattern 'questionnaire_colname'."""
+    return data.with_columns(
+        pl.col("field_name").str.replace("^aebq([0-9]+)$", "aeb_q\1")
+    )
 
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
