@@ -1,6 +1,6 @@
 import os
 from dataclasses import dataclass
-from typing import Any, Literal
+from typing import Any, Literal, Optional
 
 import requests
 
@@ -53,7 +53,7 @@ def is_empty_env() -> bool:
     return _get_env(API_CONFIG) is None
 
 
-def _get_env(api_config: APIConfig) -> str | None:
+def _get_env(api_config: APIConfig) -> Optional[str]:
     env_var = os.environ.get(api_config.env_key)
     if env_var == "":
         env_var = None
