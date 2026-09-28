@@ -48,12 +48,12 @@ def get_json(
     return response.json()
 
 
-def is_empty_env() -> bool:
+def is_empty_api_key() -> bool:
     """Check if env is empty."""
     return _get_env(API_CONFIG) is None
 
 
-def _get_env(api_config: APIConfig) -> Optional[str]:
+def _get_api_key(api_config: APIConfig) -> Optional[str]:
     env_var = os.environ.get(api_config.env_key)
     if env_var == "":
         env_var = None

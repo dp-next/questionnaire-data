@@ -29,7 +29,7 @@ def _hash_properties(props: sp.SproutProperties) -> str:
 
 
 @mark.skipif(
-    common.redcap.is_empty_env(), reason="API env key is not present, so skipping."
+    common.redcap.is_empty_env(), reason="API key is not present in the environment, so skipping."
 )
 @mark.raw
 def task_download_metadata(
