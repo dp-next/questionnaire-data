@@ -1,10 +1,13 @@
 import re
 from itertools import groupby
 from operator import itemgetter
-from typing import Literal, cast
+from typing import Literal, Optional, cast
 
 import seedcase_soil as so
 import seedcase_sprout as sp
+
+OBS_UNIT_ID_COL = "participant_id"
+MAIN_RESOURCE_NAME = "registration"
 
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -13,7 +16,7 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
 
     # Create a `participant_id` field for all forms
     participant_id_field = so.keep(
-        redcap_fields, lambda field: field["field_name"] == "participant_id"
+        redcap_fields, lambda field: field["field_name"] == OBS_UNIT_ID_COL
     )[0]
     participant_id_fields = so.fmap(
         forms,
@@ -25,7 +28,7 @@ def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     redcap_fields = so.keep(
         redcap_fields,
         lambda field: (
-            field["form_name"] in forms and field["field_name"] != "participant_id"
+            field["form_name"] in forms and field["field_name"] != OBS_UNIT_ID_COL
         ),
     )
 
@@ -98,10 +101,26 @@ def _form_to_resource(
         # TODO: Improve description
         description=_get_title(form_name),
         schema=sp.TableSchemaProperties(
-            primary_key=["participant_id"],
+            primary_key=[OBS_UNIT_ID_COL],
+            foreign_keys=_get_foreign_keys(form_name),
             fields=form_fields + checkbox_fields,
         ),
     )
+
+
+def _get_foreign_keys(
+    form_name: str,
+) -> Optional[list[sp.TableSchemaForeignKeyProperties]]:
+    if form_name == MAIN_RESOURCE_NAME:
+        return None
+    return [
+        sp.TableSchemaForeignKeyProperties(
+            fields=[OBS_UNIT_ID_COL],
+            reference=sp.ReferenceProperties(
+                resource=MAIN_RESOURCE_NAME, fields=[OBS_UNIT_ID_COL]
+            ),
+        )
+    ]
 
 
 def _expand_checkbox_field(checkbox_field: dict[str, str]) -> list[sp.FieldProperties]:
@@ -179,14 +198,14 @@ def _get_description(redcap_field: dict[str, str]) -> str:
     return description.strip()
 
 
-def _get_categories(redcap_field: dict[str, str]) -> list[str] | None:
+def _get_categories(redcap_field: dict[str, str]) -> Optional[list[str]]:
     if redcap_field["field_type"] not in {"radio", "dropdown"}:
         return None
 
     return so.fmap(_get_choices(redcap_field), itemgetter(1))
 
 
-def _get_format(redcap_field: dict[str, str]) -> str | None:
+def _get_format(redcap_field: dict[str, str]) -> Optional[str]:
     match _get_mask(redcap_field):
         case "email":
             return "email"
@@ -209,7 +228,7 @@ def _get_format(redcap_field: dict[str, str]) -> str | None:
 def _get_validation_bound(
     redcap_field: dict[str, str],
     field_name: Literal["text_validation_min", "text_validation_max"],
-) -> float | str | None:
+) -> Optional[float | str]:
     value = redcap_field[field_name]
     if value == "":
         return None
@@ -241,7 +260,7 @@ def _get_validation_bound(
 def _get_text_length_bound(
     redcap_field: dict[str, str],
     field_name: Literal["text_validation_min", "text_validation_max"],
-) -> int | None:
+) -> Optional[int]:
     value = redcap_field[field_name]
     if value == "":
         return None

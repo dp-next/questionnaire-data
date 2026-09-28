@@ -4818,6 +4818,19 @@
         ],
         "primaryKey": [
           "participant_id"
+        ],
+        "foreignKeys": [
+          {
+            "fields": [
+              "participant_id"
+            ],
+            "reference": {
+              "resource": "registration",
+              "fields": [
+                "participant_id"
+              ]
+            }
+          }
         ]
       }
     }
