@@ -3,46 +3,43 @@ from itertools import groupby
 from operator import itemgetter
 from typing import Literal, cast
 
+import polars as pl
 import seedcase_soil as so
 import seedcase_sprout as sp
+
+FORMS = ["registration", "dp_next"]
+
+
+def remove_unused_fields(redcap_metadata: dict[str, str]) -> dict[str, str]:
+    """Remove any field not used for `datapackage.json`."""
+    redcap_metadata.pop("section_header")
+    redcap_metadata.pop("identifier")
+    redcap_metadata.pop("branching_logic")
+    redcap_metadata.pop("custom_alignment")
+    redcap_metadata.pop("question_number")
+    redcap_metadata.pop("matrix_group_name")
+    redcap_metadata.pop("matrix_ranking")
+    return redcap_metadata
+
+
+def keep_needed_forms(data: pl.DataFrame) -> pl.DataFrame:
+    """Drop unused forms from the REDCap metadata."""
+    return data.filter(pl.col("form_name").is_in(FORMS))
+
+
+def add_participant_id(data: pl.DataFrame) -> pl.DataFrame:
+    """Add participant ID column to kept forms."""
+    participants_df = pl.DataFrame({"participant_id": ["", ""], "form_name": FORMS})
+    return pl.concat([data, participants_df])
+
+
+def rename_forms(data: pl.DataFrame) -> pl.DataFrame:
+    """Rename forms."""
+    return data.with_columns(pl.col("form_name").str.replace("dp_next", "survey"))
 
 
 def stage_metadata(redcap_fields: list[dict[str, str]]) -> list[dict[str, str]]:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-    forms = ["registration", "dp_next"]
-
-    # Create a `participant_id` field for all forms
-    participant_id_field = so.keep(
-        redcap_fields, lambda field: field["field_name"] == "participant_id"
-    )[0]
-    participant_id_fields = so.fmap(
-        forms,
-        lambda form: {**participant_id_field, "form_name": form},
-    )
-
-    # Discard fields in forms that are not in the data package
-    # and `participant_id`, which will be added separately
-    redcap_fields = so.keep(
-        redcap_fields,
-        lambda field: (
-            field["form_name"] in forms and field["field_name"] != "participant_id"
-        ),
-    )
-
-    # Add `participant_id` for all forms
-    redcap_fields = participant_id_fields + redcap_fields
-
-    # Rename the `dp_next` form to `survey`
-    redcap_fields = so.fmap(
-        redcap_fields,
-        lambda field: {
-            **field,
-            "form_name": "survey"
-            if field["form_name"] == "dp_next"
-            else field["form_name"],
-        },
-    )
-
     return redcap_fields
 
 
@@ -54,8 +51,8 @@ def create_resource_properties(
     content_fields = so.keep(
         redcap_fields, lambda field: field["field_type"] != "descriptive"
     )
-    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])  # type: ignore
-    grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])  # type: ignore
+    sorted_by_form = sorted(content_fields, key=lambda field: field["form_name"])
+    grouped_by_form = groupby(sorted_by_form, key=lambda field: field["form_name"])
     return so.fmap(
         grouped_by_form,
         lambda group: _form_to_resource(group[0], list(group[1])),

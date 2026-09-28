@@ -5,6 +5,8 @@ from importlib.resources import files
 from pathlib import Path
 from typing import Annotated
 
+import polars as pl
+import seedcase_soil as so
 import seedcase_sprout as sp
 from pytask import Product, PythonNode, mark
 
@@ -16,7 +18,7 @@ SRC = Path(str(files("questionnaire_data"))).joinpath("..").resolve()
 RAW = SRC.joinpath("..", "raw").resolve()
 STAGING = SRC.joinpath("..", "staging").resolve()
 
-RAW_METADATA_PATH = RAW / "metadata" / "metadata.json"
+RAW_METADATA_PATH = RAW / "metadata" / "redcap.csv"
 STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.json"
 
 DATAPACKAGE_PATH = SRC.parent / "datapackage.json"
@@ -37,8 +39,12 @@ def task_download_metadata(
     raw_metadata_path: Annotated[Path, Product] = RAW_METADATA_PATH,
 ) -> None:
     """Download the metadata to raw."""
-    redcap_metadata = common.redcap.get_json("metadata")
-    common.json.write(raw_metadata_path, redcap_metadata)
+    from_redcap = common.redcap.get_json("metadata")
+    kept_fields = so.fmap(from_redcap, metadata.redcap.remove_unused_fields)
+    metadata_df = pl.DataFrame(kept_fields)
+    kept_forms = metadata.redcap.keep_needed_forms(metadata_df)
+    renamed_forms = metadata.redcap.rename_forms(kept_forms)
+    renamed_forms.write_csv(raw_metadata_path)
 
 
 @mark.metadata
@@ -47,7 +53,7 @@ def task_stage_metadata(
     raw_metadata_path: Path = RAW_METADATA_PATH,
 ) -> None:
     """Prepare the REDCap metadata for transformation into datapackage.json."""
-    raw_metadata = common.json.read(raw_metadata_path)
+    raw_metadata = pl.read_csv(raw_metadata_path).to_dicts()
     staged_metadata = metadata.redcap.stage_metadata(raw_metadata)
     common.json.write(staging_metadata_path, staged_metadata)
 
