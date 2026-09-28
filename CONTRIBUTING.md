@@ -18,7 +18,7 @@ To contribute to questionnaire-data, you first need to install
 [justfile](https://just.systems/man/en/packages.html). We use uv and justfile to
 manage our project, such as to run checks on the data package and build the
 website. Both the uv and justfile websites have a more detailed guide on using
-uv, but below are some simple instructions to get you started.
+these tools, but below are some simple instructions to get you started.
 
 It's easiest to first [install
 uv](https://docs.astral.sh/uv/getting-started/installation/) and then install
@@ -155,3 +155,10 @@ The first steps for creating and developing your data package are kept in the
 `src/questionnaire-data/build.py`. For more detailed instructions on developing
 data packages, check out the [Building Data
 Packages](https://data-pkg-guide.seedcase-project.org) guide.
+
+## Connecting to GenomeDK
+
+The questionnaire data is kept on [GenomeDK](https://genome.au.dk), Aarhus
+University's super computer cluster. To learn about how to connect to GenomeDK,
+see the Seedcase team guide about [working on
+GenomeDK](https://team.seedcase-project.org/how-we-work/genome-dk).
