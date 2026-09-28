@@ -192,6 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#configuration-and-other-content" id="toc-configuration-and-other-content" class="nav-link" data-scroll-target="#configuration-and-other-content">Configuration and other content</a></li>
   </ul></li>
   <li><a href="#developing-your-data-package" id="toc-developing-your-data-package" class="nav-link" data-scroll-target="#developing-your-data-package">Developing your data package</a></li>
+  <li><a href="#connecting-to-genomedk" id="toc-connecting-to-genomedk" class="nav-link" data-scroll-target="#connecting-to-genomedk">Connecting to GenomeDK</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/dp-next/questionnaire-data/edit/main/CONTRIBUTING.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dp-next/questionnaire-data/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/dp-next/questionnaire-data/blob/main/CONTRIBUTING.md" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -211,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="adding-or-modifying-content" class="level2">
 <h2 class="anchored" data-anchor-id="adding-or-modifying-content"><span class="emoji" data-emoji="pencil2">✏️</span> Adding or modifying content</h2>
 <p>If you would like to contribute content, please check out our <a href="https://guidebook.seedcase-project.org/">guidebook</a> for more specific details on how we work and develop. It is a regularly evolving document, so is at various states of completion.</p>
-<p>To contribute to questionnaire-data, you first need to install <a href="https://docs.astral.sh/uv/">uv</a> and <a href="https://just.systems/man/en/packages.html">justfile</a>. We use uv and justfile to manage our project, such as to run checks on the data package and build the website. Both the uv and justfile websites have a more detailed guide on using uv, but below are some simple instructions to get you started.</p>
+<p>To contribute to questionnaire-data, you first need to install <a href="https://docs.astral.sh/uv/">uv</a> and <a href="https://just.systems/man/en/packages.html">justfile</a>. We use uv and justfile to manage our project, such as to run checks on the data package and build the website. Both the uv and justfile websites have a more detailed guide on using these tools, but below are some simple instructions to get you started.</p>
 <p>It’s easiest to first <a href="https://docs.astral.sh/uv/getting-started/installation/">install uv</a> and then install justfile with uv. Once you’ve installed uv, install justfile by running:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> tool install rust-just</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>We keep all our development workflows in the <code>justfile</code>, so you can explore it to see what commands are available. To see a list of commands available, run:</p>
@@ -270,6 +271,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="developing-your-data-package" class="level2">
 <h2 class="anchored" data-anchor-id="developing-your-data-package">Developing your data package</h2>
 <p>The first steps for creating and developing your data package are kept in the <code>src/questionnaire-data/build.py</code>. For more detailed instructions on developing data packages, check out the <a href="https://data-pkg-guide.seedcase-project.org">Building Data Packages</a> guide.</p>
+</section>
+<section id="connecting-to-genomedk" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-to-genomedk">Connecting to GenomeDK</h2>
+<p>The questionnaire data is kept on <a href="https://genome.au.dk">GenomeDK</a>, Aarhus University’s super computer cluster. To learn about how to connect to GenomeDK, see the Seedcase team guide about <a href="https://team.seedcase-project.org/how-we-work/genome-dk">working on GenomeDK</a>.</p>
 
 
 </section>
