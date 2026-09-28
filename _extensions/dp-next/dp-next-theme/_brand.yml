@@ -24,7 +24,7 @@ typography:
     - family: noto sans
       source: "bunny"
       # other weights are used for e.g., bold and table headers
-      weight: [300, 500, 600]
+      weight: [300, 300, 600]
     - family: poppins
       source: "bunny"
       weight: 400
@@ -41,15 +41,23 @@ typography:
 defaults:
   bootstrap:
     defaults:
+      navbar-bg: "#fff"
+      code-color: "#000"
       mermaid-edge-color: "#8B8B8B"
     rules: |
       .cell-output pre code {
         white-space: pre-wrap;
       }
 
+      /* Dropdown items on navbar default to 300 weight, this makes them the same weight as the body. */
+      .dropdown-item {
+          font-weight: 300 !important;
+      }
+
       .navbar {
         border-bottom: var(--quarto-scss-export-gray-300) 1px solid;
       }
+
       svg {
           display: block;
           max-width: 100%;
