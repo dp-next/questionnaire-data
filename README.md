@@ -51,8 +51,8 @@ to abide by its terms.
 The following people have contributed to this project by submitting pull
 requests :tada:
 
+[@fruvago](https://github.com/fruvago),
 [@lwjohnst86](https://github.com/lwjohnst86),
-[@martonvago](https://github.com/martonvago),
 [@signekb](https://github.com/signekb)
 
 ## Licensing
@@ -69,7 +69,7 @@ For a list of changes, see our [changelog](CHANGELOG.md) page.
 
 If you use this package in your work, please cite it as follows:
 
-Beicher K., Brødbæk S.K., Johnston L.W., Vago M. Questionnaire data
+Beicher K., Brødbæk S.K., Johnston L.W., Vago F. Questionnaire data
 package for Work Package 3 of the DP-Next project URL:
 https://dp-next.github.io/questionnaire-data
 
@@ -77,7 +77,7 @@ Or as a BibTeX entry:
 
 ``` bibtex
 @misc{YourReferenceHere,
-author = {Beicher, Kristiane and Brødbæk, Signe Kirk and Johnston, Luke William and Vago, Marton},
+author = {Beicher, Kristiane and Brødbæk, Signe Kirk and Johnston, Luke William and Vago, Fruzsina},
 title = {Questionnaire data package for Work Package 3 of the DP-Next project},
 url = {https://dp-next.github.io/questionnaire-data}
 }
