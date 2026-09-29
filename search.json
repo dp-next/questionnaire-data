@@ -115,7 +115,7 @@
     "href": "index.html#citing-us",
     "title": "DP-Next questionnaire data package",
     "section": "Citing us",
-    "text": "Citing us\nIf you use this package in your work, please cite it as follows:\nBeicher K., Brødbæk S.K., Johnston L.W., Vago M. Questionnaire data package for Work Package 3 of the DP-Next project URL: https://dp-next.github.io/questionnaire-data\nOr as a BibTeX entry:\n@misc{YourReferenceHere,\nauthor = {Beicher, Kristiane and Brødbæk, Signe Kirk and Johnston, Luke William and Vago, Marton},\ntitle = {Questionnaire data package for Work Package 3 of the DP-Next project},\nurl = {https://dp-next.github.io/questionnaire-data}\n}",
+    "text": "Citing us\nIf you use this package in your work, please cite it as follows:\nBeicher K., Brødbæk S.K., Johnston L.W., Vago F. Questionnaire data package for Work Package 3 of the DP-Next project URL: https://dp-next.github.io/questionnaire-data\nOr as a BibTeX entry:\n@misc{YourReferenceHere,\nauthor = {Beicher, Kristiane and Brødbæk, Signe Kirk and Johnston, Luke William and Vago, Fruzsina},\ntitle = {Questionnaire data package for Work Package 3 of the DP-Next project},\nurl = {https://dp-next.github.io/questionnaire-data}\n}",
     "crumbs": [
       "Overview"
     ]
@@ -125,7 +125,7 @@
     "href": "index.html#contributors",
     "title": "DP-Next questionnaire data package",
     "section": "Contributors",
-    "text": "Contributors\nThe following people have contributed to this project by submitting pull requests 🎉\n@lwjohnst86, @martonvago, @signekb",
+    "text": "Contributors\nThe following people have contributed to this project by submitting pull requests 🎉\n@fruvago, @lwjohnst86, @signekb",
     "crumbs": [
       "Overview"
     ]
