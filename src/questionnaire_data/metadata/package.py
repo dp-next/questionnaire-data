@@ -37,9 +37,9 @@ package_properties = sp.SproutProperties(
             roles=["WorkPackageLeader", "DataCurator", "Distributor"],
         ),
         sp.ContributorProperties(
-            title="Marton Vago",
-            email="mvago@clin.au.dk",
-            given_name="Marton",
+            title="Fruzsina Vago",
+            email="vago@clin.au.dk",
+            given_name="Fruzsina",
             family_name="Vago",
             organization="Steno Diabetes Centre Aarhus",
             roles=["DataCurator"],
