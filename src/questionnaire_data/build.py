@@ -6,15 +6,17 @@ from pathlib import Path
 from typing import Annotated
 
 import seedcase_sprout as sp
-from pytask import Product, PythonNode, mark
+from pytask import DirectoryNode, Product, PythonNode, mark
 
-from questionnaire_data import common, metadata
+from questionnaire_data import common, data, metadata
 
 common.dotenv.load_env_vars()
 
 SRC = Path(str(files("questionnaire_data"))).joinpath("..").resolve()
 RAW = SRC.joinpath("..", "raw").resolve()
 STAGING = SRC.joinpath("..", "staging").resolve()
+
+RAW_DATA_PATH = RAW / "data"
 
 RAW_METADATA_PATH = RAW / "metadata" / "metadata.json"
 STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.json"
@@ -26,6 +28,17 @@ def _hash_properties(props: sp.SproutProperties) -> str:
     return hashlib.sha256(
         json.dumps(props.compact_dict, sort_keys=True).encode()
     ).hexdigest()
+
+
+@mark.raw
+def task_download_data(
+    raw_data_dir: Annotated[
+        Path, DirectoryNode(root_dir=RAW_DATA_PATH, pattern="*.csv.gz"), Product
+    ],
+) -> None:
+    """Download REDCap data to raw."""
+    data_str = data.redcap.download()
+    data.redcap.write(data_str, raw_data_dir)
 
 
 @mark.metadata
