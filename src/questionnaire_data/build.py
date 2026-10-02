@@ -28,7 +28,11 @@ def _hash_properties(props: sp.SproutProperties) -> str:
     ).hexdigest()
 
 
-@mark.metadata
+@mark.skipif(
+    common.redcap.is_empty_env(),
+    reason="API key is not present in the environment, so skipping.",
+)
+@mark.raw
 def task_download_metadata(
     raw_metadata_path: Annotated[Path, Product] = RAW_METADATA_PATH,
 ) -> None:
