@@ -32,59 +32,59 @@ smoking;bginf_smoking;dp_next;Background information;background_information
 nikotine;bginf_nikotine;dp_next;Background information;background_information
 background_end;bginf_background_end;dp_next;Administration;admin
 compl_time_background;bginf_compl_time_background;dp_next;Administration;admin
-intro_sliders;intro_sliders;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-physicalhealth;physicalhealth;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-vas_physical;vas_physical;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-mentalhealth;mentalhealth;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-vas_mentalhealth;vas_mentalhealth;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-qol_intro;qol_intro;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-qol_vas;qol_vas;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_health_overall;sf_health_overall;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_intro;sf_intro;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_activities;sf_activities;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_activities_1;sf_activities_1;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_daily_activities_intro;sf_daily_activities_intro;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_daily_activities;sf_daily_activities;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_daily_activities_limit;sf_daily_activities_limit;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_intro2;sf_intro2;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_activities_mental;sf_activities_mental;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_activities_careful;sf_activities_careful;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_physical_pain;sf_physical_pain;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_mental_intro;sf_mental_intro;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_mental_relaxed;sf_mental_relaxed;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_mental_energy;sf_mental_energy;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_mental_sad;sf_mental_sad;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
-sf_mental_social;sf_mental_social;dp_next;Self-reported health of participant (SF-12v1);self_reported_health
+intro_sliders;intro_sliders;dp_next;Health (SF-12v1);health
+physicalhealth;physicalhealth;dp_next;Health (SF-12v1);health
+vas_physical;vas_physical;dp_next;Health (SF-12v1);health
+mentalhealth;mentalhealth;dp_next;Health (SF-12v1);health
+vas_mentalhealth;vas_mentalhealth;dp_next;Health (SF-12v1);health
+qol_intro;qol_intro;dp_next;Health (SF-12v1);health
+qol_vas;qol_vas;dp_next;Health (SF-12v1);health
+sf_health_overall;sf_health_overall;dp_next;Health (SF-12v1);health
+sf_intro;sf_intro;dp_next;Health (SF-12v1);health
+sf_activities;sf_activities;dp_next;Health (SF-12v1);health
+sf_activities_1;sf_activities_1;dp_next;Health (SF-12v1);health
+sf_daily_activities_intro;sf_daily_activities_intro;dp_next;Health (SF-12v1);health
+sf_daily_activities;sf_daily_activities;dp_next;Health (SF-12v1);health
+sf_daily_activities_limit;sf_daily_activities_limit;dp_next;Health (SF-12v1);health
+sf_intro2;sf_intro2;dp_next;Health (SF-12v1);health
+sf_activities_mental;sf_activities_mental;dp_next;Health (SF-12v1);health
+sf_activities_careful;sf_activities_careful;dp_next;Health (SF-12v1);health
+sf_physical_pain;sf_physical_pain;dp_next;Health (SF-12v1);health
+sf_mental_intro;sf_mental_intro;dp_next;Health (SF-12v1);health
+sf_mental_relaxed;sf_mental_relaxed;dp_next;Health (SF-12v1);health
+sf_mental_energy;sf_mental_energy;dp_next;Health (SF-12v1);health
+sf_mental_sad;sf_mental_sad;dp_next;Health (SF-12v1);health
+sf_mental_social;sf_mental_social;dp_next;Health (SF-12v1);health
 sf12v2_end;sf12v2_end;dp_next;Administration;admin
 sf12v2_complt_time;sf12v2_complt_time;dp_next;Administration;admin
-obesity;socstat_obesity;dp_next;Self-perceived social status;social_status
-body_type_men;socstat_body_type_men;dp_next;Self-perceived social status;social_status
-body_type_woman;socstat_body_type_woman;dp_next;Self-perceived social status;social_status
-body_number;socstat_body_number;dp_next;Self-perceived social status;social_status
-ses_social_intro;socstat_ses_social_intro;dp_next;Self-perceived social status;social_status
-ses_dk_slider;socstat_ses_dk_slider;dp_next;Self-perceived social status;social_status
-delphi_ses_status_local;socstat_delphi_ses_status_local;dp_next;Self-perceived social status;social_status
-ses_lokal_slider;socstat_ses_lokal_slider;dp_next;Self-perceived social status;social_status
+obesity;socstat_obesity;dp_next;Social status;social_status
+body_type_men;socstat_body_type_men;dp_next;Social status;social_status
+body_type_woman;socstat_body_type_woman;dp_next;Social status;social_status
+body_number;socstat_body_number;dp_next;Social status;social_status
+ses_social_intro;socstat_ses_social_intro;dp_next;Social status;social_status
+ses_dk_slider;socstat_ses_dk_slider;dp_next;Social status;social_status
+delphi_ses_status_local;socstat_delphi_ses_status_local;dp_next;Social status;social_status
+ses_lokal_slider;socstat_ses_lokal_slider;dp_next;Social status;social_status
 self_rate_end;socstat_self_rate_end;dp_next;Administration;admin
 compl_time_self_rate;socstat_compl_time_self_rate;dp_next;Administration;admin
-alc_intro;alc_intro;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_12mo;alc_12mo;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_days_per_week;alc_days_per_week;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_mon;alc_mon;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_tue;alc_tue;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_wed;alc_wed;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_thu;alc_thu;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_fri;alc_fri;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_sat;alc_sat;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_sun;alc_sun;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_per_week;alc_per_week;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_freq_per_occa;alc_freq_per_occa;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_want_lower;alc_want_lower;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_bad_health;alc_bad_health;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_prev_daily_use;alc_prev_daily_use;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_per_week_earlier;alc_per_week_earlier;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_period_start;alc_period_start;dp_next;Self-reported alcohol consumption;alcohol_consumption
-alc_period_start_2;alc_period_start_2;dp_next;Self-reported alcohol consumption;alcohol_consumption
+alc_intro;alc_intro;dp_next;Alcohol consumption;alcohol_consumption
+alc_12mo;alc_12mo;dp_next;Alcohol consumption;alcohol_consumption
+alc_days_per_week;alc_days_per_week;dp_next;Alcohol consumption;alcohol_consumption
+alc_mon;alc_mon;dp_next;Alcohol consumption;alcohol_consumption
+alc_tue;alc_tue;dp_next;Alcohol consumption;alcohol_consumption
+alc_wed;alc_wed;dp_next;Alcohol consumption;alcohol_consumption
+alc_thu;alc_thu;dp_next;Alcohol consumption;alcohol_consumption
+alc_fri;alc_fri;dp_next;Alcohol consumption;alcohol_consumption
+alc_sat;alc_sat;dp_next;Alcohol consumption;alcohol_consumption
+alc_sun;alc_sun;dp_next;Alcohol consumption;alcohol_consumption
+alc_per_week;alc_per_week;dp_next;Alcohol consumption;alcohol_consumption
+alc_freq_per_occa;alc_freq_per_occa;dp_next;Alcohol consumption;alcohol_consumption
+alc_want_lower;alc_want_lower;dp_next;Alcohol consumption;alcohol_consumption
+alc_bad_health;alc_bad_health;dp_next;Alcohol consumption;alcohol_consumption
+alc_prev_daily_use;alc_prev_daily_use;dp_next;Alcohol consumption;alcohol_consumption
+alc_per_week_earlier;alc_per_week_earlier;dp_next;Alcohol consumption;alcohol_consumption
+alc_period_start;alc_period_start;dp_next;Alcohol consumption;alcohol_consumption
+alc_period_start_2;alc_period_start_2;dp_next;Alcohol consumption;alcohol_consumption
 alc_end;alc_end;dp_next;Administration;admin
 alc_compl_time;alc_compl_time;dp_next;Administration;admin
 lonely_single;soccont_lonely_single;dp_next;Social contact;social_contact
