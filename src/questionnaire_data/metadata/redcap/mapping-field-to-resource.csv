@@ -1,4 +1,4 @@
-field_name;new_field_name;form_name;resource title;resource_name
+field_name;new_field_name;form_name;resource_title;resource_name
 participant_id;bginf_participant_id;registration;Background information;background_information
 digital_postcpr;bginf_digital_postcpr;registration;Background information;background_information
 municipal_code;bginf_municipal_code;registration;Background information;background_information
