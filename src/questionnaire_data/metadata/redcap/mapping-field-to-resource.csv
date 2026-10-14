@@ -1,6 +1,6 @@
 field_name;new_field_name;form_name;resource_title;resource_name
 participant_id;bginf_participant_id;registration;Background information;background_information
-digital_postcpr;bginf_digital_postcpr;registration;Background information;background_information
+digital_postcpr;bginf_digital_postcpr;registration;;
 municipal_code;bginf_municipal_code;registration;Background information;background_information
 email_eboks;email_eboks;registration;Administration;admin
 send_date;bginf_send_date;registration;Background information;background_information
