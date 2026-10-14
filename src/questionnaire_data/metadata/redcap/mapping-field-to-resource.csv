@@ -155,16 +155,16 @@ pss_cumul_prob;pss_cumul_prob;dp_next;Perceived stress scale (PSS-10);perceived_
 stress_contact;stress_contact;dp_next;Perceived stress scale (PSS-10);perceived_stress
 pss_end;pss_end;dp_next;Administration;admin
 pss_compl_time;pss_compl_time;dp_next;Administration;admin
-sleep_problems_intro;sleep_problems_intro;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_snor;berlin_snor;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_snor_volume;berlin_snor_volume;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_snor_freq;berlin_snor_freq;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_bother;berlin_bother;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_breath;berlin_breath;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_tired;berlin_tired;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_tired_daytime;berlin_tired_daytime;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_sleep_driving;berlin_sleep_driving;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
-berlin_sleep_driv_freq;berlin_sleep_driv_freq;dp_next;Obstructive sleep apnoea risk (BQ);sleep_apnoea
+sleep_problems_intro;sleep_problems_intro;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_snor;berlin_snor;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_snor_volume;berlin_snor_volume;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_snor_freq;berlin_snor_freq;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_bother;berlin_bother;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_breath;berlin_breath;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_tired;berlin_tired;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_tired_daytime;berlin_tired_daytime;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_sleep_driving;berlin_sleep_driving;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_sleep_driv_freq;berlin_sleep_driv_freq;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
 berlin_end;berlin_end;dp_next;Administration;admin
 berlin_complt_time;berlin_complt_time;dp_next;Administration;admin
 intro_umtcq;intro_umtcq;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
