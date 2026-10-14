@@ -140,7 +140,7 @@ dass_scared;scared;dp_next;Depression anxiety stress scales (DASS-21);depression
 dass_meaningless;meaningless;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
 mental_contact;mental_contact;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
 dass_end;dass_end;dp_next;Administration;admin
-dass21_compl_time;dass21_compl_time;dp_next;Administration;admin
+dass21_compl_time;dass_compl_time;dp_next;Administration;admin
 pss_intro;intro;dp_next;Perceived stress scale (PSS-10);perceived_stress
 pss_upset;upset;dp_next;Perceived stress scale (PSS-10);perceived_stress
 pss_lack_control;lack_control;dp_next;Perceived stress scale (PSS-10);perceived_stress
