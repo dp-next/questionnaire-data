@@ -1,10 +1,11 @@
 import hashlib
 import json
-from dataclasses import replace
+from dataclasses import asdict, replace
 from importlib.resources import files
 from pathlib import Path
 from typing import Annotated
 
+import seedcase_soil as so
 import seedcase_sprout as sp
 from pytask import DirectoryNode, Product, PythonNode, mark
 
@@ -76,4 +77,4 @@ def task_create_datapackage_json(
     staging_metadata = common.json.read(staging_metadata_path)
     resources = metadata.redcap.create_resource_properties(staging_metadata)
     package_properties = replace(package_properties, resources=resources)
-    sp.write_properties(package_properties, datapackage_path)
+    so.write_properties(asdict(package_properties), datapackage_path)
