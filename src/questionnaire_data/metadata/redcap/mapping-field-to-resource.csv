@@ -1,0 +1,313 @@
+field_name;new_field_name;form_name;resource_title;resource_name
+participant_id;participant_id;registration;Basic characteristics;basic_characteristics
+digital_postcpr;digital_postcpr;registration;Dropped;__dropped__
+municipal_code;municipal_code;registration;Basic characteristics;basic_characteristics
+email_eboks;email_eboks;registration;Administration;admin
+send_date;send_date;registration;Basic characteristics;basic_characteristics
+name;name;registration;Basic characteristics;basic_characteristics
+status_field;status_field;registration;Administration;admin
+status_text_field;status_text_field;registration;Administration;admin
+no_consent;no_consent;registration;Basic characteristics;basic_characteristics
+logo;logo;consent;Administration;admin
+participate;participate;consent;Administration;admin
+full_stop;full_stop;consent;Administration;admin
+background_start;background_start;dp_next;Administration;admin
+gender;gender;dp_next;Basic characteristics;basic_characteristics
+height;height;dp_next;Basic characteristics;basic_characteristics
+weight;weight;dp_next;Basic characteristics;basic_characteristics
+weight_2_female;weight_2_female;dp_next;Basic characteristics;basic_characteristics
+general_health;general_health;dp_next;Basic characteristics;basic_characteristics
+blood_preasure;blood_preasure;dp_next;Basic characteristics;basic_characteristics
+cholesterol;cholesterol;dp_next;Basic characteristics;basic_characteristics
+weight_20yo;weight_20yo;dp_next;Basic characteristics;basic_characteristics
+highest_weight;highest_weight;dp_next;Basic characteristics;basic_characteristics
+highest_weight_2;highest_weight_2;dp_next;Basic characteristics;basic_characteristics
+time_highest_weight;time_highest_weight;dp_next;Basic characteristics;basic_characteristics
+time_highest_weight_2;time_highest_weight_2;dp_next;Basic characteristics;basic_characteristics
+menstruation;menstruation;dp_next;Basic characteristics;basic_characteristics
+menopause;menopause;dp_next;Basic characteristics;basic_characteristics
+civilstatus;civilstatus;dp_next;Basic characteristics;basic_characteristics
+children_home;children_home;dp_next;Basic characteristics;basic_characteristics
+smoking;smoking;dp_next;Basic characteristics;basic_characteristics
+nikotine;nikotine;dp_next;Basic characteristics;basic_characteristics
+background_end;background_end;dp_next;Administration;admin
+compl_time_background;compl_time_background;dp_next;Administration;admin
+intro_sliders;intro_sliders;dp_next;Health (SF-12v1);health
+physicalhealth;physicalhealth;dp_next;Health (SF-12v1);health
+vas_physical;vas_physical;dp_next;Health (SF-12v1);health
+mentalhealth;mentalhealth;dp_next;Health (SF-12v1);health
+vas_mentalhealth;vas_mentalhealth;dp_next;Health (SF-12v1);health
+qol_intro;qol_intro;dp_next;Health (SF-12v1);health
+qol_vas;qol_vas;dp_next;Health (SF-12v1);health
+sf_health_overall;health_overall;dp_next;Health (SF-12v1);health
+sf_intro;intro;dp_next;Health (SF-12v1);health
+sf_activities;activities;dp_next;Health (SF-12v1);health
+sf_activities_1;activities_1;dp_next;Health (SF-12v1);health
+sf_daily_activities_intro;daily_activities_intro;dp_next;Health (SF-12v1);health
+sf_daily_activities;daily_activities;dp_next;Health (SF-12v1);health
+sf_daily_activities_limit;daily_activities_limit;dp_next;Health (SF-12v1);health
+sf_intro2;intro2;dp_next;Health (SF-12v1);health
+sf_activities_mental;activities_mental;dp_next;Health (SF-12v1);health
+sf_activities_careful;activities_careful;dp_next;Health (SF-12v1);health
+sf_physical_pain;physical_pain;dp_next;Health (SF-12v1);health
+sf_mental_intro;mental_intro;dp_next;Health (SF-12v1);health
+sf_mental_relaxed;mental_relaxed;dp_next;Health (SF-12v1);health
+sf_mental_energy;mental_energy;dp_next;Health (SF-12v1);health
+sf_mental_sad;mental_sad;dp_next;Health (SF-12v1);health
+sf_mental_social;mental_social;dp_next;Health (SF-12v1);health
+sf12v2_end;sf12v2_end;dp_next;Administration;admin
+sf12v2_complt_time;sf12v2_complt_time;dp_next;Administration;admin
+obesity;obesity;dp_next;Social status;social_status
+body_type_men;body_type_men;dp_next;Social status;social_status
+body_type_woman;body_type_woman;dp_next;Social status;social_status
+body_number;body_number;dp_next;Social status;social_status
+ses_social_intro;ses_social_intro;dp_next;Social status;social_status
+ses_dk_slider;ses_dk_slider;dp_next;Social status;social_status
+delphi_ses_status_local;delphi_ses_status_local;dp_next;Social status;social_status
+ses_lokal_slider;ses_lokal_slider;dp_next;Social status;social_status
+self_rate_end;socstat_self_rate_end;dp_next;Administration;admin
+compl_time_self_rate;socstat_compl_time_self_rate;dp_next;Administration;admin
+alc_intro;intro;dp_next;Alcohol consumption;alcohol_consumption
+alc_12mo;12mo;dp_next;Alcohol consumption;alcohol_consumption
+alc_days_per_week;days_per_week;dp_next;Alcohol consumption;alcohol_consumption
+alc_mon;mon;dp_next;Alcohol consumption;alcohol_consumption
+alc_tue;tue;dp_next;Alcohol consumption;alcohol_consumption
+alc_wed;wed;dp_next;Alcohol consumption;alcohol_consumption
+alc_thu;thu;dp_next;Alcohol consumption;alcohol_consumption
+alc_fri;fri;dp_next;Alcohol consumption;alcohol_consumption
+alc_sat;sat;dp_next;Alcohol consumption;alcohol_consumption
+alc_sun;sun;dp_next;Alcohol consumption;alcohol_consumption
+alc_per_week;per_week;dp_next;Alcohol consumption;alcohol_consumption
+alc_freq_per_occa;freq_per_occa;dp_next;Alcohol consumption;alcohol_consumption
+alc_want_lower;want_lower;dp_next;Alcohol consumption;alcohol_consumption
+alc_bad_health;bad_health;dp_next;Alcohol consumption;alcohol_consumption
+alc_prev_daily_use;prev_daily_use;dp_next;Alcohol consumption;alcohol_consumption
+alc_per_week_earlier;per_week_earlier;dp_next;Alcohol consumption;alcohol_consumption
+alc_period_start;period_start;dp_next;Alcohol consumption;alcohol_consumption
+alc_period_start_2;period_start_2;dp_next;Alcohol consumption;alcohol_consumption
+alc_end;alc_end;dp_next;Administration;admin
+alc_compl_time;alc_compl_time;dp_next;Administration;admin
+lonely_single;lonely_single;dp_next;Social contact;social_contact
+social_support;social_support;dp_next;Social contact;social_contact
+contact_helpwithprob;contact_helpwithprob;dp_next;Social contact;social_contact
+social_end;soccont_social_end;dp_next;Administration;admin
+social_compl_time;soccont_social_compl_time;dp_next;Administration;admin
+family;family;dp_next;Family history;family_history
+delphi_parents_known;delphi_parents_known;dp_next;Family history;family_history
+father;father;dp_next;Family history;family_history
+delphi_father_health;delphi_father_health;dp_next;Family history;family_history
+father_alcohol_substance;father_alcohol_substance;dp_next;Family history;family_history
+father_overweight;father_overweight;dp_next;Family history;family_history
+body_type_father;body_type_father;dp_next;Family history;family_history
+body_number_father;body_number_father;dp_next;Family history;family_history
+father_diabetes;father_diabetes;dp_next;Family history;family_history
+delphi_father_dmtype;delphi_father_dmtype;dp_next;Family history;family_history
+father_smoke;father_smoke;dp_next;Family history;family_history
+delphi_father_smoke_stoped;delphi_father_smoke_stoped;dp_next;Family history;family_history
+mother;mother;dp_next;Family history;family_history
+delphi_mother_health;delphi_mother_health;dp_next;Family history;family_history
+mother_alcohol_substance;mother_alcohol_substance;dp_next;Family history;family_history
+mother_overweight;mother_overweight;dp_next;Family history;family_history
+body_type_2;body_type_2;dp_next;Family history;family_history
+body_number_mother;body_number_mother;dp_next;Family history;family_history
+mother_diabetes;mother_diabetes;dp_next;Family history;family_history
+delphi_father_dmtype_2;delphi_father_dmtype_2;dp_next;Family history;family_history
+mother_smoke;mother_smoke;dp_next;Family history;family_history
+mother_smoke_years;mother_smoke_years;dp_next;Family history;family_history
+family_end;fam_family_end;dp_next;Administration;admin
+family_compl_time;fam_family_compl_time;dp_next;Administration;admin
+dass_intro;intro;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_tense;tense;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_dry_mouth;dry_mouth;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_pos_feelings;pos_feelings;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_diffi_breathing;diffi_breathing;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_lack_motiv;lack_motiv;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_overreact;overreact;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_shiver_hands;shiver_hands;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_phys_en;phys_en;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_embarras;embarras;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_excitement;excitement;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_uneasy;uneasy;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_restless;restless;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_discouraged;discouraged;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_interrupt;interrupt;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_panic;panic;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_lack_enthus;lack_enthus;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_worthless;worthless;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_sensitive;sensitive;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_heart_rhythm;heart_rhythm;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_scared;scared;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_meaningless;meaningless;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+mental_contact;mental_contact;dp_next;Depression anxiety stress scales (DASS-21);depression_anxiety_stress
+dass_end;dass_end;dp_next;Administration;admin
+dass21_compl_time;dass_compl_time;dp_next;Administration;admin
+pss_intro;intro;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_upset;upset;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_lack_control;lack_control;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_nervous;nervous;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_handle_probs;handle_probs;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_as_plan;as_plan;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_resilience;resilience;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_handle_irri;handle_irri;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_control;control;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_lack_influ;lack_influ;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_cumul_prob;cumul_prob;dp_next;Perceived stress scale (PSS-10);perceived_stress
+stress_contact;stress_contact;dp_next;Perceived stress scale (PSS-10);perceived_stress
+pss_end;pss_end;dp_next;Administration;admin
+pss_compl_time;pss_compl_time;dp_next;Administration;admin
+sleep_problems_intro;sleep_problems_intro;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_snor;snor;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_snor_volume;snor_volume;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_snor_freq;snor_freq;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_bother;bother;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_breath;breath;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_tired;tired;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_tired_daytime;tired_daytime;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_sleep_driving;sleep_driving;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_sleep_driv_freq;sleep_driv_freq;dp_next;Obstructive sleep apnea risk (BQ);sleep_apnea
+berlin_end;berlin_end;dp_next;Administration;admin
+berlin_complt_time;berlin_complt_time;dp_next;Administration;admin
+intro_umtcq;intro;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_shift;shift;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_text;text;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_sleep_hr;sleep_hr;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_sleep_min;sleep_min;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_wake_hr;wake_hr;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_wake_min;wake_min;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_workday;workday;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_sleep_hr_we;sleep_hr_we;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_sleep_min_we;sleep_min_we;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_wake_hr_we;wake_hr_we;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_wake_min_we;wake_min_we;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+umctq_workday_2;workday_2;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+circadian_var;circadian_var;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+meq_item;meq_item;dp_next;Ultra-short Munich chronotype questionnaire (μMCTQ);munich_chronotype
+mctq_end;mctq_end;dp_next;Administration;admin
+mctq_compl_time;mctq_compl_time;dp_next;Administration;admin
+trans_main;trans_main;dp_next;Physical activity (IPAQ-SF);physical_activity
+work_activity;work_activity;dp_next;Physical activity (IPAQ-SF);physical_activity
+leisure_activity_cat;leisure_activity_cat;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_intro;intro;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_active_days;active_days;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_active_time;active_time;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_hours;hours;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_minutes;minutes;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_moderate_intro;moderate_intro;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_moderate_days;moderate_days;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_moderate_time;moderate_time;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_moderate_hours;moderate_hours;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_moderate_minutes;moderate_minutes;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_walk_intro;walk_intro;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_walk_days;walk_days;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_walk_time;walk_time;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_walk_hours;walk_hours;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_walk_minutes;walk_minutes;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_sitting_intro;sitting_intro;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_walk_time_2;walk_time_2;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_sit_hours;sit_hours;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_sit_minutes;sit_minutes;dp_next;Physical activity (IPAQ-SF);physical_activity
+ipaq_end;ipaq_end;dp_next;Administration;admin
+ipaq_compl_time;ipaq_compl_time;dp_next;Administration;admin
+use_personal_tracker;use_personal_tracker;dp_next;Smartwatches and wearables;watch
+health_tracker_devices;health_tracker_devices;dp_next;Smartwatches and wearables;watch
+other_health_tracker;other_health_tracker;dp_next;Smartwatches and wearables;watch
+smart_watch_type;smart_watch_type;dp_next;Smartwatches and wearables;watch
+smartphone_brand;smartphone_brand;dp_next;Smartwatches and wearables;watch
+smart_phone_other;smart_phone_other;dp_next;Smartwatches and wearables;watch
+health_data_intro;health_data_intro;dp_next;Smartwatches and wearables;watch
+mvpa_can_report;mvpa_can_report;dp_next;Smartwatches and wearables;watch
+mvpa_min_7d;mvpa_min_7d;dp_next;Smartwatches and wearables;watch
+steps_can_report;steps_can_report;dp_next;Smartwatches and wearables;watch
+step_avg_7d;step_avg_7d;dp_next;Smartwatches and wearables;watch
+sleep_can_report;sleep_can_report;dp_next;Smartwatches and wearables;watch
+sleep_hours_avg;sleep_hours_avg;dp_next;Smartwatches and wearables;watch
+rhr_can_report;rhr_can_report;dp_next;Smartwatches and wearables;watch
+rhr_value;rhr_value;dp_next;Smartwatches and wearables;watch
+vo2max_can_report;vo2max_can_report;dp_next;Smartwatches and wearables;watch
+vo2max_value;vo2max_value;dp_next;Smartwatches and wearables;watch
+healthdata_other;healthdata_other;dp_next;Smartwatches and wearables;watch
+healthtrack_end;smwatch_healthtrack_end;dp_next;Administration;admin
+healthtrack_compl;smwatch_healthtrack_compl;dp_next;Administration;admin
+bhla_intro;intro;dp_next;Health literacy (B-HLA);health_literacy
+bhla_knowledge;knowledge;dp_next;Health literacy (B-HLA);health_literacy
+bhla_health_ideas;health_ideas;dp_next;Health literacy (B-HLA);health_literacy
+bhla_comp_info;comp_info;dp_next;Health literacy (B-HLA);health_literacy
+bhla_follow_instruct;follow_instruct;dp_next;Health literacy (B-HLA);health_literacy
+bhla_better_health;better_health;dp_next;Health literacy (B-HLA);health_literacy
+bhla_actions_eff;actions_eff;dp_next;Health literacy (B-HLA);health_literacy
+bhla_understa_health;understa_health;dp_next;Health literacy (B-HLA);health_literacy
+bhla_health_behav;health_behav;dp_next;Health literacy (B-HLA);health_literacy
+bhla_false_info;false_info;dp_next;Health literacy (B-HLA);health_literacy
+bhla_argue_actions;argue_actions;dp_next;Health literacy (B-HLA);health_literacy
+bhla_end;bhla_end;dp_next;Administration;admin
+bhla_compl_time;bhla_compl_time;dp_next;Administration;admin
+bfis_intro;intro;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_quiet;quiet;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_compassion;compassion;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_disorganized;disorganized;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_worried;worried;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_artistic;artistic;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_control;control;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_rude;rude;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_motivation;motivation;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_depressed;depressed;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_not_abstract;not_abstract;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_energetic;energetic;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_naive;naive;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_reliable;reliable;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_stable;stable;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_innovative;innovative;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_social;social;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_indifferent;indifferent;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_organized;organized;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_relaxed;relaxed;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_not_artistic;not_artistic;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_compliant;compliant;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_respectful;respectful;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_persistent;persistent;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_self_assured;self_assured;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_considerate;considerate;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_less_energetic;less_energetic;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_dependent;dependent;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_reckless;reckless;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_emotional;emotional;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_not_creative;not_creative;dp_next;Personality traits (BFI-2-S);personality_traits
+bfis_end;bfis_end;dp_next;Administration;admin
+bfi2s_compl_time;bfi2s_compl_time;dp_next;Administration;admin
+diet_intro;diet_intro;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+diet_foods;diet_foods;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+diet_foods_other;diet_foods_other;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+diet_fasting;diet_fasting;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+diet_time;diet_time;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq2;aebq2;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq5;aebq5;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq7;aebq7;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq8;aebq8;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq9;aebq9;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq10;aebq10;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq11;aebq11;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq12;aebq12;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+aebq13;aebq13;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
+genralfood_end;aebq_genralfood_end;dp_next;Administration;admin
+gen_food_compl_time;aebq_gen_food_compl_time;dp_next;Administration;admin
+myfas_intro;intro;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_feeling_sick;feeling_sick;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_sluggish;sluggish;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_overeat;overeat;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_emo_eating;emo_eating;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_worry;worry;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_life_probs;life_probs;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_overeating_impa;overeating_impa;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_cont_overeat;cont_overeat;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_less_enjoy;less_enjoy;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_craving_obses;craving_obses;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_lack_restraint;lack_restraint;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_distracted;distracted;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_family_concern;family_concern;dp_next;Food addiction (mYFAS 2.0);food_addiction
+myfas_end;myfas_end;completion;Administration;admin
+myfas_compl_time;myfas_compl_time;completion;Administration;admin
+device;device;completion;Basic characteristics;basic_characteristics
+completion_get_help;completion_get_help;completion;Basic characteristics;basic_characteristics
+completion_help_details;completion_help_details;completion;Basic characteristics;basic_characteristics
+contact_participant;contact_participant;completion;Basic characteristics;basic_characteristics
+confirm_stop;confirm_stop;completion;Administration;admin
