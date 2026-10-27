@@ -33,13 +33,13 @@ def _hash_properties(props: sp.SproutProperties) -> str:
 
 @mark.raw
 def task_download_data(
-    raw_data_dir: Annotated[
-        Path, DirectoryNode(root_dir=RAW_DATA_PATH, pattern="*.csv.gz"), Product
+    raw_data_path: Annotated[
+        Path, DirectoryNode(root_path=RAW_DATA_PATH, pattern="*.csv.gz"), Product
     ],
 ) -> None:
     """Download REDCap data to raw."""
     data_str = data.redcap.download()
-    data.redcap.write(data_str, raw_data_dir)
+    data.redcap.write(data_str, raw_data_path)
 
 
 @mark.metadata
