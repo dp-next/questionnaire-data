@@ -313,7 +313,7 @@ myfas_family_concern;family_concern;dp_next;Food addiction (mYFAS 2.0);food_addi
 dp_next_complete; dp_next_complete;;Administration;admin;Only in raw data, not in data dict
 myfas_end;myfas_end;completion;Administration;admin
 myfas_compl_time;myfas_compl_time;completion;Administration;admin
-device;device;completion;Basic characteristics;basic_characteristics
+device;completion_device;completion;Basic characteristics;basic_characteristics
 completion_get_help;completion_get_help;completion;Basic characteristics;basic_characteristics
 completion_help_details;completion_help_details;completion;Basic characteristics;basic_characteristics
 contact_participant;contact_participant;completion;Basic characteristics;basic_characteristics
