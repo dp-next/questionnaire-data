@@ -233,7 +233,7 @@ vo2max_can_report;vo2max_can_report;dp_next;Smartwatches and wearables;watch
 vo2max_value;vo2max_value;dp_next;Smartwatches and wearables;watch
 healthdata_other;healthdata_other;dp_next;Smartwatches and wearables;watch
 healthtrack_end;smwatch_healthtrack_end;dp_next;Administration;admin
-healthtrack_compl;smwatch_healthtrack_compl;dp_next;Administration;admin
+healthtrack_compl;smwatch_healthtrack_compl_time;dp_next;Administration;admin
 bhla_intro;intro;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
 bhla_knowledge;knowledge;dp_next;Health literacy (B-HLA);health_literacy
 bhla_health_ideas;health_ideas;dp_next;Health literacy (B-HLA);health_literacy
