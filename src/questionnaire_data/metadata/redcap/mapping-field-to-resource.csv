@@ -8,8 +8,11 @@ name;name;registration;Basic characteristics;basic_characteristics
 status_field;status_field;registration;Administration;admin
 status_text_field;status_text_field;registration;Administration;admin
 no_consent;no_consent;registration;Dropped;__dropped__;Only in data dict, not in raw data
+no_consent___1;no_consent;registration;Basic characteristics;basic_characteristics;Only in raw data, not in data dict
+registration_complete;registration_complete;registration;Administration;admin;Only in raw data, not in data dict
 logo;logo;consent;Dropped;__dropped__;Only in data dict, not in raw data
 participate;participate;consent;Administration;admin
+consent_complete;consent_complete;consent;Administration;admin;Only in raw data, not in data dict
 full_stop;full_stop;consent;Dropped;__dropped__;Only in data dict, not in raw data
 background_start;background_start;dp_next;Administration;admin
 gender;gender;dp_next;Basic characteristics;basic_characteristics
@@ -210,6 +213,9 @@ ipaq_end;ipaq_end;dp_next;Administration;admin
 ipaq_compl_time;ipaq_compl_time;dp_next;Administration;admin
 use_personal_tracker;use_personal_tracker;dp_next;Smartwatches and wearables;watch
 health_tracker_devices;health_tracker_devices;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
+health_tracker_devices___1;smart_watch;dp_next;Smartwatches and wearables;watch;Only in raw data, not in data dict
+health_tracker_devices___2;phone;dp_next;Smartwatches and wearables;watch;Only in raw data, not in data dict
+health_tracker_devices___3;other;dp_next;Smartwatches and wearables;watch;Only in raw data, not in data dict
 other_health_tracker;other_health_tracker;dp_next;Smartwatches and wearables;watch
 smart_watch_type;smart_watch_type;dp_next;Smartwatches and wearables;watch
 smartphone_brand;smartphone_brand;dp_next;Smartwatches and wearables;watch
@@ -304,10 +310,12 @@ myfas_craving_obses;craving_obses;dp_next;Food addiction (mYFAS 2.0);food_addict
 myfas_lack_restraint;lack_restraint;dp_next;Food addiction (mYFAS 2.0);food_addiction
 myfas_distracted;distracted;dp_next;Food addiction (mYFAS 2.0);food_addiction
 myfas_family_concern;family_concern;dp_next;Food addiction (mYFAS 2.0);food_addiction
+dp_next_complete; dp_next_complete;;Administration;admin;Only in raw data, not in data dict
 myfas_end;myfas_end;completion;Administration;admin
 myfas_compl_time;myfas_compl_time;completion;Administration;admin
 device;device;completion;Basic characteristics;basic_characteristics
 completion_get_help;completion_get_help;completion;Basic characteristics;basic_characteristics
 completion_help_details;completion_help_details;completion;Basic characteristics;basic_characteristics
 contact_participant;contact_participant;completion;Basic characteristics;basic_characteristics
+completion_complete;completion_complete;;Basic characteristics;basic_characteristics;Only in raw data, not in data dict
 confirm_stop;confirm_stop;completion;Dropped;__dropped__;Only in data dict, not in raw data
