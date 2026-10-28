@@ -80,7 +80,7 @@ alc_thu;thu;dp_next;Alcohol consumption;alcohol_consumption
 alc_fri;fri;dp_next;Alcohol consumption;alcohol_consumption
 alc_sat;sat;dp_next;Alcohol consumption;alcohol_consumption
 alc_sun;sun;dp_next;Alcohol consumption;alcohol_consumption
-alc_per_week;per_week;dp_next;Alcohol consumption;alcohol_consumption
+alc_per_week;per_week;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
 alc_freq_per_occa;freq_per_occa;dp_next;Alcohol consumption;alcohol_consumption
 alc_want_lower;want_lower;dp_next;Alcohol consumption;alcohol_consumption
 alc_bad_health;bad_health;dp_next;Alcohol consumption;alcohol_consumption
