@@ -279,7 +279,7 @@ bfis_reckless;reckless;dp_next;Personality traits (BFI-2-S);personality_traits
 bfis_emotional;emotional;dp_next;Personality traits (BFI-2-S);personality_traits
 bfis_not_creative;not_creative;dp_next;Personality traits (BFI-2-S);personality_traits
 bfis_end;bfis_end;dp_next;Administration;admin
-bfi2s_compl_time;bfi2s_compl_time;dp_next;Administration;admin
+bfi2s_compl_time;bfis_compl_time;dp_next;Administration;admin
 diet_intro;diet_intro;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
 diet_foods;diet_foods;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
 diet_foods_other;diet_foods_other;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
