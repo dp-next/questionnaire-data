@@ -1,6 +1,6 @@
 field_name;new_field_name;form_name;resource_title;resource_name;comment
 participant_id;participant_id;registration;Basic characteristics;basic_characteristics
-digital_postcpr;digital_postcpr;registration;Dropped;__dropped__
+digital_postcpr;digital_postcpr;registration;Dropped;__dropped__;Should be kept in separate file outside DP/resources to be able to map to participant_id for use on DST.
 municipal_code;municipal_code;registration;Basic characteristics;basic_characteristics
 email_eboks;email_eboks;registration;Administration;admin
 send_date;send_date;registration;Basic characteristics;basic_characteristics
