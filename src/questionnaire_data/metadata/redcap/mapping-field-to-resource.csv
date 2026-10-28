@@ -106,7 +106,7 @@ body_number_father;body_number_father;dp_next;Family history;family_history
 father_diabetes;father_diabetes;dp_next;Family history;family_history
 delphi_father_dmtype;delphi_father_dmtype;dp_next;Family history;family_history
 father_smoke;father_smoke;dp_next;Family history;family_history
-delphi_father_smoke_stoped;delphi_father_smoke_stoped;dp_next;Family history;family_history
+delphi_father_smoke_stoped;delphi_father_smoke_stopped;dp_next;Family history;family_history
 mother;mother;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
 delphi_mother_health;delphi_mother_health;dp_mext;Dropped;__dropped__;Only in data dict, not in raw data
 mother_alcohol_substance;mother_alcohol_substance;dp_next;Family history;family_history
@@ -114,7 +114,7 @@ mother_overweight;mother_overweight;dp_next;Family history;family_history
 body_type_2;body_type_2;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
 body_number_mother;body_number_mother;dp_next;Family history;family_history
 mother_diabetes;mother_diabetes;dp_next;Family history;family_history
-delphi_father_dmtype_2;delphi_father_dmtype_2;dp_next;Family history;family_history
+delphi_father_dmtype_2;delphi_mother_dmtype;dp_next;Family history;family_history
 mother_smoke;mother_smoke;dp_next;Family history;family_history
 mother_smoke_years;mother_smoke_years;dp_next;Family history;family_history
 family_end;fam_family_end;dp_next;Administration;admin
@@ -206,7 +206,7 @@ ipaq_walk_time;walk_time;dp_next;Dropped;__dropped__;Only in data dict, not in r
 ipaq_walk_hours;walk_hours;dp_next;Physical activity (IPAQ-SF);physical_activity
 ipaq_walk_minutes;walk_minutes;dp_next;Physical activity (IPAQ-SF);physical_activity
 ipaq_sitting_intro;sitting_intro;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
-ipaq_walk_time_2;walk_time_2;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
+ipaq_walk_time_2;sit_time;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
 ipaq_sit_hours;sit_hours;dp_next;Physical activity (IPAQ-SF);physical_activity
 ipaq_sit_minutes;sit_minutes;dp_next;Physical activity (IPAQ-SF);physical_activity
 ipaq_end;ipaq_end;dp_next;Administration;admin
