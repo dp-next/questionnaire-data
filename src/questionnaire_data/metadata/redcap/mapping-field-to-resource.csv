@@ -294,8 +294,8 @@ aebq10;aebq10;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eatin
 aebq11;aebq11;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
 aebq12;aebq12;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
 aebq13;aebq13;dp_next;Emotional overeating and food fussiness (AEBQ);adult_eating_behaviour
-genralfood_end;aebq_genralfood_end;dp_next;Administration;admin
-gen_food_compl_time;aebq_gen_food_compl_time;dp_next;Administration;admin
+genralfood_end;aebq_end;dp_next;Administration;admin
+gen_food_compl_time;aebq_compl_time;dp_next;Administration;admin
 myfas_intro;intro;dp_next;Dropped;__dropped__;Only in data dict, not in raw data
 myfas_feeling_sick;feeling_sick;dp_next;Food addiction (mYFAS 2.0);food_addiction
 myfas_sluggish;sluggish;dp_next;Food addiction (mYFAS 2.0);food_addiction
