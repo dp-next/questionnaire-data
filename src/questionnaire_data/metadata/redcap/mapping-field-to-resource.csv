@@ -1,8 +1,8 @@
 field_name;new_field_name;form_name;resource_title;resource_name;comment
 participant_id;participant_id;registration;Basic characteristics;basic_characteristics
-digital_postcpr;digital_postcpr;registration;;private;Will be kept outside the data package
+digital_postcpr;cpr;registration;;private;Will be kept outside the data package
 municipal_code;municipal_code;registration;Basic characteristics;basic_characteristics
-email_eboks;email_eboks;registration;private;Will be kept outside the data package
+email_eboks;email;registration;private;Will be kept outside the data package
 send_date;send_date;registration;Basic characteristics;basic_characteristics
 name;name;registration;;private;Will be kept outside the data package
 status_field;status_field;registration;Administration;admin
