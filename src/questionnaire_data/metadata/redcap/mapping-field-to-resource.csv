@@ -1,17 +1,17 @@
 field_name;new_field_name;form_name;resource_title;resource_name;comment
 participant_id;participant_id;registration;Basic characteristics;basic_characteristics
-digital_postcpr;digital_postcpr;registration;Dropped;__dropped__;Should be kept in separate file outside DP/resources to be able to map to participant_id for use on DST.
+digital_postcpr;digital_postcpr;registration;;private;Will be kept outside the data package
 municipal_code;municipal_code;registration;Basic characteristics;basic_characteristics
-email_eboks;email_eboks;registration;Administration;admin
+email_eboks;email_eboks;registration;private;Will be kept outside the data package
 send_date;send_date;registration;Basic characteristics;basic_characteristics
-name;name;registration;Basic characteristics;basic_characteristics
+name;name;registration;;private;Will be kept outside the data package
 status_field;status_field;registration;Administration;admin
 status_text_field;status_text_field;registration;Administration;admin
 no_consent;no_consent;registration;Dropped;__dropped__;Only in data dict, not in raw data
 no_consent___1;no_consent;registration;Basic characteristics;basic_characteristics;Only in raw data, not in data dict
 registration_complete;registration_complete;registration;Administration;admin;Only in raw data, not in data dict
 logo;logo;consent;Dropped;__dropped__;Only in data dict, not in raw data
-participate;participate;consent;Administration;admin
+participate;participate;consent;private;Will be kept outside the data package
 consent_complete;consent_complete;consent;Administration;admin;Only in raw data, not in data dict
 full_stop;full_stop;consent;Dropped;__dropped__;Only in data dict, not in raw data
 background_start;background_start;dp_next;Administration;admin
