@@ -33,7 +33,7 @@ def write(data_str: str, raw_data_path: Path) -> None:
     df.write_csv(raw_data_path, compression="gzip")
 
 
-def read_newest_raw(raw_data_paths: Path):
+def read_newest_raw(raw_data_paths: list[Path]):
     """Read the newest downloaded raw data."""
     return pl.read_csv(
         # Newest data path based on datetime filename.

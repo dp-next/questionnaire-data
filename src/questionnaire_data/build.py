@@ -48,8 +48,8 @@ def task_download_data(
 
 @mark.raw
 def task_write_field_resource_mapping_csv(
-    raw_data_path: Annotated[
-        Path, DirectoryNode(root_dir=RAW_DATA_PATH, pattern="*.csv.gz")
+    raw_data_paths: Annotated[
+        list[Path], DirectoryNode(root_dir=RAW_DATA_PATH, pattern="*.csv.gz")
     ],
     mapping_csv_path: Annotated[Path, Product] = FIELD_RESOURCE_MAPPING_PATH,
 ):
