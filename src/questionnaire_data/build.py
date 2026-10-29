@@ -54,7 +54,7 @@ def task_write_field_resource_mapping_csv(
     mapping_csv_path: Annotated[Path, Product] = FIELD_RESOURCE_MAPPING_PATH,
 ):
     """Extract field names from newest raw and write to field resource mapping csv."""
-    raw_data = data.redcap.read_newest_raw(raw_data_path)
+    raw_data = data.redcap.read_newest_raw(raw_data_paths)
     # If new fields, append them to existing csv.
     data.redcap.write_columns_to_mapping_csv(raw_data, mapping_csv_path)
 
