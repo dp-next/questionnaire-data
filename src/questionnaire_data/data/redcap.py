@@ -1,3 +1,4 @@
+from datetime import datetime
 from io import StringIO
 from pathlib import Path
 
@@ -37,7 +38,10 @@ def read_newest_raw(raw_data_paths: list[Path]):
     """Read the newest downloaded raw data."""
     return pl.read_csv(
         # Newest data path based on datetime filename.
-        max(raw_data_paths),
+        max(
+            raw_data_paths,
+            key=lambda path: datetime.strptime(path.name, "%Y-%m-%dT%H-%M-%SZ.csv.gz"),
+        ),
         infer_schema=False,
     )
 
