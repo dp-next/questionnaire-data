@@ -59,12 +59,14 @@ def write_columns_to_mapping_csv(
     # If mapping csv exists, check for new fields and append them.
     if mapping_csv_path.exists():
         mapping_csv = pl.read_csv(mapping_csv_path, separator=";")
-        existing_field_names = mapping_csv["field_name"].to_list()
-        new_fields = [
-            field_name
-            for field_name in field_names
-            if field_name not in existing_field_names
-        ]
+        new_fields = list(
+            filter(
+                lambda field_name: (
+                    field_name not in mapping_csv["field_name"].to_list()
+                ),
+                field_names,
+            )
+        )
         if len(new_fields) != 0:
             pl.concat(
                 [mapping_csv, pl.DataFrame({"field_name": new_fields})],
