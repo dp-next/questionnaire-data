@@ -19,6 +19,10 @@ STAGING = SRC.joinpath("..", "staging").resolve()
 
 RAW_DATA_PATH = RAW / "data"
 
+FIELD_RESOURCE_MAPPING_PATH = (
+    SRC / "questionnaire_data" / "metadata" / "redcap" / "mapping-field-to-resource.csv"
+)
+
 RAW_METADATA_PATH = RAW / "metadata" / "metadata.json"
 STAGING_METADATA_PATH = STAGING / "metadata" / "metadata.json"
 
@@ -34,12 +38,32 @@ def _hash_properties(props: sp.SproutProperties) -> str:
 @mark.raw
 def task_download_data(
     raw_data_path: Annotated[
-        Path, DirectoryNode(root_dir=RAW_DATA_PATH, pattern="*.csv.gz"), Product
+        Path,
+        DirectoryNode(
+            root_dir=RAW_DATA_PATH, pattern=f"*{data.redcap.RAW_DATA_SUFFIX}"
+        ),
+        Product,
     ],
 ) -> None:
     """Download REDCap data to raw."""
     data_str = data.redcap.download()
     data.redcap.write(data_str, raw_data_path)
+
+
+@mark.raw
+def task_write_field_resource_mapping_csv(
+    raw_data_paths: Annotated[
+        list[Path],
+        DirectoryNode(
+            root_dir=RAW_DATA_PATH, pattern=f"*{data.redcap.RAW_DATA_SUFFIX}"
+        ),
+    ],
+    mapping_csv_path: Annotated[Path, Product] = FIELD_RESOURCE_MAPPING_PATH,
+):
+    """Extract field names from newest raw and write to field resource mapping csv."""
+    raw_data = data.redcap.read_newest_raw(raw_data_paths)
+    # If new fields, append them to existing csv.
+    data.redcap.write_columns_to_mapping_csv(raw_data, mapping_csv_path)
 
 
 @mark.metadata

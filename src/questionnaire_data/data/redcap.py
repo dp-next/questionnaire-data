@@ -1,9 +1,12 @@
+from datetime import datetime
 from io import StringIO
 from pathlib import Path
 
 import polars as pl
 
 from questionnaire_data import common
+
+RAW_DATA_SUFFIX = ".csv.gz"
 
 
 def download() -> str:
@@ -29,5 +32,53 @@ def write(data_str: str, raw_data_path: Path) -> None:
     """Write REDCap data as a timestamped file."""
     df = pl.read_csv(StringIO(data_str), separator=";", infer_schema=False)
     raw_data_path.mkdir(parents=True, exist_ok=True)
-    file_path = raw_data_path / f"{common.datetime.get_current()}.csv.gz"
+    file_path = raw_data_path / f"{common.datetime.get_current()}{RAW_DATA_SUFFIX}"
     df.write_csv(file_path, compression="gzip")
+
+
+def read_newest_raw(raw_data_paths: list[Path]):
+    """Read the newest downloaded raw data."""
+    return pl.read_csv(
+        # Newest data path based on datetime filename.
+        max(
+            raw_data_paths,
+            key=lambda path: datetime.strptime(
+                path.name, f"%Y-%m-%dT%H-%M-%SZ{RAW_DATA_SUFFIX}"
+            ),
+        ),
+        infer_schema=False,
+    )
+
+
+def write_columns_to_mapping_csv(
+    newest_raw_data: pl.DataFrame, mapping_csv_path: Path
+) -> None:
+    """Write raw data columns to CSV."""
+    field_names = newest_raw_data.columns
+
+    # If mapping csv exists, check for new fields and append them.
+    if mapping_csv_path.exists():
+        mapping_csv = pl.read_csv(mapping_csv_path, separator=";")
+        new_fields = list(
+            filter(
+                lambda field_name: (
+                    field_name not in mapping_csv["field_name"].to_list()
+                ),
+                field_names,
+            )
+        )
+
+        # Concatenate any new fields (if no new fields nothing is added)
+        pl.concat(
+            [mapping_csv, pl.DataFrame({"field_name": new_fields})],
+            # Fills in missing columns with None.
+            how="diagonal",
+        ).write_csv(mapping_csv_path, separator=";")
+
+    else:
+        pl.DataFrame({"field_name": field_names}).with_columns(
+            new_field_name=pl.lit(None),
+            resource_title=pl.lit(None),
+            resource_name=pl.lit(None),
+            comment=None,
+        ).write_csv(mapping_csv_path, separator=";")
