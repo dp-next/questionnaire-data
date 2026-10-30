@@ -6,6 +6,8 @@ import polars as pl
 
 from questionnaire_data import common
 
+RAW_DATA_SUFFIX = ".csv.gz"
+
 
 def download() -> str:
     """Download REDCap data."""
@@ -30,7 +32,7 @@ def write(data_str: str, raw_data_path: Path) -> None:
     """Write REDCap data as a timestamped file."""
     df = pl.read_csv(StringIO(data_str), separator=";", infer_schema=False)
     raw_data_path.mkdir(parents=True, exist_ok=True)
-    file_path = raw_data_path / f"{common.datetime.get_current()}.csv.gz"
+    file_path = raw_data_path / f"{common.datetime.get_current()}{RAW_DATA_SUFFIX}"
     df.write_csv(file_path, compression="gzip")
 
 
@@ -40,7 +42,9 @@ def read_newest_raw(raw_data_paths: list[Path]):
         # Newest data path based on datetime filename.
         max(
             raw_data_paths,
-            key=lambda path: datetime.strptime(path.name, "%Y-%m-%dT%H-%M-%SZ.csv.gz"),
+            key=lambda path: datetime.strptime(
+                path.name, f"%Y-%m-%dT%H-%M-%SZ{RAW_DATA_SUFFIX}"
+            ),
         ),
         infer_schema=False,
     )
