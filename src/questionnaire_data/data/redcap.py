@@ -32,6 +32,7 @@ def write(data_str: str, raw_data_path: Path) -> None:
     file_path = raw_data_path / f"{common.datetime.get_current()}.csv.gz"
     df.write_csv(file_path, compression="gzip")
 
+
 def read_newest_raw(raw_data_paths: list[Path]):
     """Read the newest downloaded raw data."""
     return pl.read_csv(
