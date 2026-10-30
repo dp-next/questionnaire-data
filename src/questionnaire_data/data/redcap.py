@@ -67,12 +67,13 @@ def write_columns_to_mapping_csv(
                 field_names,
             )
         )
-        if len(new_fields) != 0:
-            pl.concat(
-                [mapping_csv, pl.DataFrame({"field_name": new_fields})],
-                # Fills in missing columns with None.
-                how="diagonal",
-            ).write_csv(mapping_csv_path, separator=";")
+
+        # Concatenate any new fields (if no new fields nothing is added)
+        pl.concat(
+            [mapping_csv, pl.DataFrame({"field_name": new_fields})],
+            # Fills in missing columns with None.
+            how="diagonal",
+        ).write_csv(mapping_csv_path, separator=";")
 
     else:
         pl.DataFrame({"field_name": field_names}).with_columns(
