@@ -28,10 +28,9 @@ def download() -> str:
 def write(data_str: str, raw_data_path: Path) -> None:
     """Write REDCap data as a timestamped file."""
     df = pl.read_csv(StringIO(data_str), separator=";", infer_schema=False)
-    raw_data_path = raw_data_path / f"{common.datetime.get_current()}.csv.gz"
     raw_data_path.mkdir(parents=True, exist_ok=True)
-    df.write_csv(raw_data_path, compression="gzip")
-
+    file_path = raw_data_path / f"{common.datetime.get_current()}.csv.gz"
+    df.write_csv(file_path, compression="gzip")
 
 def read_newest_raw(raw_data_paths: list[Path]):
     """Read the newest downloaded raw data."""
