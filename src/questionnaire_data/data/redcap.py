@@ -1,9 +1,9 @@
 from datetime import datetime
 from io import StringIO
 from pathlib import Path
-import seedcase_soil as so
 
 import polars as pl
+import seedcase_soil as so
 
 from questionnaire_data import common
 
@@ -62,9 +62,7 @@ def write_columns_to_mapping_csv(
         mapping_csv = pl.read_csv(mapping_csv_path, separator=";")
         new_fields = so.keep(
             field_names,
-            lambda field_name: (
-                field_name not in mapping_csv["field_name"].to_list()
-            )
+            lambda field_name: field_name not in mapping_csv["field_name"].to_list(),
         )
 
         # Concatenate any new fields (if no new fields nothing is added)
