@@ -1,6 +1,7 @@
 from datetime import datetime
 from io import StringIO
 from pathlib import Path
+import seedcase_soil as so
 
 import polars as pl
 
@@ -59,12 +60,10 @@ def write_columns_to_mapping_csv(
     # If mapping csv exists, check for new fields and append them.
     if mapping_csv_path.exists():
         mapping_csv = pl.read_csv(mapping_csv_path, separator=";")
-        new_fields = list(
-            filter(
-                lambda field_name: (
-                    field_name not in mapping_csv["field_name"].to_list()
-                ),
-                field_names,
+        new_fields = so.keep(
+            field_names,
+            lambda field_name: (
+                field_name not in mapping_csv["field_name"].to_list()
             )
         )
 
