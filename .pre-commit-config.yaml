@@ -14,7 +14,7 @@ repos:
   # sub-packages, which confuses pre-commit when it tries to find the latest
   # version
   - repo: https://github.com/adhtruong/mirrors-typos
-    rev: v1.51.1
+    rev: v1.52.0
     hooks:
       - id: typos
         args: [--config, .config/typos.toml, --force-exclude]
@@ -35,7 +35,7 @@ repos:
         args: [--assume-in-merge]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.17.3
+    rev: v0.17.4
     hooks:
       # Run the linter.
       - id: ruff-check
